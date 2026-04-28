@@ -85,12 +85,12 @@
 }
 /* Design. 줄만 위로 당기기 */
 .hero-headline .hl-row:last-child {
-  margin-top: -1.8em;
+  margin-top: -2em;
 }
 .hl-row {
   display: flex;
   align-items: flex-end;
-  gap: -2em;
+  gap: 0;
   line-height: 1.0;
 }
 /* "Clarity within" 줄 — Order 너비만큼 들여쓰기 */
@@ -195,6 +195,9 @@
   transition: background 0.25s;
   color: inherit;
 }
+.p-desc-wrap {
+  padding-top: 0;
+}
 /* 태그 줄수 차이로 인한 desc 위치 틀어짐 방지 */
 .p-main {
   display: flex;
@@ -223,7 +226,7 @@
   letter-spacing: -0.01em;
   line-height: 1.35;
 }
-.p-tags { display: flex; gap: 6px; flex-wrap: wrap; min-height: 52px; align-content: flex-start; }
+.p-tags { display: flex; gap: 6px; flex-wrap: wrap; min-height: 56px; align-content: flex-start; }
 .p-desc {
   font-size: 13px;
   color: var(--text-secondary);
@@ -241,6 +244,18 @@
   color: var(--text-muted);
   padding-top: 3px;
   transition: transform 0.2s, color 0.2s;
+}
+
+/* 태그 블루 fill */
+.tag {
+  background: #2a52cc;
+  border-color: transparent;
+  color: #ffffff;
+}
+.tag.hi {
+  background: #1e40af;
+  border-color: transparent;
+  color: #ffffff;
 }
 
 /* ── ABOUT STRIP ── */
