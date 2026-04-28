@@ -295,7 +295,7 @@
   .p-desc { display: none; }
 }
 @media (max-width: 768px) {
-  .hero { padding: 0 24px 40px; }
+  .hero { min-height: auto; padding: 80px 24px 48px; }
 
   /* 상단 메타 — 여백 줄이고 가로 정렬, 위 맞춤 */
   .hero-top {
