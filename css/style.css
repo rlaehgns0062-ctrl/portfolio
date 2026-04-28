@@ -182,3 +182,12 @@ footer {
   .nav-links { display: none; }
   footer { padding: 28px 24px; flex-direction: column; gap: 16px; text-align: center; }
 }
+
+/* ── Playfair SemiBold Italic 추가 ── */
+@font-face {
+  font-family: 'PlayfairDisplay';
+  src: url('../fonts/PlayfairDisplay-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
