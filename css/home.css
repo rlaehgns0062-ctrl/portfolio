@@ -81,6 +81,11 @@
   display: flex;
   flex-direction: column;
   gap: 0;
+  row-gap: 0;
+}
+/* Design. 줄만 위로 당기기 */
+.hero-headline .hl-row:last-child {
+  margin-top: -0.12em;
 }
 .hl-row {
   display: flex;
@@ -115,6 +120,12 @@
   letter-spacing: -0.01em;
   flex-shrink: 0;
   padding-bottom: 0.08em;
+}
+
+/* 상단 서브 텍스트 밝게 */
+.hero-top .mono {
+  color: #aaaaaa;
+  letter-spacing: 0.18em;
 }
 
 /* 하단 설명 */
@@ -164,7 +175,7 @@
   margin-bottom: 14px;
 }
 .works-title {
-  font-family: 'Anton', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 44px;
   letter-spacing: 0.03em;
   color: var(--text-primary);

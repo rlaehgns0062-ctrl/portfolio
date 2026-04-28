@@ -14,7 +14,7 @@
   line-height: 0.9;
 }
 .ahl-sans {
-  font-family: 'Anton', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: clamp(56px, 8vw, 112px);
   color: var(--text-primary);
   text-transform: uppercase;

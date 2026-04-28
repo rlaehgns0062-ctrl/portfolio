@@ -39,15 +39,15 @@
   --bg3:           #141414;
   --text-primary:  #f0ede6;
   --text-secondary: #cccccc;
-  --text-muted:    #3a3a36;
+  --text-muted:    #777772;
   --accent-green:  #a8ff78;
   --accent-blue:   #4a90ff;
   --border:        rgba(240, 237, 230, 0.07);
   --border-hover:  rgba(240, 237, 230, 0.14);
 
-  --font-sans:   'DM Sans', sans-serif;
+  --font-sans:   'Outfit', 'Pretendard', sans-serif;
   --font-serif:  'PlayfairDisplay', Georgia, serif;
-  --font-mono:   'DM Mono', monospace;
+  --font-mono:   'Outfit', 'Pretendard', monospace;
 
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 }

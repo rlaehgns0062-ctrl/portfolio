@@ -21,7 +21,7 @@
   display: block;
 }
 .case-title {
-  font-family: 'Anton', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: clamp(40px, 5.5vw, 76px);
   color: var(--text-primary);
   text-transform: uppercase;
@@ -96,7 +96,7 @@
   margin-bottom: 16px;
 }
 .case-section h2 {
-  font-family: 'Anton', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 28px;
   color: var(--text-primary);
   text-transform: uppercase;
@@ -186,7 +186,7 @@
   margin-bottom: 8px;
 }
 .result-val {
-  font-family: 'Anton', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 28px;
   color: var(--text-primary);
   letter-spacing: 0.02em;
