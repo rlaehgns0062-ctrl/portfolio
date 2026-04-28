@@ -85,7 +85,7 @@
 }
 /* Design. 줄만 위로 당기기 */
 .hero-headline .hl-row:last-child {
-  margin-top: -2em;
+  margin-top: -0.12em;
 }
 .hl-row {
   display: flex;
@@ -194,6 +194,14 @@
   cursor: pointer;
   transition: background 0.25s;
   color: inherit;
+}
+/* 태그 줄수 차이로 인한 desc 위치 틀어짐 방지 */
+.p-main {
+  display: flex;
+  flex-direction: column;
+}
+.p-tags {
+  min-height: 48px;
 }
 .project-card:last-of-type {
   border-bottom: 0.5px solid var(--border);
