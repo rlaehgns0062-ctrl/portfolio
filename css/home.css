@@ -64,7 +64,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding-top: 112px;
+  padding-top: 88px;
   margin-bottom: 20px;
 }
 
@@ -295,11 +295,11 @@
   .p-desc { display: none; }
 }
 @media (max-width: 768px) {
-  .hero { padding: 0 24px 48px; }
+  .hero { padding: 0 24px 40px; }
 
   /* 상단 메타 — 여백 줄이고 가로 정렬, 위 맞춤 */
   .hero-top {
-    padding-top: 72px;
+    padding-top: 20px;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
@@ -310,7 +310,8 @@
 
   /* 모바일 헤드라인 SVG */
   .headline-svg {
-    max-width: 100%;
+    width: 100% !important;
+    max-width: 100% !important;
   }
 
   .hero-bottom {
@@ -320,6 +321,7 @@
     margin-top: 40px;
   }
   .hero-desc { font-size: 13px; max-width: 100%; }
+  .br-desktop { display: none; }
 
   /* 코너 마커 제거 */
   .corner { display: none; }
