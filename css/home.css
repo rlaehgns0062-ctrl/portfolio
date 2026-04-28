@@ -84,13 +84,12 @@
 }
 .hl-row {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   gap: 0.18em;
   line-height: 1.0;
 }
 /* "Clarity within" 줄 — Order 너비만큼 들여쓰기 */
 .hl-row--indent {
-  margin-top: -0.08em;
   padding-left: clamp(80px, 12vw, 168px);
 }
 
@@ -112,9 +111,10 @@
   font-weight: 400;
   font-size: clamp(24px, 3.2vw, 46px);
   color: var(--text-primary);
-  line-height: 1.0;
+  line-height: 1.15;
   letter-spacing: -0.01em;
   flex-shrink: 0;
+  padding-bottom: 0.08em;
 }
 
 /* 하단 설명 */
@@ -132,7 +132,7 @@
   color: var(--text-secondary);
   max-width: 360px;
   line-height: 1.8;
-  font-weight: 300;
+  font-weight: 400;
 }
 .hero-desc strong {
   color: var(--text-primary);
@@ -212,7 +212,7 @@
   font-size: 13px;
   color: var(--text-secondary);
   line-height: 1.8;
-  font-weight: 300;
+  font-weight: 400;
 }
 .p-meta { text-align: right; }
 .p-date {
@@ -251,8 +251,7 @@
   font-weight: 600;
   font-style: italic;
   font-size: 34px;
-  color: transparent;
-  -webkit-text-stroke: 1px rgba(240, 237, 230, 0.22);
+  color: var(--text-primary);
   line-height: 1.05;
   display: block;
   margin-bottom: 28px;
@@ -261,7 +260,7 @@
   font-size: 13px;
   color: var(--text-secondary);
   line-height: 1.85;
-  font-weight: 300;
+  font-weight: 400;
 }
 .about-body strong {
   color: var(--text-primary);

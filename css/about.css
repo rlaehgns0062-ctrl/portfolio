@@ -33,7 +33,7 @@
   font-size: 15px;
   color: var(--text-secondary);
   line-height: 1.8;
-  font-weight: 300;
+  font-weight: 400;
   max-width: 400px;
 }
 
@@ -49,7 +49,7 @@
   font-size: 14px;
   color: var(--text-secondary);
   line-height: 1.9;
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 20px;
 }
 .about-intro p strong {
