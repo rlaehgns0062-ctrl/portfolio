@@ -84,12 +84,14 @@
 }
 .hl-row {
   display: flex;
-  align-items: baseline;
-  gap: 0.2em;
+  align-items: center;
+  gap: 0.18em;
   line-height: 1.0;
 }
+/* "Clarity within" 줄 — Order 너비만큼 들여쓰기 */
 .hl-row--indent {
-  padding-left: 0.12em;
+  margin-top: -0.08em;
+  padding-left: clamp(80px, 12vw, 168px);
 }
 
 /* 세리프 — Playfair SemiBold Italic, 크고 굵게 */
@@ -101,17 +103,18 @@
   color: var(--text-primary);
   line-height: 1.0;
   letter-spacing: -0.02em;
+  display: block;
 }
 
 /* 산세리프 — Outfit Regular, 작고 가볍게 */
 .hl-sans-sm {
   font-family: 'Outfit', sans-serif;
   font-weight: 400;
-  font-size: clamp(28px, 3.8vw, 54px);
+  font-size: clamp(24px, 3.2vw, 46px);
   color: var(--text-primary);
-  line-height: 1.1;
+  line-height: 1.0;
   letter-spacing: -0.01em;
-  align-self: center;
+  flex-shrink: 0;
 }
 
 /* 하단 설명 */
@@ -234,17 +237,18 @@
   gap: 64px;
   align-items: start;
 }
+/* About strip — 헤드라인과 동일한 폰트 구성 */
 .about-hl {
-  font-family: 'Anton', sans-serif;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
   font-size: 38px;
-  text-transform: uppercase;
   color: var(--text-primary);
   line-height: 1.05;
-  letter-spacing: 0.02em;
+  letter-spacing: -0.01em;
 }
 .about-hl-serif {
   font-family: var(--font-serif);
-  font-weight: 700;
+  font-weight: 600;
   font-style: italic;
   font-size: 34px;
   color: transparent;
