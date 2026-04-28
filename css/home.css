@@ -352,13 +352,9 @@
   .hero-top .mono { font-size: 9px; letter-spacing: 0.1em; }
   .hero-year { text-align: right !important; line-height: 1.6 !important; }
 
-  /* 모바일 헤드라인 */
-  .hl-serif { font-size: clamp(48px, 14vw, 72px); }
-  .hl-sans-sm { font-size: clamp(16px, 4.8vw, 26px); }
-  .hl-row--indent { padding-left: clamp(48px, 14vw, 72px); }
-  .hero-headline .hl-row:last-child {
-    margin-top: -1.2em;
-    margin-left: 0;
+  /* 모바일 헤드라인 SVG */
+  .headline-svg {
+    max-width: 100%;
   }
 
   .hero-bottom {
