@@ -85,7 +85,7 @@
 }
 /* Design. 줄만 위로 당기기 */
 .hero-headline .hl-row:last-child {
-  margin-top: -0.22em;
+  margin-top: -0.5em;
 }
 .hl-row {
   display: flex;
