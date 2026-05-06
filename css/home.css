@@ -181,7 +181,7 @@
 /* ── PROJECT CARD ── */
 .project-card {
   display: grid;
-  grid-template-columns: 44px 1fr 240px auto 20px;
+  grid-template-columns: 44px 280px 1fr auto 20px;
   gap: 20px;
   align-items: start;
   padding: 28px 0;
@@ -256,14 +256,15 @@
 
 /* 프로젝트 썸네일 */
 .p-thumb {
-  width: 240px;
-  aspect-ratio: 16 / 9;
+  width: 280px;
+  aspect-ratio: 4 / 3;
   overflow: hidden;
   border-radius: 4px;
   background: var(--bg3);
   border: 0.5px solid var(--border);
   flex-shrink: 0;
   align-self: start;
+  justify-self: start;
 }
 .p-thumb img {
   width: 100%;
@@ -368,7 +369,7 @@
 /* ── RESPONSIVE ── */
 @media (max-width: 1024px) {
   .project-card {
-    grid-template-columns: 36px 1fr 180px auto 20px;
+    grid-template-columns: 36px 220px 1fr auto 20px;
   }
   .p-desc { display: none; }
 }
