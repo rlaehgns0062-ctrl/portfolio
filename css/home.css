@@ -130,13 +130,13 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-top: 56px;
+  margin-top: 72px;
   gap: 40px;
 }
 .hero-desc {
   font-size: 14px;
   color: var(--text-secondary);
-  max-width: 360px;
+  max-width: 340px;
   line-height: 1.8;
   font-weight: 400;
 }
