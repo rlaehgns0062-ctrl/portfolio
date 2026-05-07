@@ -13,7 +13,7 @@
   overflow: hidden;
 }
 
-/* 그라데이션 배경 오브 */
+/* 그라데이션 배경 오브 — 라이트 테마용 */
 .grad-layer {
   position: absolute;
   inset: 0;
@@ -23,31 +23,31 @@
 .grad-orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(90px);
+  filter: blur(100px);
 }
 .orb1 {
   width: 580px; height: 580px;
   top: -140px; right: -60px;
-  background: radial-gradient(circle, #1a3aff 0%, #0c1daa 45%, transparent 70%);
-  opacity: 0.5;
+  background: radial-gradient(circle, #c8d4ff 0%, #a0b4f0 45%, transparent 70%);
+  opacity: 0.6;
 }
 .orb2 {
   width: 420px; height: 420px;
   top: 40px; left: -120px;
-  background: radial-gradient(circle, #7b2fff 0%, #4a0fa0 50%, transparent 70%);
-  opacity: 0.3;
+  background: radial-gradient(circle, #d4c8ff 0%, #b8a8e8 50%, transparent 70%);
+  opacity: 0.4;
 }
 .orb3 {
   width: 340px; height: 340px;
   bottom: 100px; right: 14%;
-  background: radial-gradient(circle, #00c896 0%, #007a5a 50%, transparent 70%);
-  opacity: 0.28;
+  background: radial-gradient(circle, #b8ead8 0%, #90d4b8 50%, transparent 70%);
+  opacity: 0.35;
 }
 .orb4 {
   width: 260px; height: 260px;
   bottom: 180px; left: 28%;
-  background: radial-gradient(circle, #ff6b2b 0%, #b83300 55%, transparent 70%);
-  opacity: 0.18;
+  background: radial-gradient(circle, #ffd4b8 0%, #f0b898 55%, transparent 70%);
+  opacity: 0.25;
 }
 
 /* 코너 마커 */
@@ -78,11 +78,13 @@
   max-width: 560px;
   height: auto;
   display: block;
+  /* 다크 SVG를 라이트 배경에 맞게 반전 */
+  filter: invert(1);
 }
 
-/* 상단 서브 텍스트 밝게 */
+/* 상단 서브 텍스트 */
 .hero-top .mono {
-  color: #aaaaaa;
+  color: var(--text-muted);
   letter-spacing: 0.18em;
 }
 
@@ -111,7 +113,7 @@
   background-size: 200% 200%;
   animation: grad-shift 4s ease infinite;
   transition: opacity 0.2s, transform 0.2s;
-  box-shadow: 0 0 32px rgba(58, 123, 255, 0.25);
+  box-shadow: 0 4px 24px rgba(26, 58, 255, 0.2);
 }
 .resume-cta:hover {
   opacity: 0.88;
@@ -190,10 +192,7 @@
   transition: background 0.25s;
   color: inherit;
 }
-.p-desc-wrap {
-  padding-top: 0;
-}
-/* 태그 줄수 차이로 인한 desc 위치 틀어짐 방지 */
+.p-desc-wrap { padding-top: 0; }
 .p-main {
   display: flex;
   flex-direction: column;
@@ -202,7 +201,7 @@
   border-bottom: 0.5px solid var(--border);
 }
 .project-card:hover {
-  background: rgba(240, 237, 230, 0.02);
+  background: rgba(20, 18, 16, 0.02);
 }
 .project-card:hover .p-arrow {
   transform: translate(3px, -3px);
@@ -242,16 +241,16 @@
   transition: transform 0.2s, color 0.2s;
 }
 
-/* 태그 블루 fill */
+/* 태그 — 라이트 테마 */
 .tag {
-  background: #2a52cc;
+  background: rgba(20, 18, 16, 0.08);
   border-color: transparent;
-  color: #ffffff;
+  color: var(--text-secondary);
 }
 .tag.hi {
-  background: #1e40af;
+  background: rgba(26, 107, 58, 0.1);
   border-color: transparent;
-  color: #ffffff;
+  color: var(--accent-green);
 }
 
 /* 프로젝트 썸네일 */
@@ -265,6 +264,7 @@
   flex-shrink: 0;
   align-self: start;
   justify-self: start;
+  position: relative;
 }
 .p-thumb img {
   width: 100%;
@@ -276,9 +276,7 @@
 .project-card:hover .p-thumb img {
   transform: scale(1.04);
 }
-.p-thumb {
-  position: relative;
-}
+
 /* ── ABOUT STRIP ── */
 .about-strip {
   padding: 72px 48px;
@@ -289,7 +287,6 @@
   gap: 64px;
   align-items: start;
 }
-/* About strip — 헤드라인과 동일한 폰트 구성 */
 .about-hl {
   font-family: 'Outfit', sans-serif;
   font-weight: 400;
@@ -358,8 +355,6 @@
 }
 @media (max-width: 768px) {
   .hero { padding: 0 24px 40px; }
-
-  /* 상단 메타 — 여백 줄이고 가로 정렬, 위 맞춤 */
   .hero-top {
     padding-top: 20px;
     flex-direction: row;
@@ -369,39 +364,28 @@
   }
   .hero-top .mono { font-size: 9px; letter-spacing: 0.1em; }
   .hero-year { text-align: right !important; line-height: 1.6 !important; }
-
-  /* 모바일 헤드라인 SVG */
   .headline-svg {
     width: 100% !important;
     max-width: 100% !important;
   }
-
   .hero-bottom {
     flex-direction: column;
     align-items: flex-start;
     gap: 24px;
     margin-top: 40px;
   }
-  .resume-cta {
-    font-size: 13px;
-    padding: 12px 24px;
-  }
+  .resume-cta { font-size: 13px; padding: 12px 24px; }
   .hero-desc { font-size: 13px; max-width: 100%; }
   .br-desktop { display: none; }
-
-  /* 코너 마커 제거 */
   .corner { display: none; }
-
   .works { padding: 48px 24px; }
   .project-card {
     grid-template-columns: 28px 1fr 16px;
     gap: 12px;
   }
   .p-desc { display: none; }
-  .p-desc { display: none; }
   .p-meta { display: none; }
   .p-thumb { display: none; }
   .p-tags { min-height: auto; }
-
   .about-strip { grid-template-columns: 1fr; gap: 40px; padding: 48px 24px; }
 }

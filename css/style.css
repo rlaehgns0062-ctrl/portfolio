@@ -32,18 +32,18 @@
   font-display: swap;
 }
 
-/* ── TOKENS ── */
+/* ── TOKENS — 크림/베이지 라이트 테마 ── */
 :root {
-  --bg:             #080808;
-  --bg2:            #0e0e0e;
-  --bg3:            #141414;
-  --text-primary:   #f0ede6;
-  --text-secondary: #cccccc;
-  --text-muted:     #777772;
-  --accent-green:   #a8ff78;
-  --accent-blue:    #4a90ff;
-  --border:         rgba(240, 237, 230, 0.07);
-  --border-hover:   rgba(240, 237, 230, 0.14);
+  --bg:             #f5f2ec;
+  --bg2:            #ede9e1;
+  --bg3:            #e4e0d8;
+  --text-primary:   #141210;
+  --text-secondary: #3a3630;
+  --text-muted:     #8a8580;
+  --accent-green:   #1a6b3a;
+  --accent-blue:    #1a3aaa;
+  --border:         rgba(20, 18, 16, 0.1);
+  --border-hover:   rgba(20, 18, 16, 0.2);
 
   --font-sans:  'Outfit', 'Pretendard', sans-serif;
   --font-serif: 'PlayfairDisplay', Georgia, serif;
@@ -67,7 +67,7 @@ body {
 a { color: inherit; text-decoration: none; }
 img { display: block; max-width: 100%; }
 
-/* ── NAV — 3컬럼 그리드로 토글 항상 정중앙 고정 ── */
+/* ── NAV — 3컬럼 그리드, 토글 항상 정중앙 ── */
 nav {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -76,7 +76,7 @@ nav {
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   padding: 20px 48px;
-  background: rgba(8, 8, 8, 0.82);
+  background: rgba(245, 242, 236, 0.88);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 0.5px solid var(--border);
@@ -86,28 +86,26 @@ nav {
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.18em;
-  color: var(--text-secondary);
+  color: var(--text-muted);
   justify-self: start;
 }
 .nav-logo span { color: var(--text-primary); }
 
-/* 토글 pill — 항상 가운데 */
+/* 토글 pill */
 .nav-links {
   justify-self: center;
   display: flex;
   list-style: none;
   gap: 0;
-  background: rgba(240, 237, 230, 0.05);
+  background: rgba(20, 18, 16, 0.05);
   border: 0.5px solid var(--border-hover);
   border-radius: 999px;
   padding: 3px;
   position: relative;
 }
-
-/* sliding indicator */
 .nav-indicator {
   position: absolute;
-  background: rgba(240, 237, 230, 0.1);
+  background: rgba(20, 18, 16, 0.09);
   border-radius: 999px;
   pointer-events: none;
   z-index: 0;
@@ -131,7 +129,7 @@ nav {
 .nav-links li a:hover { color: var(--text-secondary); }
 .nav-links li a.active { color: var(--text-primary); }
 
-/* Contact 버튼 — 타원형, 우측 고정 */
+/* Contact 버튼 */
 .nav-cta {
   justify-self: end;
   font-family: var(--font-mono);
@@ -146,8 +144,8 @@ nav {
 }
 .nav-cta:hover {
   color: var(--text-primary);
-  border-color: rgba(240, 237, 230, 0.3);
-  background: rgba(240, 237, 230, 0.04);
+  border-color: var(--text-primary);
+  background: rgba(20, 18, 16, 0.04);
 }
 
 /* ── FOOTER ── */
@@ -198,7 +196,7 @@ footer {
 }
 .tag.hi {
   color: var(--accent-green);
-  border-color: rgba(168, 255, 120, 0.2);
+  border-color: rgba(26, 107, 58, 0.3);
 }
 
 /* ── PAGE TRANSITION ── */
@@ -212,10 +210,7 @@ footer {
 
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
-  nav {
-    padding: 16px 24px;
-    grid-template-columns: 1fr auto 1fr;
-  }
+  nav { padding: 16px 24px; }
   .nav-links li a { padding: 5px 14px; font-size: 11px; }
   footer { padding: 28px 24px; flex-direction: column; gap: 16px; text-align: center; }
 }
