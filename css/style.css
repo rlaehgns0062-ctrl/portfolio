@@ -89,31 +89,50 @@ nav {
   color: var(--text-secondary);
 }
 .nav-logo span { color: var(--text-primary); }
+
+/* 토글 pill */
 .nav-links {
   display: flex;
-  gap: 36px;
   list-style: none;
+  gap: 0;
+  background: rgba(240, 237, 230, 0.05);
+  border: 0.5px solid var(--border-hover);
+  border-radius: 999px;
+  padding: 3px;
 }
-.nav-links a {
-  font-size: 13px;
-  color: var(--text-secondary);
-  letter-spacing: 0.04em;
-  transition: color 0.2s;
+.nav-links li a {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  padding: 6px 18px;
+  border-radius: 999px;
+  transition: color 0.2s, background 0.2s;
+  font-family: var(--font-mono);
 }
-.nav-links a:hover { color: var(--text-primary); }
-.nav-links a.active { color: var(--text-primary); }
+.nav-links li a:hover {
+  color: var(--text-primary);
+}
+.nav-links li a.active {
+  background: rgba(240, 237, 230, 0.1);
+  color: var(--text-primary);
+}
+
+/* Contact 버튼 — 타원형 */
 .nav-cta {
   font-family: var(--font-mono);
   font-size: 11px;
-  color: var(--text-primary);
-  border: 0.5px solid var(--border-hover);
-  padding: 8px 18px;
   letter-spacing: 0.1em;
+  color: var(--text-secondary);
+  border: 0.5px solid var(--border-hover);
+  padding: 8px 20px;
+  border-radius: 999px;
   text-transform: uppercase;
   transition: all 0.2s;
 }
 .nav-cta:hover {
-  border-color: var(--text-primary);
+  color: var(--text-primary);
+  border-color: rgba(240, 237, 230, 0.3);
   background: rgba(240, 237, 230, 0.04);
 }
 
@@ -180,7 +199,8 @@ footer {
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
   nav { padding: 16px 24px; }
-  .nav-links { display: none; }
+  .nav-links { display: flex; }
+  .nav-links li a { padding: 5px 14px; font-size: 11px; }
   footer { padding: 28px 24px; flex-direction: column; gap: 16px; text-align: center; }
 }
 
