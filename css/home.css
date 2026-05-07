@@ -275,7 +275,6 @@
 }
 .project-card:hover .p-thumb img {
   transform: scale(1.04);
-  filter: brightness(1);
 }
 .p-thumb {
   position: relative;
