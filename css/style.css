@@ -99,6 +99,22 @@ nav {
   border: 0.5px solid var(--border-hover);
   border-radius: 999px;
   padding: 3px;
+  position: relative; /* indicator 기준점 */
+}
+
+/* sliding indicator */
+.nav-indicator {
+  position: absolute;
+  background: rgba(240, 237, 230, 0.1);
+  border-radius: 999px;
+  pointer-events: none;
+  z-index: 0;
+  /* left, width, height, top은 JS가 세팅 */
+}
+
+.nav-links li {
+  position: relative;
+  z-index: 1;
 }
 .nav-links li a {
   display: block;
@@ -107,14 +123,15 @@ nav {
   color: var(--text-muted);
   padding: 6px 18px;
   border-radius: 999px;
-  transition: color 0.2s, background 0.2s;
+  transition: color 0.2s;
   font-family: var(--font-mono);
+  position: relative;
+  z-index: 1;
 }
 .nav-links li a:hover {
-  color: var(--text-primary);
+  color: var(--text-secondary);
 }
 .nav-links li a.active {
-  background: rgba(240, 237, 230, 0.1);
   color: var(--text-primary);
 }
 
@@ -199,7 +216,6 @@ footer {
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
   nav { padding: 16px 24px; }
-  .nav-links { display: flex; }
   .nav-links li a { padding: 5px 14px; font-size: 11px; }
   footer { padding: 28px 24px; flex-direction: column; gap: 16px; text-align: center; }
 }
