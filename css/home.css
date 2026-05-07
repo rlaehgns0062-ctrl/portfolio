@@ -278,24 +278,9 @@
   transform: scale(1.04);
   filter: brightness(1);
 }
-/* 이미지 없을 때 플레이스홀더 */
-.p-thumb::after {
-  content: 'IMAGE';
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-mono);
-  font-size: 9px;
-  letter-spacing: 0.2em;
-  color: var(--text-muted);
-}
 .p-thumb {
   position: relative;
 }
-.p-thumb img ~ * { display: none; }
-
 /* ── ABOUT STRIP ── */
 .about-strip {
   padding: 72px 48px;
