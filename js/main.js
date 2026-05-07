@@ -1,7 +1,6 @@
 /* ============================================
    main.js — Global interactions
    ============================================ */
-
 document.addEventListener('DOMContentLoaded', () => {
 
   /* ── 페이지 진입 애니메이션 ── */
@@ -16,6 +15,71 @@ document.addEventListener('DOMContentLoaded', () => {
       nav.style.borderBottomColor = '';
     }
   }, { passive: true });
+
+  /* ── 토글 nav — 슬라이딩 active indicator ── */
+  const navLinks = document.querySelectorAll('.nav-links li a');
+  const currentPath = window.location.pathname;
+
+  // active indicator 엘리먼트 생성
+  const pill = document.querySelector('.nav-links');
+  const indicator = document.createElement('span');
+  indicator.className = 'nav-indicator';
+  pill.appendChild(indicator);
+
+  // 현재 페이지 기준으로 active 설정
+  let activeLink = null;
+  navLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    const isAbout = currentPath.includes('about');
+    const isWork = !isAbout;
+
+    if ((href.includes('about') && isAbout) || (href.includes('index') && isWork)) {
+      link.classList.add('active');
+      activeLink = link;
+    } else {
+      link.classList.remove('active');
+    }
+  });
+
+  // indicator 초기 위치 설정 (애니메이션 없이)
+  function setIndicator(el, animate) {
+    if (!el) return;
+    const pillRect = pill.getBoundingClientRect();
+    const elRect = el.getBoundingClientRect();
+    indicator.style.transition = animate ? 'left 0.3s cubic-bezier(0.22,1,0.36,1), width 0.3s cubic-bezier(0.22,1,0.36,1)' : 'none';
+    indicator.style.left = (elRect.left - pillRect.left) + 'px';
+    indicator.style.width = elRect.width + 'px';
+    indicator.style.height = elRect.height + 'px';
+    indicator.style.top = (elRect.top - pillRect.top) + 'px';
+  }
+
+  // 초기 위치 (transition 없이)
+  if (activeLink) {
+    requestAnimationFrame(() => setIndicator(activeLink, false));
+  }
+
+  // 클릭 시 — 토글 먼저 이동, 딜레이 후 페이지 전환
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      const href = link.getAttribute('href');
+      const isCurrentPage = link.classList.contains('active');
+      if (isCurrentPage) return; // 현재 페이지면 아무것도 안 함
+
+      e.preventDefault();
+
+      // active 클래스 이동
+      navLinks.forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
+
+      // indicator 슬라이드
+      setIndicator(link, true);
+
+      // 200ms 후 페이지 전환
+      setTimeout(() => {
+        window.location.href = href;
+      }, 220);
+    });
+  });
 
   /* ── 프로젝트 카드 호버 시 번호 강조 ── */
   const cards = document.querySelectorAll('.project-card');
