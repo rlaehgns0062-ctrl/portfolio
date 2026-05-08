@@ -62,23 +62,22 @@
   font-weight: 400;
 }
 
-/* ── 메타 바 ── */
+/* ── 메타 바 — border를 item으로 내려서 padding이 실제로 작동하게 ── */
 .work-meta-bar {
   padding: 0 80px;
   margin: 48px 0 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  border-top: 0.5px solid var(--border);
-  border-bottom: 0.5px solid var(--border);
 }
 .work-meta-item {
-  padding: 32px 24px 32px 0;
+  padding: 28px 24px 28px 0;
+  border-top: 0.5px solid var(--border);
+  border-bottom: 0.5px solid var(--border);
   border-right: 0.5px solid var(--border);
 }
 .work-meta-item:last-child {
   border-right: none;
 }
-/* label을 border에서 띄우기 위해 별도 처리 */
 .work-meta-label {
   font-size: 10px;
   letter-spacing: 0.18em;
@@ -86,7 +85,6 @@
   text-transform: uppercase;
   display: block;
   margin-bottom: 12px;
-  padding-top: 4px; /* border와 텍스트 사이 추가 여백 */
 }
 .work-meta-value {
   font-size: 13px;
@@ -374,7 +372,6 @@
   padding: 18px 0;
   border-bottom: 0.5px solid var(--border);
 }
-/* 소제목 — bold로 본문과 구분 */
 .retro-item-title {
   font-size: 14px;
   font-weight: 600;
