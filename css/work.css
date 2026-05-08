@@ -20,7 +20,6 @@
   object-position: center top;
   display: block;
 }
-/* 딤 약하게 — 하단만 살짝 */
 .work-cover-overlay {
   position: absolute;
   inset: 0;
@@ -63,7 +62,7 @@
   font-weight: 400;
 }
 
-/* ── 메타 바 — 라인과 텍스트 사이 여백 확보 ── */
+/* ── 메타 바 ── */
 .work-meta-bar {
   padding: 0 80px;
   margin: 48px 0 0;
@@ -73,19 +72,21 @@
   border-bottom: 0.5px solid var(--border);
 }
 .work-meta-item {
-  padding: 28px 24px 28px 0;
+  padding: 32px 24px 32px 0;
   border-right: 0.5px solid var(--border);
 }
 .work-meta-item:last-child {
   border-right: none;
 }
+/* label을 border에서 띄우기 위해 별도 처리 */
 .work-meta-label {
   font-size: 10px;
   letter-spacing: 0.18em;
   color: var(--text-muted);
   text-transform: uppercase;
   display: block;
-  margin-bottom: 10px; /* 라인↔텍스트 여백 늘림 */
+  margin-bottom: 12px;
+  padding-top: 4px; /* border와 텍스트 사이 추가 여백 */
 }
 .work-meta-value {
   font-size: 13px;
@@ -192,7 +193,7 @@
   min-width: 0;
 }
 
-/* 칩 — 가독성 개선: 더 뚜렷한 배경, 패딩 확대 */
+/* 칩 */
 .decision-tag {
   font-size: 10px;
   font-weight: 500;
@@ -370,14 +371,16 @@
   border-bottom: 0.5px solid var(--border);
 }
 .retro-item {
-  padding: 16px 0;
+  padding: 18px 0;
   border-bottom: 0.5px solid var(--border);
 }
+/* 소제목 — bold로 본문과 구분 */
 .retro-item-title {
-  font-size: 13px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 600;
   color: var(--text-primary);
-  margin-bottom: 6px;
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
 }
 .retro-item-desc {
   font-size: 13px;
