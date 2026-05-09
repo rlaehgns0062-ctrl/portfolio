@@ -32,7 +32,7 @@
   font-display: swap;
 }
 
-/* ── TOKENS — 크림/베이지 라이트 테마 ── */
+/* ── TOKENS ── */
 :root {
   --bg:             #f5f2ec;
   --bg2:            #ede9e1;
@@ -67,7 +67,7 @@ body {
 a { color: inherit; text-decoration: none; }
 img { display: block; max-width: 100%; }
 
-/* ── NAV — 3컬럼 그리드, 토글 항상 정중앙 ── */
+/* ── NAV — 데스크탑: 3컬럼, 토글 정중앙 ── */
 nav {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -91,7 +91,7 @@ nav {
 }
 .nav-logo span { color: var(--text-primary); }
 
-/* 토글 pill */
+/* 토글 pill — 데스크탑: 중앙 */
 .nav-links {
   justify-self: center;
   display: flex;
@@ -129,9 +129,15 @@ nav {
 .nav-links li a:hover { color: var(--text-secondary); }
 .nav-links li a.active { color: var(--text-primary); }
 
+/* nav-right — 데스크탑: 오른쪽 끝 */
+.nav-right {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+}
+
 /* Contact 버튼 */
 .nav-cta {
-  justify-self: end;
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.1em;
@@ -210,9 +216,63 @@ footer {
 
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
-  nav { padding: 16px 24px; }
-  .nav-links li a { padding: 5px 14px; font-size: 11px; }
-  footer { padding: 28px 24px; flex-direction: column; gap: 16px; text-align: center; }
+  nav {
+    padding: 14px 20px;
+    /* 모바일: 로고 왼쪽 / 토글+contact 오른쪽 */
+    grid-template-columns: 1fr auto;
+    gap: 0;
+  }
+  .nav-logo {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    line-height: 1.5;
+    justify-self: start;
+  }
+  /* 토글을 nav-right 안으로 숨기고 오른쪽에 고정 */
+  .nav-links {
+    display: none; /* 기존 중앙 위치 숨김 */
+  }
+  .nav-right {
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  /* 모바일 전용 토글 — nav-right 안에 삽입 */
+  .nav-right .nav-links-mobile {
+    display: flex;
+    list-style: none;
+    gap: 0;
+    background: rgba(20, 18, 16, 0.05);
+    border: 0.5px solid var(--border-hover);
+    border-radius: 999px;
+    padding: 3px;
+    position: relative;
+  }
+  .nav-right .nav-links-mobile li a {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+    padding: 5px 12px;
+    border-radius: 999px;
+    transition: color 0.2s;
+  }
+  .nav-right .nav-links-mobile li a.active {
+    color: var(--text-primary);
+    background: rgba(20, 18, 16, 0.09);
+  }
+  .nav-cta {
+    font-size: 10px;
+    padding: 6px 12px;
+  }
+  footer {
+    padding: 28px 24px;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
 }
 
 /* ── Playfair SemiBold Italic ── */
