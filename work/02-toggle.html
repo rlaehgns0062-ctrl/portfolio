@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="../css/work.css" />
   <style>
     * { font-family: 'Pretendard', sans-serif !important; }
+
+    /* 메타 바 기본 (데스크탑) */
     .work-meta-bar {
       border-top: none !important;
       border-bottom: none !important;
@@ -28,6 +30,44 @@
     .work-meta-label {
       margin-bottom: 12px !important;
       padding-top: 0 !important;
+    }
+
+    /* 모바일 */
+    @media (max-width: 768px) {
+      /* 커버 — 검정 영역 제거, 높이 축소 */
+      .work-cover {
+        height: 220px !important;
+        background: var(--bg3) !important;
+      }
+      .work-cover img {
+        object-position: center center !important;
+      }
+      .work-cover-overlay {
+        background: linear-gradient(to bottom, transparent 30%, rgba(245,242,236,0.6) 100%) !important;
+      }
+
+      /* 메타 바 — 2컬럼, 패딩 균일하게 */
+      .work-meta-bar {
+        grid-template-columns: 1fr 1fr !important;
+        padding: 0 24px !important;
+      }
+      .work-meta-item {
+        padding: 24px 16px 24px 16px !important;
+        border-right: 0.5px solid rgba(20,18,16,0.1) !important;
+      }
+      .work-meta-item:first-child {
+        padding-left: 16px !important; /* 모바일에선 첫번째도 동일하게 */
+      }
+      .work-meta-item:nth-child(2) {
+        border-right: none !important;
+      }
+      .work-meta-item:nth-child(3) {
+        border-top: none !important;
+      }
+      .work-meta-item:nth-child(4) {
+        border-top: none !important;
+        border-right: none !important;
+      }
     }
   </style>
 </head>
