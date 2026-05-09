@@ -91,7 +91,7 @@ nav {
 }
 .nav-logo span { color: var(--text-primary); }
 
-/* 토글 pill — 데스크탑: 중앙 */
+/* 데스크탑 토글 pill — 중앙 */
 .nav-links {
   justify-self: center;
   display: flex;
@@ -129,11 +129,17 @@ nav {
 .nav-links li a:hover { color: var(--text-secondary); }
 .nav-links li a.active { color: var(--text-primary); }
 
-/* nav-right — 데스크탑: 오른쪽 끝 */
+/* nav-right — 데스크탑: Contact만 오른쪽에 */
 .nav-right {
   justify-self: end;
   display: flex;
   align-items: center;
+  gap: 8px;
+}
+
+/* 모바일 토글 — 데스크탑에서 숨김 */
+.nav-links-mobile {
+  display: none;
 }
 
 /* Contact 버튼 */
@@ -218,28 +224,27 @@ footer {
 @media (max-width: 768px) {
   nav {
     padding: 14px 20px;
-    /* 모바일: 로고 왼쪽 / 토글+contact 오른쪽 */
+    /* 모바일: 로고 왼쪽 / nav-right 오른쪽 */
     grid-template-columns: 1fr auto;
-    gap: 0;
   }
   .nav-logo {
     font-size: 10px;
     letter-spacing: 0.1em;
     line-height: 1.5;
-    justify-self: start;
   }
-  /* 토글을 nav-right 안으로 숨기고 오른쪽에 고정 */
+  /* 데스크탑 토글 숨김 */
   .nav-links {
-    display: none; /* 기존 중앙 위치 숨김 */
+    display: none;
   }
+  /* nav-right 오른쪽 정렬 */
   .nav-right {
     justify-self: end;
     display: flex;
     align-items: center;
     gap: 8px;
   }
-  /* 모바일 전용 토글 — nav-right 안에 삽입 */
-  .nav-right .nav-links-mobile {
+  /* 모바일 토글 표시 */
+  .nav-links-mobile {
     display: flex;
     list-style: none;
     gap: 0;
@@ -247,9 +252,8 @@ footer {
     border: 0.5px solid var(--border-hover);
     border-radius: 999px;
     padding: 3px;
-    position: relative;
   }
-  .nav-right .nav-links-mobile li a {
+  .nav-links-mobile li a {
     display: block;
     font-family: var(--font-mono);
     font-size: 10px;
@@ -259,7 +263,7 @@ footer {
     border-radius: 999px;
     transition: color 0.2s;
   }
-  .nav-right .nav-links-mobile li a.active {
+  .nav-links-mobile li a.active {
     color: var(--text-primary);
     background: rgba(20, 18, 16, 0.09);
   }
