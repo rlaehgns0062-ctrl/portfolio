@@ -68,7 +68,7 @@
   margin-bottom: 20px;
 }
 
-/* 헤드라인 SVG */
+/* 헤드라인 SVG — invert 제거 */
 .hero-headline {
   position: relative;
   z-index: 2;
@@ -78,8 +78,6 @@
   max-width: 560px;
   height: auto;
   display: block;
-  /* 다크 SVG를 라이트 배경에 맞게 반전 */
-  filter: invert(1);
 }
 
 /* 상단 서브 텍스트 */
