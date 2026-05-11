@@ -4,7 +4,8 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   /* ── 페이지 진입 애니메이션 ── */
-  document.body.classList.add('page-enter');
+  const mainEl = document.querySelector('main') || document.querySelector('.hero') || document.body;
+mainEl.classList.add('page-enter');
 
   /* ── 스크롤 시 nav 테두리 강조 ── */
   const nav = document.querySelector('nav');
