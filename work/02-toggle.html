@@ -7,7 +7,28 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="../css/work.css" />
-  
+  <style>
+    * { font-family: 'Pretendard', sans-serif !important; }
+    .work-cover-overlay { display: none !important; }
+    .work-meta-bar { border-top: none !important; border-bottom: none !important; }
+    .work-meta-item {
+      padding: 32px 24px 32px 24px !important;
+      border-top: 0.5px solid rgba(20,18,16,0.1) !important;
+      border-bottom: 0.5px solid rgba(20,18,16,0.1) !important;
+      border-right: 0.5px solid rgba(20,18,16,0.1) !important;
+    }
+    .work-meta-item:first-child { padding-left: 0 !important; }
+    .work-meta-item:last-child { border-right: none !important; }
+    .work-meta-label { margin-bottom: 12px !important; }
+    @media (max-width: 768px) {
+      .work-meta-bar { grid-template-columns: 1fr 1fr !important; padding: 0 24px !important; }
+      .work-meta-item { padding: 24px 16px !important; border-right: 0.5px solid rgba(20,18,16,0.1) !important; }
+      .work-meta-item:first-child { padding-left: 16px !important; }
+      .work-meta-item:nth-child(2) { border-right: none !important; }
+      .work-meta-item:nth-child(3) { border-top: none !important; }
+      .work-meta-item:nth-child(4) { border-top: none !important; border-right: none !important; }
+    }
+  </style>
 </head>
 <body>
 
@@ -26,9 +47,12 @@
     </div>
   </nav>
 
-  <main class="work-page page-enter">
+  <main class="work-page">
 
-  
+    <div class="work-cover">
+      <img src="../assets/thumb-02.png" alt="Toggle SaaS 메인화면 리디자인" />
+      <div class="work-cover-overlay"></div>
+    </div>
 
     <div class="work-intro">
       <span class="work-intro-label">02 — Product Design · 2024</span>
@@ -240,17 +264,16 @@
 
     </div>
 
-    <!-- 02는 이전/다음 모두 있음 -->
-  <div class="work-nav-bottom">
-  <a href="01-finance.html" class="work-nav-link prev">
-    <span class="work-nav-link-arrow">←</span>
-    <span class="work-nav-link-title">국내 1위 MTS앱 신규 퇴직연금 기능 구축</span>
-  </a>
-  <a href="03-estore.html" class="work-nav-link next">
-    <span class="work-nav-link-arrow">→</span>
-    <span class="work-nav-link-title">E-STORE 36.5 차세대 판로 플랫폼 개선</span>
-  </a>
-</div>
+    <div class="work-nav-bottom">
+      <a href="01-finance.html" class="work-nav-link prev">
+        <span class="work-nav-link-arrow">←</span>
+        <span class="work-nav-link-title">국내 1위 MTS앱 신규 퇴직연금 기능 구축</span>
+      </a>
+      <a href="03-estore.html" class="work-nav-link next">
+        <span class="work-nav-link-arrow">→</span>
+        <span class="work-nav-link-title">E-STORE 36.5 차세대 판로 플랫폼 개선</span>
+      </a>
+    </div>
 
   </main>
 
