@@ -12,7 +12,7 @@
   min-height: 400px;
   overflow: hidden;
   position: relative;
-  background: var(--bg3);
+  background: transparent;
 }
 .work-cover img {
   width: 100%;
