@@ -10,18 +10,12 @@
   <style>
     * { font-family: 'Pretendard', sans-serif !important; }
 
-    /* 커버 오버레이 제거 */
     .work-cover-overlay { display: none !important; }
 
-    /* 커버 모바일 비율 */
     @media (max-width: 768px) {
-      .work-cover {
-        height: auto !important;
-        aspect-ratio: 16 / 9 !important;
-      }
+      .work-cover { height: auto !important; aspect-ratio: 16 / 9 !important; }
     }
 
-    /* 메타 바 */
     .work-meta-bar { border-top: none !important; border-bottom: none !important; }
     .work-meta-item {
       padding: 32px 24px 32px 24px !important;
@@ -46,19 +40,20 @@
 <body>
 
   <nav>
-    <!-- 좌측: 백 버튼 -->
+    <!-- 1컬럼: 백 버튼 -->
     <a href="../index.html" class="nav-back">←</a>
-    <!-- 중앙: 데스크탑 토글 -->
+    <!-- 2컬럼: 데스크탑 토글 (중앙) -->
     <ul class="nav-links">
       <li><a href="../index.html" class="active">Work</a></li>
       <li><a href="../about.html">About</a></li>
     </ul>
-    <!-- 우측: 모바일 토글 + Contact -->
+    <!-- 2컬럼: 모바일 토글 (중앙, nav-right 밖 독립) -->
+    <ul class="nav-links-mobile">
+      <li><a href="../index.html" class="active">Work</a></li>
+      <li><a href="../about.html">About</a></li>
+    </ul>
+    <!-- 3컬럼: contact -->
     <div class="nav-right">
-      <ul class="nav-links-mobile">
-        <li><a href="../index.html" class="active">Work</a></li>
-        <li><a href="../about.html">About</a></li>
-      </ul>
       <a href="mailto:rlaehgns0062@gmail.com" class="nav-cta">Contact</a>
     </div>
   </nav>
