@@ -1,8 +1,9 @@
 /* ============================================
-   work.css — Case Study Layout (Pretendard)
+   work.css — Case Study Layout
    ============================================ */
 
-.work-page { padding-top: 72px; }
+/* nav 높이만큼 padding-top */
+.work-page { padding-top: var(--nav-h); }
 
 /* ── 커버 이미지 ── */
 .work-cover {
@@ -103,24 +104,14 @@
 
 .section-sticky {
   position: sticky;
-  top: 96px;
+  top: calc(var(--nav-h) + 24px);
   height: fit-content;
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
-.section-num {
-  font-size: 10px;
-  letter-spacing: 0.18em;
-  color: var(--text-muted);
-  text-transform: uppercase;
-}
-.section-label {
-  font-size: 10px;
-  letter-spacing: 0.18em;
-  color: var(--accent-green);
-  text-transform: uppercase;
-}
+.section-num { font-size: 10px; letter-spacing: 0.18em; color: var(--text-muted); text-transform: uppercase; }
+.section-label { font-size: 10px; letter-spacing: 0.18em; color: var(--accent-green); text-transform: uppercase; }
 
 .section-content h2 {
   font-size: clamp(20px, 2vw, 26px);
@@ -147,12 +138,7 @@
   padding: 20px 24px;
   margin: 24px 0;
 }
-.insight-box p {
-  font-size: 14px !important;
-  color: var(--text-primary) !important;
-  line-height: 1.8 !important;
-  margin: 0 !important;
-}
+.insight-box p { font-size: 14px !important; color: var(--text-primary) !important; line-height: 1.8 !important; margin: 0 !important; }
 
 /* ── 판단 리스트 ── */
 .decision-list { list-style: none; margin: 24px 0 0; }
@@ -188,26 +174,11 @@
 .decision-tag.why  { background: rgba(20,18,16,0.07); color: var(--text-secondary); border: 1px solid var(--border-hover); }
 
 /* ── 이미지 블록 ── */
-.img-full {
-  width: 100%;
-  margin: 32px 0 8px;
-  border-radius: 6px;
-  overflow: hidden;
-  background: var(--bg3);
-  border: 0.5px solid var(--border);
-}
+.img-full { width: 100%; margin: 32px 0 8px; border-radius: 6px; overflow: hidden; background: var(--bg3); border: 0.5px solid var(--border); }
 .img-full img { width: 100%; height: auto; display: block; }
 .img-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 32px 0 8px; }
 .img-2col .img-full { margin: 0; }
-.img-caption {
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  color: var(--text-muted);
-  text-align: center;
-  margin-bottom: 24px;
-  display: block;
-  text-transform: uppercase;
-}
+.img-caption { font-size: 11px; letter-spacing: 0.1em; color: var(--text-muted); text-align: center; margin-bottom: 24px; display: block; text-transform: uppercase; }
 
 .img-placeholder {
   width: 100%;
@@ -284,7 +255,6 @@
 }
 .work-nav-link:hover { opacity: 0.6; }
 
-/* 화살표 — 크고 prominent */
 .work-nav-link-arrow {
   font-size: 22px;
   font-weight: 300;
@@ -292,8 +262,6 @@
   line-height: 1;
   display: block;
 }
-
-/* 타이틀 — 작고 muted */
 .work-nav-link-title {
   font-size: 11px;
   letter-spacing: 0.06em;
@@ -301,11 +269,7 @@
   line-height: 1.5;
   font-weight: 400;
 }
-
-.work-nav-link.next {
-  text-align: right;
-  align-items: flex-end;
-}
+.work-nav-link.next { text-align: right; align-items: flex-end; }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 1024px) {
@@ -315,6 +279,9 @@
   .work-meta-item:nth-child(3) { padding-left: 0; }
 }
 @media (max-width: 768px) {
+  /* 모바일: nav-h-mobile 기준으로 padding-top */
+  .work-page { padding-top: var(--nav-h-mobile); }
+
   .work-cover { height: auto; aspect-ratio: 16 / 9; }
   .work-intro, .work-meta-bar, .work-body, .work-nav-bottom { padding-left: 24px; padding-right: 24px; }
   .work-intro { padding-top: 48px; }
