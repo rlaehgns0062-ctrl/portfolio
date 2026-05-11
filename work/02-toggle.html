@@ -10,12 +10,10 @@
   <style>
     * { font-family: 'Pretendard', sans-serif !important; }
 
-    /* 커버 오버레이 — 딤 완전 제거 */
-    .work-cover-overlay {
-      display: none !important;
-    }
+    /* 커버 오버레이 제거 */
+    .work-cover-overlay { display: none !important; }
 
-    /* 커버 — 모바일에서 aspect-ratio로 비율 유지 */
+    /* 커버 모바일 비율 */
     @media (max-width: 768px) {
       .work-cover {
         height: auto !important;
@@ -24,61 +22,38 @@
     }
 
     /* 메타 바 */
-    .work-meta-bar {
-      border-top: none !important;
-      border-bottom: none !important;
-    }
+    .work-meta-bar { border-top: none !important; border-bottom: none !important; }
     .work-meta-item {
       padding: 32px 24px 32px 24px !important;
       border-top: 0.5px solid rgba(20,18,16,0.1) !important;
       border-bottom: 0.5px solid rgba(20,18,16,0.1) !important;
       border-right: 0.5px solid rgba(20,18,16,0.1) !important;
     }
-    .work-meta-item:first-child {
-      padding-left: 0 !important;
-    }
-    .work-meta-item:last-child {
-      border-right: none !important;
-    }
-    .work-meta-label {
-      margin-bottom: 12px !important;
-      padding-top: 0 !important;
-    }
+    .work-meta-item:first-child { padding-left: 0 !important; }
+    .work-meta-item:last-child { border-right: none !important; }
+    .work-meta-label { margin-bottom: 12px !important; padding-top: 0 !important; }
 
-    /* 메타 바 모바일 */
     @media (max-width: 768px) {
-      .work-meta-bar {
-        grid-template-columns: 1fr 1fr !important;
-        padding: 0 24px !important;
-      }
-      .work-meta-item {
-        padding: 24px 16px 24px 16px !important;
-        border-right: 0.5px solid rgba(20,18,16,0.1) !important;
-      }
-      .work-meta-item:first-child {
-        padding-left: 16px !important;
-      }
-      .work-meta-item:nth-child(2) {
-        border-right: none !important;
-      }
-      .work-meta-item:nth-child(3) {
-        border-top: none !important;
-      }
-      .work-meta-item:nth-child(4) {
-        border-top: none !important;
-        border-right: none !important;
-      }
+      .work-meta-bar { grid-template-columns: 1fr 1fr !important; padding: 0 24px !important; }
+      .work-meta-item { padding: 24px 16px !important; border-right: 0.5px solid rgba(20,18,16,0.1) !important; }
+      .work-meta-item:first-child { padding-left: 16px !important; }
+      .work-meta-item:nth-child(2) { border-right: none !important; }
+      .work-meta-item:nth-child(3) { border-top: none !important; }
+      .work-meta-item:nth-child(4) { border-top: none !important; border-right: none !important; }
     }
   </style>
 </head>
 <body>
 
   <nav>
-    <div class="nav-logo"><span>KIM DOHOON</span></div>
+    <!-- 좌측: 백 버튼 -->
+    <a href="../index.html" class="nav-back">←</a>
+    <!-- 중앙: 데스크탑 토글 -->
     <ul class="nav-links">
       <li><a href="../index.html" class="active">Work</a></li>
       <li><a href="../about.html">About</a></li>
     </ul>
+    <!-- 우측: 모바일 토글 + Contact -->
     <div class="nav-right">
       <ul class="nav-links-mobile">
         <li><a href="../index.html" class="active">Work</a></li>
@@ -200,7 +175,7 @@
         </div>
         <div class="section-content">
           <h2>솔루션 — 업무 흐름이 보이는 홈</h2>
-          <p>개선된 홈 화면은 프로젝트 단위로 업무 정보를 재구성해, 사용자가 다른 화면으로 이동하지 않아도 현재 업무 현황을 파악할 수 있도록 설계했습니다. 홈을 단순 검색 화면이 아닌, 업무 흐름을 확인하고 다음 행동으로 이어지는 허브로 전환하는 것이 핵심이었습니다.</p>
+          <p>개선된 홈 화면은 프로젝트 단위로 업무 정보를 재구성해, 사용자가 다른 화면으로 이동하지 않아도 현재 업무 현황을 파악할 수 있도록 설계했습니다.</p>
           <div class="img-placeholder">
             <span class="ph-label">To-be — 칸반 기반 프로젝트 허브 홈 화면</span>
             <span class="ph-note">이미지 준비 중</span>
@@ -222,7 +197,7 @@
               <p>마감일과 진행률을 카드에 직접 노출해, 사용자가 우선순위 판단에 필요한 핵심 정보를 한눈에 확인할 수 있도록 했습니다.</p>
             </div>
           </div>
-          <p>프로젝트 수가 많아질수록 홈 화면의 정보 밀도가 높아질 수 있다고 판단했습니다. 이를 대비해 사용자가 원하는 프로젝트를 빠르게 찾을 수 있도록 정렬과 필터 기준을 분리해 설계했습니다.</p>
+          <p>프로젝트 수가 많아질수록 홈 화면의 정보 밀도가 높아질 수 있다고 판단했습니다. 정렬과 필터 기준을 분리해 설계했습니다.</p>
           <div class="img-placeholder">
             <span class="ph-label">정렬 / 필터 구성안</span>
             <span class="ph-note">이미지 준비 중</span>
@@ -292,11 +267,11 @@
               <span class="retro-col-title">What I'd Do Differently</span>
               <div class="retro-item">
                 <p class="retro-item-title">정보 분류 자동화 설계 필요</p>
-                <p class="retro-item-desc">프로젝트 카드에 정보를 직접 분류하는 방식은 사용자에게 또 다른 관리 부담을 줄 수 있습니다. 이후에는 AI 기반 자동 분류 시스템을 함께 설계해, 사용자 개입 없이 정보가 정리되는 방향까지 확장하고 싶습니다.</p>
+                <p class="retro-item-desc">프로젝트 카드에 정보를 직접 분류하는 방식은 사용자에게 또 다른 관리 부담을 줄 수 있습니다. AI 기반 자동 분류 시스템을 함께 설계했다면 서비스 가치가 더 높아졌을 것입니다.</p>
               </div>
               <div class="retro-item">
                 <p class="retro-item-title">실제 검증 데이터 확보 필요</p>
-                <p class="retro-item-desc">체류시간 6초 이상이라는 Target Metric은 가설 기반 목표였습니다. 프로토타입 테스트나 사용성 검증을 통해 실제 사용 데이터를 확보했다면, 솔루션의 설득력을 더 높일 수 있었을 것입니다.</p>
+                <p class="retro-item-desc">체류시간 6초 이상이라는 Target Metric은 가설 기반 목표였습니다. 프로토타입 테스트를 통해 실제 사용 데이터를 확보했다면 솔루션의 설득력을 더 높일 수 있었을 것입니다.</p>
               </div>
             </div>
           </div>
