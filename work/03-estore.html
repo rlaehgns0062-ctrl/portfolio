@@ -10,9 +10,6 @@
   <style>
     * { font-family: 'Pretendard', sans-serif !important; }
     .work-cover-overlay { display: none !important; }
-    @media (max-width: 768px) {
-      .work-cover { height: auto !important; aspect-ratio: 16 / 9 !important; }
-    }
     .work-meta-bar { border-top: none !important; border-bottom: none !important; }
     .work-meta-item {
       padding: 32px 24px 32px 24px !important;
@@ -22,7 +19,7 @@
     }
     .work-meta-item:first-child { padding-left: 0 !important; }
     .work-meta-item:last-child { border-right: none !important; }
-    .work-meta-label { margin-bottom: 12px !important; padding-top: 0 !important; }
+    .work-meta-label { margin-bottom: 12px !important; }
     @media (max-width: 768px) {
       .work-meta-bar { grid-template-columns: 1fr 1fr !important; padding: 0 24px !important; }
       .work-meta-item { padding: 24px 16px !important; border-right: 0.5px solid rgba(20,18,16,0.1) !important; }
@@ -239,9 +236,13 @@
 
     </div>
 
+    <!-- 03은 다음 없음, 이전만 -->
     <div class="work-nav-bottom">
-      <a href="../index.html" class="work-nav-link">← All Projects</a>
-      <a href="02-toggle.html" class="work-nav-link">← Toggle SaaS</a>
+      <a href="02-toggle.html" class="work-nav-link prev">
+        <span class="work-nav-link-label">이전 프로젝트</span>
+        <span class="work-nav-link-title">Toggle SaaS 메인화면 리디자인</span>
+      </a>
+      <span></span>
     </div>
 
   </main>

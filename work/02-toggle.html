@@ -9,13 +9,7 @@
   <link rel="stylesheet" href="../css/work.css" />
   <style>
     * { font-family: 'Pretendard', sans-serif !important; }
-
     .work-cover-overlay { display: none !important; }
-
-    @media (max-width: 768px) {
-      .work-cover { height: auto !important; aspect-ratio: 16 / 9 !important; }
-    }
-
     .work-meta-bar { border-top: none !important; border-bottom: none !important; }
     .work-meta-item {
       padding: 32px 24px 32px 24px !important;
@@ -25,8 +19,7 @@
     }
     .work-meta-item:first-child { padding-left: 0 !important; }
     .work-meta-item:last-child { border-right: none !important; }
-    .work-meta-label { margin-bottom: 12px !important; padding-top: 0 !important; }
-
+    .work-meta-label { margin-bottom: 12px !important; }
     @media (max-width: 768px) {
       .work-meta-bar { grid-template-columns: 1fr 1fr !important; padding: 0 24px !important; }
       .work-meta-item { padding: 24px 16px !important; border-right: 0.5px solid rgba(20,18,16,0.1) !important; }
@@ -40,19 +33,15 @@
 <body>
 
   <nav>
-    <!-- 1컬럼: 백 버튼 -->
     <a href="../index.html" class="nav-back">←</a>
-    <!-- 2컬럼: 데스크탑 토글 (중앙) -->
     <ul class="nav-links">
       <li><a href="../index.html" class="active">Work</a></li>
       <li><a href="../about.html">About</a></li>
     </ul>
-    <!-- 2컬럼: 모바일 토글 (중앙, nav-right 밖 독립) -->
     <ul class="nav-links-mobile">
       <li><a href="../index.html" class="active">Work</a></li>
       <li><a href="../about.html">About</a></li>
     </ul>
-    <!-- 3컬럼: contact -->
     <div class="nav-right">
       <a href="mailto:rlaehgns0062@gmail.com" class="nav-cta">Contact</a>
     </div>
@@ -221,7 +210,7 @@
             <div class="result-item">
               <span class="result-label">홈 구조 전환</span>
               <span class="result-val">Hub</span>
-              <span class="result-desc">검색 중심의 진입 화면을 프로젝트 단위 업무 허브로 재구성해, 홈에서 업무 현황을 파악할 수 있는 구조로 전환했습니다.</span>
+              <span class="result-desc">검색 중심의 진입 화면을 프로젝트 단위 업무 허브로 재구성했습니다.</span>
             </div>
             <div class="result-item">
               <span class="result-label">비즈니스 목표 연결</span>
@@ -275,9 +264,16 @@
 
     </div>
 
+    <!-- 02는 이전/다음 모두 있음 -->
     <div class="work-nav-bottom">
-      <a href="../index.html" class="work-nav-link">← All Projects</a>
-      <a href="03-estore.html" class="work-nav-link">Next — E-STORE 36.5 →</a>
+      <a href="01-finance.html" class="work-nav-link prev">
+        <span class="work-nav-link-label">이전 프로젝트</span>
+        <span class="work-nav-link-title">국내 1위 MTS앱 신규 퇴직연금 기능 구축</span>
+      </a>
+      <a href="03-estore.html" class="work-nav-link next">
+        <span class="work-nav-link-label">다음 프로젝트</span>
+        <span class="work-nav-link-title">E-STORE 36.5 차세대 판로 플랫폼 개선</span>
+      </a>
     </div>
 
   </main>

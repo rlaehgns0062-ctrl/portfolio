@@ -10,27 +10,6 @@
   <style>
     * { font-family: 'Pretendard', sans-serif !important; }
     .work-cover-overlay { display: none !important; }
-    @media (max-width: 768px) {
-      .work-cover { height: auto !important; aspect-ratio: 16 / 9 !important; }
-    }
-    .work-meta-bar { border-top: none !important; border-bottom: none !important; }
-    .work-meta-item {
-      padding: 32px 24px 32px 24px !important;
-      border-top: 0.5px solid rgba(20,18,16,0.1) !important;
-      border-bottom: 0.5px solid rgba(20,18,16,0.1) !important;
-      border-right: 0.5px solid rgba(20,18,16,0.1) !important;
-    }
-    .work-meta-item:first-child { padding-left: 0 !important; }
-    .work-meta-item:last-child { border-right: none !important; }
-    .work-meta-label { margin-bottom: 12px !important; padding-top: 0 !important; }
-    @media (max-width: 768px) {
-      .work-meta-bar { grid-template-columns: 1fr 1fr !important; padding: 0 24px !important; }
-      .work-meta-item { padding: 24px 16px !important; border-right: 0.5px solid rgba(20,18,16,0.1) !important; }
-      .work-meta-item:first-child { padding-left: 16px !important; }
-      .work-meta-item:nth-child(2) { border-right: none !important; }
-      .work-meta-item:nth-child(3) { border-top: none !important; }
-      .work-meta-item:nth-child(4) { border-top: none !important; border-right: none !important; }
-    }
   </style>
 </head>
 <body>
@@ -153,13 +132,9 @@
         </div>
         <div class="section-content">
           <h2>주요 개선 화면</h2>
-
           <div class="insight-box">
             <p>🔒 본 프로젝트는 미출시 서비스로, As-is 화면 및 일부 To-be 상세 화면은 NDA에 의해 공개가 제한됩니다.</p>
           </div>
-
-          <h3 style="font-size:16px; font-weight:600; margin: 32px 0 12px; color: var(--text-primary);">복잡한 정보를 더 쉽게 볼 수 있게</h3>
-          <p>Type 1 가이드 적용으로 상품 정보를 정보 계층과 컬러 계층으로 정리, 사용자가 핵심을 빠르게 파악할 수 있도록 개선했습니다.</p>
           <div class="point-grid">
             <div class="point-card">
               <span class="point-card-label">일관된 디자인 기준</span>
@@ -177,8 +152,6 @@
               <p>AI 프롬프트 엔지니어링으로 외주 없이 브랜드 일관성 유지</p>
             </div>
           </div>
-
-          <h3 style="font-size:16px; font-weight:600; margin: 32px 0 12px; color: var(--text-primary);">라이트 / 다크 모드 토큰화</h3>
           <p>1,800페이지 이상의 대규모 화면 작업에서 Figma Variables와 토큰화를 활용해 라이트·다크 모드를 효율적으로 구축하고, 유지보수성을 극대화했습니다.</p>
           <div class="point-grid">
             <div class="point-card">
@@ -267,9 +240,13 @@
 
     </div>
 
+    <!-- 01은 이전 없음, 다음만 -->
     <div class="work-nav-bottom">
-      <a href="../index.html" class="work-nav-link">← All Projects</a>
-      <a href="02-toggle.html" class="work-nav-link">Next — Toggle SaaS →</a>
+      <span></span>
+      <a href="02-toggle.html" class="work-nav-link next">
+        <span class="work-nav-link-label">다음 프로젝트</span>
+        <span class="work-nav-link-title">Toggle SaaS 메인화면 리디자인</span>
+      </a>
     </div>
 
   </main>
