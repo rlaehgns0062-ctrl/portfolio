@@ -71,8 +71,9 @@ nav {
   padding: 20px 48px;
   height: var(--nav-h);
   background: rgba(245, 242, 236, 0.92);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: rgba(245, 242, 236, 1);
+backdrop-filter: none;
+-webkit-backdrop-filter: none;
   border-bottom: 0.5px solid var(--border);
   transition: border-color 0.3s;
 }
