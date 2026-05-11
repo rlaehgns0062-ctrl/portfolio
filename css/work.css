@@ -209,7 +209,6 @@
   text-transform: uppercase;
 }
 
-/* NDA 플레이스홀더 */
 .img-placeholder {
   width: 100%;
   background: var(--bg3);
@@ -265,39 +264,48 @@
 .retro-item-title { font-size: 14px; font-weight: 600; color: var(--text-primary); margin-bottom: 8px; letter-spacing: -0.01em; }
 .retro-item-desc { font-size: 13px; color: var(--text-muted); line-height: 1.75; font-weight: 400; }
 
-/* ── 하단 네비게이션 — 좌우 양끝 정렬 ── */
+/* ── 하단 네비게이션 ── */
 .work-nav-bottom {
   padding: 48px 80px;
   border-top: 0.5px solid var(--border);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 24px;
 }
 
-/* 이전/다음 링크 */
 .work-nav-link {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 8px;
   text-decoration: none;
   transition: opacity 0.2s;
+  max-width: 40%;
 }
-.work-nav-link:hover { opacity: 0.7; }
-.work-nav-link-label {
-  font-size: 10px;
-  letter-spacing: 0.18em;
-  color: var(--text-muted);
-  text-transform: uppercase;
-}
-.work-nav-link-title {
-  font-size: 14px;
-  font-weight: 500;
+.work-nav-link:hover { opacity: 0.6; }
+
+/* 화살표 — 크고 prominent */
+.work-nav-link-arrow {
+  font-size: 22px;
+  font-weight: 300;
   color: var(--text-primary);
-  letter-spacing: -0.01em;
+  line-height: 1;
+  display: block;
 }
-.work-nav-link.prev .work-nav-link-title::before { content: '← '; }
-.work-nav-link.next .work-nav-link-title::after  { content: ' →'; }
-.work-nav-link.next { text-align: right; }
+
+/* 타이틀 — 작고 muted */
+.work-nav-link-title {
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.work-nav-link.next {
+  text-align: right;
+  align-items: flex-end;
+}
 
 /* ── RESPONSIVE ── */
 @media (max-width: 1024px) {
@@ -319,5 +327,8 @@
   .point-grid, .result-grid { grid-template-columns: 1fr; }
   .retro-grid { grid-template-columns: 1fr; gap: 32px; }
   .img-2col { grid-template-columns: 1fr; }
-  .work-nav-bottom { padding: 36px 24px; }
+  .work-nav-bottom { padding: 36px 24px; gap: 16px; }
+  .work-nav-link { max-width: 45%; }
+  .work-nav-link-arrow { font-size: 20px; }
+  .work-nav-link-title { font-size: 10px; }
 }
