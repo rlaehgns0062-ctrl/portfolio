@@ -10,6 +10,11 @@
   <style>
     * { font-family: 'Pretendard', sans-serif !important; }
 
+    /* 커버 오버레이 — 딤 완전 제거 */
+    .work-cover-overlay {
+      display: none !important;
+    }
+
     /* 커버 — 모바일에서 aspect-ratio로 비율 유지 */
     @media (max-width: 768px) {
       .work-cover {
@@ -69,13 +74,11 @@
 <body>
 
   <nav>
-    <div class="nav-logo"><span>KIM DOHOON</span>&nbsp;/&nbsp;PRODUCT DESIGNER</div>
-    <!-- 데스크탑 토글 (중앙) -->
+    <div class="nav-logo"><span>KIM DOHOON</span></div>
     <ul class="nav-links">
-      <li><a href="../index.html">Work</a></li>
+      <li><a href="../index.html" class="active">Work</a></li>
       <li><a href="../about.html">About</a></li>
     </ul>
-    <!-- 오른쪽: 모바일 토글 + Contact -->
     <div class="nav-right">
       <ul class="nav-links-mobile">
         <li><a href="../index.html" class="active">Work</a></li>
