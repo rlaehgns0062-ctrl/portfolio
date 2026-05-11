@@ -91,7 +91,28 @@ nav {
 }
 .nav-logo span { color: var(--text-primary); }
 
-/* 데스크탑 토글 pill — 중앙 */
+/* 백 버튼 — 상세 페이지 전용 */
+.nav-back {
+  justify-self: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 0.5px solid var(--border-hover);
+  color: var(--text-secondary);
+  font-size: 18px;
+  transition: all 0.2s;
+  background: transparent;
+}
+.nav-back:hover {
+  color: var(--text-primary);
+  border-color: var(--text-primary);
+  background: rgba(20, 18, 16, 0.04);
+}
+
+/* 데스크탑 토글 pill */
 .nav-links {
   justify-self: center;
   display: flex;
@@ -129,17 +150,15 @@ nav {
 .nav-links li a:hover { color: var(--text-secondary); }
 .nav-links li a.active { color: var(--text-primary); }
 
-/* nav-right — 데스크탑: Contact만 오른쪽에 */
+/* 모바일 토글 — 데스크탑에서 숨김 */
+.nav-links-mobile { display: none; }
+
+/* nav-right */
 .nav-right {
   justify-self: end;
   display: flex;
   align-items: center;
   gap: 8px;
-}
-
-/* 모바일 토글 — 데스크탑에서 숨김 */
-.nav-links-mobile {
-  display: none;
 }
 
 /* Contact 버튼 */
@@ -224,28 +243,26 @@ footer {
 @media (max-width: 768px) {
   nav {
     padding: 14px 20px;
-    /* 모바일: 로고 왼쪽 / nav-right 오른쪽 */
-    grid-template-columns: 1fr auto;
+    /* 모바일: 로고/백버튼 왼쪽 | 토글 중앙 | contact 오른쪽 */
+    grid-template-columns: 1fr auto 1fr;
   }
   .nav-logo {
     font-size: 10px;
     letter-spacing: 0.1em;
     line-height: 1.5;
+    justify-self: start;
   }
-  /* 데스크탑 토글 숨김 */
-  .nav-links {
-    display: none;
+  .nav-back {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+    justify-self: start;
   }
-  /* nav-right 오른쪽 정렬 */
-  .nav-right {
-    justify-self: end;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  /* 모바일 토글 표시 */
+  /* 데스크탑 토글 숨기고 모바일 토글 중앙에 표시 */
+  .nav-links { display: none; }
   .nav-links-mobile {
     display: flex;
+    justify-self: center;
     list-style: none;
     gap: 0;
     background: rgba(20, 18, 16, 0.05);
@@ -266,6 +283,10 @@ footer {
   .nav-links-mobile li a.active {
     color: var(--text-primary);
     background: rgba(20, 18, 16, 0.09);
+  }
+  /* nav-right: contact만 오른쪽 */
+  .nav-right {
+    justify-self: end;
   }
   .nav-cta {
     font-size: 10px;
