@@ -4,30 +4,70 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>E-STORE 36.5 차세대 판로 플랫폼 개선 — Kim Dohoon</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="../css/work.css" />
+  <style>
+    * { font-family: 'Pretendard', sans-serif !important; }
+    .work-cover-overlay { display: none !important; }
+    @media (max-width: 768px) {
+      .work-cover { height: auto !important; aspect-ratio: 16 / 9 !important; }
+    }
+    .work-meta-bar { border-top: none !important; border-bottom: none !important; }
+    .work-meta-item {
+      padding: 32px 24px 32px 24px !important;
+      border-top: 0.5px solid rgba(20,18,16,0.1) !important;
+      border-bottom: 0.5px solid rgba(20,18,16,0.1) !important;
+      border-right: 0.5px solid rgba(20,18,16,0.1) !important;
+    }
+    .work-meta-item:first-child { padding-left: 0 !important; }
+    .work-meta-item:last-child { border-right: none !important; }
+    .work-meta-label { margin-bottom: 12px !important; padding-top: 0 !important; }
+    @media (max-width: 768px) {
+      .work-meta-bar { grid-template-columns: 1fr 1fr !important; padding: 0 24px !important; }
+      .work-meta-item { padding: 24px 16px !important; border-right: 0.5px solid rgba(20,18,16,0.1) !important; }
+      .work-meta-item:first-child { padding-left: 16px !important; }
+      .work-meta-item:nth-child(2) { border-right: none !important; }
+      .work-meta-item:nth-child(3) { border-top: none !important; }
+      .work-meta-item:nth-child(4) { border-top: none !important; border-right: none !important; }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav class="nav">
-    <a href="../index.html" class="nav-logo">KIM DOHOON / PRODUCT DESIGNER</a>
+  <nav>
+    <a href="../index.html" class="nav-back">←</a>
     <ul class="nav-links">
-      <li><a href="../index.html">Work</a></li>
+      <li><a href="../index.html" class="active">Work</a></li>
       <li><a href="../about.html">About</a></li>
     </ul>
-    <a href="mailto:rlaehgns0062@gmail.com" class="nav-contact">Contact</a>
+    <ul class="nav-links-mobile">
+      <li><a href="../index.html" class="active">Work</a></li>
+      <li><a href="../about.html">About</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="mailto:rlaehgns0062@gmail.com" class="nav-cta">Contact</a>
+    </div>
   </nav>
 
-  <!-- HERO -->
-  <section class="work-hero">
-    <div class="work-hero-label">03 / Product Design</div>
-    <h1 class="work-hero-title">E-STORE 36.5<br>차세대 판로 플랫폼 개선</h1>
-    <p class="work-hero-desc">
-      노후화된 공공 커머스 플랫폼, 탐색부터 구매까지 전면 재설계.<br>
-      정보구조 문제 발견 및 메인 플로우 재설계 리딩. QA 프로세스 주도를 통해 출시 전 결함 수정 및 품질 관리.
-    </p>
-    <div class="work-meta">
+  <main class="work-page page-enter">
+
+    <div class="work-cover">
+      <img src="../assets/thumb-03.png" alt="E-STORE 36.5 차세대 판로 플랫폼 개선" />
+      <div class="work-cover-overlay"></div>
+    </div>
+
+    <div class="work-intro">
+      <span class="work-intro-label">03 — Product Design · 2024</span>
+      <h1 class="work-intro-title">E-STORE 36.5</h1>
+      <span class="work-intro-sub">차세대 판로 플랫폼 개선</span>
+      <p class="work-intro-desc">
+        노후화된 공공 커머스 플랫폼, 탐색부터 구매까지 전면 재설계.
+        정보구조 문제 발견 및 메인 플로우 재설계 리딩. QA 프로세스 주도를 통해 출시 전 결함 수정 및 품질 관리.
+      </p>
+    </div>
+
+    <div class="work-meta-bar">
       <div class="work-meta-item">
         <span class="work-meta-label">Role</span>
         <span class="work-meta-value">Design PL<br>(UI·UX 디자인, PC·MO 디자인 시스템 구축, UX 기획 일부 주도)</span>
@@ -45,216 +85,170 @@
         <span class="work-meta-value">Figma</span>
       </div>
     </div>
-  </section>
 
-  <!-- 01 CONTEXT -->
-  <section class="work-section">
-    <div class="section-index">01 — Context</div>
-    <h2 class="section-title">왜 이 프로젝트를 했는가</h2>
-    <p class="section-body">
-      E-Store 36.5는 사회적경제 상품을 판매하는 공공 커머스 플랫폼으로, 약 40억원의 예산이 투입하여 접속자 107만 5,866명,
-      구매회원 23,586명, 입점기업 2,756개, 등록상품 42,421개 규모의 플랫폼입니다.<br><br>
-      입점업체의 66.8%가 매출 0원을 기록하며 플랫폼이 제 역할을 하지 못한다는 지적이 이어졌습니다.
-      노후화된 UI와 반응형 미지원, 복잡한 탐색 구조가 복합적으로 작용하며 사용자 이탈을 유발하고 있었고,
-      이를 해결하기 위한 차세대 개편의 일환으로 UI/UX 전면 재설계가 시작됐습니다.
-    </p>
-  </section>
+    <div class="work-body">
 
-  <!-- 02 PROBLEM -->
-  <section class="work-section">
-    <div class="section-index">02 — Problem</div>
-    <h2 class="section-title">문제의 크기</h2>
-
-    <div class="card-grid-3">
-      <div class="card dark">
-        <div class="card-label">Target User</div>
-        <p>E-Store 36.5를 통해 사회적경제 상품을 구매하는 일반 소비자 및 공공기관 구매 담당자.<br><br>
-        모바일 환경에서도 자주 접속하지만 반응형이 지원되지 않아 불편함을 겪고 있으며, 복잡한 탐색 구조로 원하는 상품을 찾기 어려운 사용자</p>
-        <div class="card-number">01</div>
-      </div>
-      <div class="card dark">
-        <div class="card-label">Problems</div>
-        <p><strong class="accent">비효율적인 탐색 구조</strong><br>
-        복잡한 GNB와 카테고리로 원하는 상품 탐색 시 이탈 가능성 높음</p>
-        <br>
-        <p><strong class="accent">구매 전환 저하</strong><br>
-        상품 상세부터 결제까지 이어지는 플로우의 정보 과부하로 구매 완료율 저하</p>
-        <br>
-        <p><strong class="accent">반응형 미지원</strong><br>
-        모바일 사용자가 PC 화면을 그대로 접속하는 구조로 사용성 심각하게 저하</p>
-        <div class="card-number">02</div>
-      </div>
-      <div class="card dark">
-        <div class="card-label">Target Metric</div>
-        <p>상품 중심의 구조 재설계를 통한 탐색 이탈 감소, 구매 플로우 간소화를 통한 전환 흐름 개선, PC·MO 반응형 구축을 통한 모바일 사용성 확보를 핵심 목표로 설정</p>
-        <div class="card-number">03</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 03 DECISION -->
-  <section class="work-section">
-    <div class="section-index">03 — Decision</div>
-    <h2 class="section-title">무엇을 하고, 무엇을 하지 않았는가</h2>
-
-    <div class="decision-block">
-      <p class="section-body">
-        핵심 판단은 재설계의 방향을 <strong>'공공 플랫폼의 신뢰성'과 '커머스의 전환율'</strong> 두 가지를 동시에 잡는 것이었습니다.
-        공공기관 플랫폼 특성상 기업의 사회적 가치를 전달하면서도 방문자가 자연스럽게 구매로 이어지는 경험을 설계하는 것이 핵심 과제였습니다.
-      </p>
-      <div class="decision-list">
-        <div class="decision-item">
-          <span class="decision-tag do">한 것</span>
-          <p>상품 중심의 홈 재설계, 카테고리·검색 탐색 구조 개선, 구매 플로우 정보 계층 재정립, PC·MO 디자인 시스템 동시 구축. 탐색부터 결제까지 흐름을 재설계해 가치 전달과 구매 전환이라는 두 목표를 동시에 달성</p>
+      <div class="work-section">
+        <div class="section-sticky">
+          <span class="section-num">01</span>
+          <span class="section-label">Context</span>
         </div>
-        <div class="decision-item">
-          <span class="decision-tag dont">하지 않은 것</span>
-          <p>화려한 비주얼 변화보다 명확한 구조와 여백 중심의 설계로 사용 편의성 확보에 집중. 불필요한 정보 레이어 제거</p>
-        </div>
-        <div class="decision-item">
-          <span class="decision-tag basis">기준</span>
-          <p>주 방문층인 40대 이상 사용자가 어렵지 않게 사용할 수 있도록 정보 계층과 레이아웃 밀도를 조정. 사용자 편의성과 플랫폼 신뢰도를 동시에 확보</p>
+        <div class="section-content">
+          <h2>왜 이 프로젝트를 했는가</h2>
+          <p>E-Store 36.5는 사회적경제 상품을 판매하는 공공 커머스 플랫폼으로, 약 40억원의 예산이 투입되어 접속자 107만 5,866명, 구매회원 23,586명, 입점기업 2,756개, 등록상품 42,421개 규모의 플랫폼입니다.</p>
+          <p>입점업체의 66.8%가 매출 0원을 기록하며 플랫폼이 제 역할을 하지 못한다는 지적이 이어졌습니다. 노후화된 UI와 반응형 미지원, 복잡한 탐색 구조가 복합적으로 작용하며 사용자 이탈을 유발하고 있었고, 이를 해결하기 위한 차세대 개편의 일환으로 UI/UX 전면 재설계가 시작됐습니다.</p>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- 04 DESIGN -->
-  <section class="work-section">
-    <div class="section-index">04 — Design</div>
-    <h2 class="section-title">주요 개선 화면</h2>
-
-    <div class="tobe-block">
-      <h3 class="tobe-subtitle">To-Be : 홈 화면 재설계</h3>
-      <p class="section-body">
-        기존 배너 중심의 홈에서 상품 중심 구조로 전환하여,
-        사용자가 진입 즉시 원하는 상품 카테고리로 진입할 수 있도록 재설계했습니다.
-      </p>
-      <div class="point-grid">
-        <div class="point-card">
-          <div class="point-title">상품 중심 홈 재설계</div>
-          <p>배너 중심 → 상품·카테고리 중심 구조로 전환해 탐색 이탈 감소</p>
+      <div class="work-section">
+        <div class="section-sticky">
+          <span class="section-num">02</span>
+          <span class="section-label">Problem</span>
         </div>
-        <div class="point-card">
-          <div class="point-title">GNB 구조 단순화</div>
-          <p>복잡한 카테고리 뎁스를 줄이고 핵심 진입점 중심으로 재편</p>
-        </div>
-        <div class="point-card">
-          <div class="point-title">사회적 가치 전달</div>
-          <p>공공 플랫폼 특성에 맞게 기업 스토리와 상품을 자연스럽게 연결</p>
+        <div class="section-content">
+          <h2>문제의 크기</h2>
+          <ul class="decision-list">
+            <li>
+              <span class="decision-tag dont">문제 1</span>
+              <div><strong>비효율적인 탐색 구조</strong> — 복잡한 GNB와 카테고리로 원하는 상품 탐색 시 이탈 가능성 높음</div>
+            </li>
+            <li>
+              <span class="decision-tag dont">문제 2</span>
+              <div><strong>구매 전환 저하</strong> — 상품 상세부터 결제까지 이어지는 플로우의 정보 과부하로 구매 완료율 저하</div>
+            </li>
+            <li>
+              <span class="decision-tag dont">문제 3</span>
+              <div><strong>반응형 미지원</strong> — 모바일 사용자가 PC 화면을 그대로 접속하는 구조로 사용성 심각하게 저하</div>
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
 
-    <div class="tobe-block">
-      <h3 class="tobe-subtitle">To-Be : PC·MO 반응형 디자인 시스템</h3>
-      <p class="section-body">
-        기존 화면을 새로운 컴포넌트로 전환하는 과정에서 단순 제작에 그치지 않고,
-        이후 운영에서 누구나 참고할 수 있는 재사용 가능한 가이드 구축을 목표로 했습니다.
-      </p>
-      <div class="point-grid">
-        <div class="point-card">
-          <div class="point-title">PC·MO 파운데이션 분리</div>
-          <p>PC와 모바일 환경을 단일 시스템으로 운영하면 기기별 사용성 차이가 발생. 파운데이션을 분리해 각 환경에 맞는 컴포넌트만 사용하도록 제한, 기기별 최적화된 경험 확보</p>
+      <div class="work-section">
+        <div class="section-sticky">
+          <span class="section-num">03</span>
+          <span class="section-label">Decision</span>
         </div>
-        <div class="point-card">
-          <div class="point-title">재사용 가능한 컴포넌트 구축</div>
-          <p>매번 새로 만드는 방식은 일관성을 깨고 운영 비용을 높임. 반복 사용되는 UI 패턴을 컴포넌트화해 어떤 화면에서도 동일한 기준으로 조합 가능한 구조 구축</p>
-        </div>
-        <div class="point-card">
-          <div class="point-title">레이아웃 가이드 제작</div>
-          <p>서브 페이지 유형을 분석해 어떤 레이아웃을 사용하면 되는지 가이드 제작. 이후 운영에서 디자이너가 가이드를 참고해 빠르게 화면을 구성할 수 있는 기반 마련</p>
+        <div class="section-content">
+          <h2>무엇을 하고, 무엇을 하지 않았는가</h2>
+          <p>핵심 판단은 재설계의 방향을 <strong>'공공 플랫폼의 신뢰성'과 '커머스의 전환율'</strong> 두 가지를 동시에 잡는 것이었습니다.</p>
+          <ul class="decision-list">
+            <li>
+              <span class="decision-tag do">한 것</span>
+              <div>상품 중심의 홈 재설계, 카테고리·검색 탐색 구조 개선, 구매 플로우 정보 계층 재정립, PC·MO 디자인 시스템 동시 구축</div>
+            </li>
+            <li>
+              <span class="decision-tag dont">하지 않은 것</span>
+              <div>화려한 비주얼 변화보다 명확한 구조와 여백 중심의 설계로 사용 편의성 확보에 집중. 불필요한 정보 레이어 제거</div>
+            </li>
+            <li>
+              <span class="decision-tag why">기준</span>
+              <div>주 방문층인 40대 이상 사용자가 어렵지 않게 사용할 수 있도록 정보 계층과 레이아웃 밀도를 조정</div>
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
 
-    <div class="tobe-block">
-      <h3 class="tobe-subtitle">QA 프로세스 주도</h3>
-      <p class="section-body">
-        디자인 완료 후 퍼블리싱 단계에서 QA 프로세스를 주도하여 출시 전 결함을 수정하고 품질을 관리했습니다.
-        모바일부터 디자인 시스템까지 전 프로세스를 혼자 판단하고 결정해야 하는 순간이 많았습니다.
-      </p>
-    </div>
-  </section>
-
-  <!-- 05 RESULT -->
-  <section class="work-section">
-    <div class="section-index">05 — Result</div>
-    <h2 class="section-title">성과</h2>
-    <div class="result-grid">
-      <div class="result-card">
-        <div class="result-metric">PC·MO</div>
-        <div class="result-label">반응형 구축</div>
-        <p>기기별 파운데이션 분리로 최적화된 경험 확보</p>
-      </div>
-      <div class="result-card">
-        <div class="result-metric">전면</div>
-        <div class="result-label">구조 재설계</div>
-        <p>탐색부터 구매까지 메인 플로우 리딩</p>
-      </div>
-      <div class="result-card">
-        <div class="result-metric">QA</div>
-        <div class="result-label">품질 관리 주도</div>
-        <p>출시 전 결함 수정 및 품질 기준 수립</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 06 REVIEW -->
-  <section class="work-section">
-    <div class="section-index">06 — Review</div>
-    <h2 class="section-title">회고</h2>
-    <div class="review-grid">
-      <div class="review-col">
-        <h3 class="review-heading">What Changed<br><span>: 성과</span></h3>
-        <div class="review-item">
-          <div class="review-num">01</div>
-          <div>
-            <strong>공공성과 커머스 경험의 균형 설계</strong>
-            <p>공공기관 플랫폼 특성상 기업의 사회적 가치를 전달하면서도 방문자가 자연스럽게 구매로 이어지는 경험을 설계하는 것이 핵심 과제. 탐색부터 결제까지 흐름을 재설계해 가치 전달과 구매 전환이라는 두 목표를 동시에 달성</p>
-          </div>
+      <div class="work-section">
+        <div class="section-sticky">
+          <span class="section-num">04</span>
+          <span class="section-label">Design</span>
         </div>
-        <div class="review-item">
-          <div class="review-num">02</div>
-          <div>
-            <strong>주 사용자층을 고려한 접근성 설계</strong>
-            <p>주 방문층인 40대 이상 사용자가 어렵지 않게 사용할 수 있도록 정보 계층과 레이아웃 밀도를 조정. 화려한 비주얼보다 명확한 구조와 여백 중심의 설계로 사용 편의성 확보</p>
-          </div>
-        </div>
-        <div class="review-item">
-          <div class="review-num">03</div>
-          <div>
-            <strong>운영 가능한 디자인 시스템 구축</strong>
-            <p>단순 화면 제작을 넘어 PC·MO 파운데이션 분리와 레이아웃 가이드 제작으로 이후 운영에서 참고할 수 있는 재사용 가능한 기반 마련. 이 재설계는 이후 플랫폼이 일반 소비자 전용 스토어36.5와 공공기관 전용 가치장터로 분리·확대되는 구조적 기반으로 활용</p>
+        <div class="section-content">
+          <h2>주요 개선 화면</h2>
+          <div class="point-grid">
+            <div class="point-card">
+              <span class="point-card-label">홈 화면 재설계</span>
+              <p class="point-card-title">상품 중심 구조로 전환</p>
+              <p>배너 중심 → 상품·카테고리 중심 구조. GNB 단순화로 핵심 진입점 중심 재편</p>
+            </div>
+            <div class="point-card">
+              <span class="point-card-label">PC·MO 반응형</span>
+              <p class="point-card-title">파운데이션 분리 설계</p>
+              <p>기기별 최적화된 컴포넌트 시스템 구축. 재사용 가능한 레이아웃 가이드 제작</p>
+            </div>
+            <div class="point-card">
+              <span class="point-card-label">QA 프로세스</span>
+              <p class="point-card-title">출시 전 품질 관리 주도</p>
+              <p>퍼블리싱 단계 QA를 직접 주도하여 출시 전 결함 수정 및 품질 기준 수립</p>
+            </div>
           </div>
         </div>
       </div>
-      <div class="review-col">
-        <h3 class="review-heading">What I'd Do Differently<br><span>: 아쉬운 점</span></h3>
-        <div class="review-item">
-          <div class="review-num">01</div>
-          <div>
-            <strong>기획과 디자인 동시 진행의 한계</strong>
-            <p>명확한 기획 없이 화면 기획과 디자인을 동시에 진행하다 보니 프로젝트가 러프하게 흘러간 부분이 있었음. 예산과 인력 배치의 현실적 한계 속에서 빠르게 성장할 수 있었지만, 다양한 관점의 피드백을 충분히 받지 못한 것이 아쉬움으로 남음</p>
+
+      <div class="work-section">
+        <div class="section-sticky">
+          <span class="section-num">05</span>
+          <span class="section-label">Result</span>
+        </div>
+        <div class="section-content">
+          <h2>설계 결과</h2>
+          <div class="result-grid">
+            <div class="result-item">
+              <span class="result-label">반응형 구축</span>
+              <span class="result-val">PC·MO</span>
+              <span class="result-desc">기기별 파운데이션 분리로 최적화된 경험 확보</span>
+            </div>
+            <div class="result-item">
+              <span class="result-label">구조 재설계</span>
+              <span class="result-val">전면</span>
+              <span class="result-desc">탐색부터 구매까지 메인 플로우 리딩</span>
+            </div>
+            <div class="result-item">
+              <span class="result-label">품질 관리 주도</span>
+              <span class="result-val">QA</span>
+              <span class="result-desc">출시 전 결함 수정 및 품질 기준 수립</span>
+            </div>
           </div>
         </div>
-        <div class="review-item review-highlight">
-          <p>모바일부터 디자인 시스템까지 전 프로세스를 주도하며 혼자 판단하고 결정해야 하는 순간이 많았습니다. 그 경험이 더 체계적인 환경에서, 더 다양한 관점과 함께 설계하고 싶다는 동기로 이어졌습니다.</p>
+      </div>
+
+      <div class="work-section">
+        <div class="section-sticky">
+          <span class="section-num">06</span>
+          <span class="section-label">Review</span>
+        </div>
+        <div class="section-content">
+          <h2>배운 점과 개선할 점</h2>
+          <div class="retro-grid">
+            <div>
+              <span class="retro-col-title">What Changed</span>
+              <div class="retro-item">
+                <p class="retro-item-title">공공성과 커머스 경험의 균형 설계</p>
+                <p class="retro-item-desc">공공기관 플랫폼 특성상 기업의 사회적 가치를 전달하면서도 방문자가 자연스럽게 구매로 이어지는 경험을 설계. 탐색부터 결제까지 흐름을 재설계해 가치 전달과 구매 전환이라는 두 목표를 동시에 달성</p>
+              </div>
+              <div class="retro-item">
+                <p class="retro-item-title">운영 가능한 디자인 시스템 구축</p>
+                <p class="retro-item-desc">PC·MO 파운데이션 분리와 레이아웃 가이드 제작으로 이후 운영에서 참고할 수 있는 재사용 가능한 기반 마련. 이 재설계는 이후 플랫폼이 일반 소비자 전용 스토어36.5와 공공기관 전용 가치장터로 분리·확대되는 구조적 기반으로 활용</p>
+              </div>
+            </div>
+            <div>
+              <span class="retro-col-title">What I'd Do Differently</span>
+              <div class="retro-item">
+                <p class="retro-item-title">기획과 디자인 동시 진행의 한계</p>
+                <p class="retro-item-desc">명확한 기획 없이 화면 기획과 디자인을 동시에 진행하다 보니 프로젝트가 러프하게 흘러간 부분이 있었음. 다양한 관점의 피드백을 충분히 받지 못한 것이 아쉬움으로 남음</p>
+              </div>
+              <div class="retro-item">
+                <p class="retro-item-title">더 체계적인 환경에서 설계하고 싶다는 동기</p>
+                <p class="retro-item-desc">모바일부터 디자인 시스템까지 전 프로세스를 혼자 판단하고 결정해야 하는 순간이 많았습니다. 그 경험이 더 체계적인 환경에서, 더 다양한 관점과 함께 설계하고 싶다는 동기로 이어졌습니다.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
     </div>
-  </section>
 
-  <!-- NAV BOTTOM -->
-  <div class="work-nav-bottom">
-    <a href="../index.html" class="work-nav-link">← All Projects</a>
-    <a href="01-finance.html" class="work-nav-link">← 국내 1위 MTS앱</a>
-  </div>
+    <div class="work-nav-bottom">
+      <a href="../index.html" class="work-nav-link">← All Projects</a>
+      <a href="02-toggle.html" class="work-nav-link">← Toggle SaaS</a>
+    </div>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>© 2026 Kim Dohoon · Seoul, Korea</p>
-    <a href="mailto:rlaehgns0062@gmail.com">rlaehgns0062@gmail.com</a>
+  </main>
+
+  <footer>
+    <div class="footer-left">© 2026 Kim Dohoon &nbsp;·&nbsp; Seoul, Korea</div>
+    <a href="mailto:rlaehgns0062@gmail.com" class="footer-mail">rlaehgns0062@gmail.com</a>
   </footer>
 
   <script src="../js/main.js"></script>
