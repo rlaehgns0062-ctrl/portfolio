@@ -10,6 +10,25 @@
   <style>
     * { font-family: 'Pretendard', sans-serif !important; }
     .work-cover-overlay { display: none !important; }
+    .work-meta-bar { border-top: none !important; border-bottom: none !important; }
+    .work-meta-item {
+      padding: 32px 24px 32px 24px !important;
+      border-top: 0.5px solid rgba(20,18,16,0.1) !important;
+      border-bottom: 0.5px solid rgba(20,18,16,0.1) !important;
+      border-right: 0.5px solid rgba(20,18,16,0.1) !important;
+    }
+    .work-meta-item:first-child { padding-left: 0 !important; }
+    .work-meta-item:last-child { border-right: none !important; }
+    .work-meta-label { margin-bottom: 12px !important; }
+    .retro-item-title { font-weight: 700 !important; }
+    @media (max-width: 768px) {
+      .work-meta-bar { grid-template-columns: 1fr 1fr !important; padding: 0 24px !important; }
+      .work-meta-item { padding: 24px 16px !important; border-right: 0.5px solid rgba(20,18,16,0.1) !important; }
+      .work-meta-item:first-child { padding-left: 16px !important; }
+      .work-meta-item:nth-child(2) { border-right: none !important; }
+      .work-meta-item:nth-child(3) { border-top: none !important; }
+      .work-meta-item:nth-child(4) { border-top: none !important; border-right: none !important; }
+    }
   </style>
 </head>
 <body>
@@ -29,10 +48,13 @@
     </div>
   </nav>
 
-  <main class="work-page page-enter">
+  <main class="work-page">
 
     <div class="work-cover">
-      <img src="../assets/thumb-01.png" alt="국내 1위 MTS앱 신규 퇴직연금 기능 구축" />
+      <picture>
+        <source media="(max-width: 768px)" srcset="../assets/thumb-01-mobile.png">
+        <img src="../assets/thumb-01.png" alt="국내 1위 MTS앱 신규 퇴직연금 기능 구축" />
+      </picture>
       <div class="work-cover-overlay"></div>
     </div>
 
@@ -240,14 +262,13 @@
 
     </div>
 
-    <!-- 01은 이전 없음, 다음만 -->
     <div class="work-nav-bottom">
-  <span></span>
-  <a href="02-toggle.html" class="work-nav-link next">
-    <span class="work-nav-link-arrow">→</span>
-    <span class="work-nav-link-title">Toggle SaaS 메인화면 리디자인</span>
-  </a>
-</div>
+      <span></span>
+      <a href="02-toggle.html" class="work-nav-link next">
+        <span class="work-nav-link-arrow">→</span>
+        <span class="work-nav-link-title">Toggle SaaS 메인화면 리디자인</span>
+      </a>
+    </div>
 
   </main>
 

@@ -20,6 +20,7 @@
     .work-meta-item:first-child { padding-left: 0 !important; }
     .work-meta-item:last-child { border-right: none !important; }
     .work-meta-label { margin-bottom: 12px !important; }
+    .retro-item-title { font-weight: 700 !important; }
     @media (max-width: 768px) {
       .work-meta-bar { grid-template-columns: 1fr 1fr !important; padding: 0 24px !important; }
       .work-meta-item { padding: 24px 16px !important; border-right: 0.5px solid rgba(20,18,16,0.1) !important; }
@@ -47,10 +48,13 @@
     </div>
   </nav>
 
-  <main class="work-page page-enter">
+  <main class="work-page">
 
     <div class="work-cover">
-      <img src="../assets/thumb-03.png" alt="E-STORE 36.5 차세대 판로 플랫폼 개선" />
+      <picture>
+        <source media="(max-width: 768px)" srcset="../assets/thumb-03-mobile.png">
+        <img src="../assets/thumb-03.png" alt="E-STORE 36.5 차세대 판로 플랫폼 개선" />
+      </picture>
       <div class="work-cover-overlay"></div>
     </div>
 
@@ -236,14 +240,13 @@
 
     </div>
 
-    <!-- 03은 다음 없음, 이전만 -->
-<div class="work-nav-bottom">
-  <a href="02-toggle.html" class="work-nav-link prev">
-    <span class="work-nav-link-arrow">←</span>
-    <span class="work-nav-link-title">Toggle SaaS 메인화면 리디자인</span>
-  </a>
-  <span></span>
-</div>
+    <div class="work-nav-bottom">
+      <a href="02-toggle.html" class="work-nav-link prev">
+        <span class="work-nav-link-arrow">←</span>
+        <span class="work-nav-link-title">Toggle SaaS 메인화면 리디자인</span>
+      </a>
+      <span></span>
+    </div>
 
   </main>
 

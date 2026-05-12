@@ -20,6 +20,7 @@
     .work-meta-item:first-child { padding-left: 0 !important; }
     .work-meta-item:last-child { border-right: none !important; }
     .work-meta-label { margin-bottom: 12px !important; }
+    .retro-item-title { font-weight: 700 !important; }
     @media (max-width: 768px) {
       .work-meta-bar { grid-template-columns: 1fr 1fr !important; padding: 0 24px !important; }
       .work-meta-item { padding: 24px 16px !important; border-right: 0.5px solid rgba(20,18,16,0.1) !important; }
@@ -50,7 +51,10 @@
   <main class="work-page">
 
     <div class="work-cover">
-      <img src="../assets/thumb-02.png" alt="Toggle SaaS 메인화면 리디자인" />
+      <picture>
+        <source media="(max-width: 768px)" srcset="../assets/thumb-02-mobile.png">
+        <img src="../assets/thumb-02.png" alt="Toggle SaaS 메인화면 리디자인" />
+      </picture>
       <div class="work-cover-overlay"></div>
     </div>
 
