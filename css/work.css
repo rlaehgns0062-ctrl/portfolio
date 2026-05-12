@@ -2,7 +2,6 @@
    work.css — Case Study Layout
    ============================================ */
 
-/* nav 높이만큼 padding-top */
 .work-page { padding-top: var(--nav-h); }
 
 /* ── 커버 이미지 ── */
@@ -43,7 +42,7 @@
   color: var(--text-primary);
   letter-spacing: -0.02em;
   line-height: 1.25;
-  margin-bottom: 8px;
+  margin-bottom: 20px;
 }
 .work-intro-sub {
   font-size: clamp(18px, 2.5vw, 28px);
@@ -121,6 +120,14 @@
   line-height: 1.3;
   margin-bottom: 24px;
 }
+.section-content h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+  margin: 32px 0 10px;
+}
 .section-content p {
   font-size: 14px;
   color: var(--text-secondary);
@@ -178,10 +185,11 @@
 .img-full img { width: 100%; height: auto; display: block; }
 .img-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 32px 0 8px; }
 .img-2col .img-full { margin: 0; }
-.img-caption { font-size: 11px; letter-spacing: 0.1em; color: var(--text-muted); text-align: center; margin-bottom: 24px; display: block; text-transform: uppercase; }
 
+/* 이미지 플레이스홀더 — 16:9 비율 */
 .img-placeholder {
   width: 100%;
+  aspect-ratio: 16 / 9;
   background: var(--bg3);
   border: 0.5px solid var(--border);
   border-radius: 6px;
@@ -190,11 +198,21 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 80px 24px;
-  margin: 32px 0;
+  margin: 32px 0 8px;
 }
 .ph-label { font-size: 10px; letter-spacing: 0.18em; color: var(--text-muted); text-transform: uppercase; }
 .ph-note { font-size: 12px; color: var(--text-muted); opacity: 0.5; }
+
+/* 캡션 — 이미지 아래 */
+.ph-caption {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 24px;
+  display: block;
+}
 
 /* ── 포인트 카드 ── */
 .point-grid {
@@ -244,7 +262,6 @@
   align-items: center;
   gap: 24px;
 }
-
 .work-nav-link {
   display: flex;
   flex-direction: column;
@@ -254,7 +271,6 @@
   max-width: 40%;
 }
 .work-nav-link:hover { opacity: 0.6; }
-
 .work-nav-link-arrow {
   font-size: 22px;
   font-weight: 300;
@@ -279,9 +295,7 @@
   .work-meta-item:nth-child(3) { padding-left: 0; }
 }
 @media (max-width: 768px) {
-  /* 모바일: nav-h-mobile 기준으로 padding-top */
   .work-page { padding-top: var(--nav-h-mobile); }
-
   .work-cover { height: auto; aspect-ratio: 16 / 9; }
   .work-intro, .work-meta-bar, .work-body, .work-nav-bottom { padding-left: 24px; padding-right: 24px; }
   .work-intro { padding-top: 48px; }
