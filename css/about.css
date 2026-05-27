@@ -6,7 +6,7 @@
 ══════════════════════════════ */
 .about-hero {
   display: grid;
-  grid-template-columns: 1fr 400px;
+  grid-template-columns: 1fr 40%;
   min-height: 90vh;
   border-bottom: 0.5px solid var(--border);
   overflow: hidden;
@@ -62,14 +62,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 48px 32px;
   overflow: hidden;
   background: none;
   border: none;
 }
 .about-hero-img img {
-  width: 100%;
-  max-width: 320px;
+  width: 80%;
   height: auto;
   object-fit: contain;
   object-position: center;
