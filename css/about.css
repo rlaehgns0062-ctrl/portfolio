@@ -4,21 +4,20 @@
 /* ── 히어로 헤더 ── */
 .about-header {
   display: grid;
-  grid-template-columns: 1fr 400px;
+  grid-template-columns: 1fr 360px;
   min-height: 88vh;
   border-bottom: 0.5px solid var(--border);
   overflow: hidden;
+  gap: 0;
 }
 
-/* 좌측: 타이틀 + 소개 + 연락처 */
+/* 좌측 */
 .about-header-left {
-  padding: 72px 64px 72px 48px;
+  padding: 72px 80px 72px 48px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-
-.about-header-top {}
 
 .about-page-title {
   font-family: 'Outfit', sans-serif;
@@ -37,15 +36,9 @@
   line-height: 1.8;
   font-weight: 400;
   max-width: 400px;
-  margin-bottom: 0;
 }
 
-/* 소개 + 연락처 — 하단 */
-.about-header-bottom {}
-
-.about-intro-short {
-  margin-bottom: 40px;
-}
+.about-intro-short { margin-bottom: 40px; }
 .about-intro-short p {
   font-size: 14px;
   color: var(--text-secondary);
@@ -54,16 +47,9 @@
   margin-bottom: 16px;
 }
 .about-intro-short p:last-child { margin-bottom: 0; }
-.about-intro-short p strong {
-  color: var(--text-primary);
-  font-weight: 400;
-}
+.about-intro-short p strong { color: var(--text-primary); font-weight: 400; }
 
-.contact-links {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-}
+.contact-links { display: flex; flex-direction: column; }
 .contact-item {
   display: flex;
   justify-content: space-between;
@@ -79,12 +65,12 @@
 .contact-item:first-child { border-top: 0.5px solid var(--border); }
 a.contact-item:hover { color: var(--text-primary); }
 
-/* 우측: 프로필 사진 */
+/* 우측: 프로필 사진 — 배경/보더 없음 */
 .about-profile-img {
   position: relative;
   overflow: hidden;
-  background: var(--bg3);
-  border-left: 0.5px solid var(--border);
+  background: none;
+  border: none;
 }
 .about-profile-img img {
   width: 100%;
@@ -94,7 +80,7 @@ a.contact-item:hover { color: var(--text-primary); }
   display: block;
 }
 
-/* ── 하단 경력/스킬 그리드 ── */
+/* ── 하단 그리드 ── */
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -106,10 +92,7 @@ a.contact-item:hover { color: var(--text-primary); }
 .about-section { margin-bottom: 40px; }
 .section-title { display: block; margin-bottom: 20px; }
 .exp-list { display: flex; flex-direction: column; }
-.exp-item {
-  padding: 14px 0;
-  border-bottom: 0.5px solid var(--border);
-}
+.exp-item { padding: 14px 0; border-bottom: 0.5px solid var(--border); }
 .exp-header {
   display: flex;
   justify-content: space-between;
@@ -121,6 +104,39 @@ a.contact-item:hover { color: var(--text-primary); }
 .exp-role { font-size: 12px; color: var(--text-muted); }
 .skills-grid { display: flex; flex-wrap: wrap; gap: 8px; }
 
+/* ── Tools 아이콘 리스트 ── */
+.tools-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.tool-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 0.5px solid var(--border);
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+.tool-item:first-child { border-top: 0.5px solid var(--border); }
+.tool-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tool-icon img,
+.tool-icon svg {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+.tool-name { font-size: 13px; color: var(--text-primary); }
+.tool-desc { font-size: 12px; color: var(--text-muted); margin-left: auto; }
+
 /* ── 모바일 ── */
 @media (max-width: 768px) {
   .about-header {
@@ -131,8 +147,6 @@ a.contact-item:hover { color: var(--text-primary); }
     order: 1;
     height: 70vw;
     max-height: 360px;
-    border-left: none;
-    border-bottom: 0.5px solid var(--border);
   }
   .about-header-left {
     order: 2;
