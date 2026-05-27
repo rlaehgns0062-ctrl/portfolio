@@ -23,22 +23,8 @@
   z-index: 1;
 }
 
-/* 배경 Hello! — 연한 */
-.about-hero-bg-text {
-  position: absolute;
-  top: 50%;
-  left: 32px;
-  transform: translateY(-60%);
-  font-family: 'Outfit', sans-serif;
-  font-size: clamp(120px, 16vw, 220px);
-  font-weight: 700;
-  color: rgba(20, 18, 16, 0.04);
-  line-height: 1;
-  pointer-events: none;
-  user-select: none;
-  white-space: nowrap;
-  z-index: 0;
-}
+/* 배경 Hello! — 제거 */
+.about-hero-bg-text { display: none; }
 
 /* 타이틀 */
 .about-title {
@@ -49,8 +35,6 @@
   letter-spacing: -0.02em;
   line-height: 1;
   margin: 0 0 10px;
-  position: relative;
-  z-index: 1;
 }
 
 .about-subtitle {
@@ -60,16 +44,9 @@
   letter-spacing: -0.01em;
   margin: 0 0 40px;
   line-height: 1.4;
-  position: relative;
-  z-index: 1;
 }
 
-.about-hero-desc {
-  position: relative;
-  z-index: 1;
-  max-width: 520px;
-}
-
+.about-hero-desc { max-width: 520px; }
 .about-hero-desc p {
   font-size: 14px;
   color: var(--text-secondary);
@@ -80,23 +57,27 @@
 .about-hero-desc p:last-child { margin-bottom: 0; }
 .about-hero-desc p strong { color: var(--text-primary); font-weight: 400; }
 
-/* 우측 이미지 */
+/* 우측 이미지 — 중앙 정렬 */
 .about-hero-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 32px;
   overflow: hidden;
   background: none;
   border: none;
-  position: relative;
 }
 .about-hero-img img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
+  max-width: 320px;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
   display: block;
 }
 
 /* ══════════════════════════════
-   BODY GRID — Experience / Capabilities
+   BODY GRID
 ══════════════════════════════ */
 .about-body {
   display: grid;
@@ -110,10 +91,7 @@
 .about-section { margin-bottom: 48px; }
 .about-section:last-child { margin-bottom: 0; }
 
-.section-title {
-  display: block;
-  margin-bottom: 20px;
-}
+.section-title { display: block; margin-bottom: 20px; }
 
 .exp-list { display: flex; flex-direction: column; }
 .exp-item { padding: 16px 0; border-bottom: 0.5px solid var(--border); }
@@ -161,10 +139,7 @@
   padding: 64px 48px;
   border-bottom: 0.5px solid var(--border);
 }
-.about-contact-label {
-  display: block;
-  margin-bottom: 24px;
-}
+.about-contact-label { display: block; margin-bottom: 24px; }
 .about-contact-row {
   display: flex;
   gap: 48px;
@@ -194,39 +169,33 @@
    RESPONSIVE
 ══════════════════════════════ */
 @media (max-width: 1024px) {
-  .about-hero { grid-template-columns: 1fr 320px; }
+  .about-hero { grid-template-columns: 1fr 300px; }
+  .about-hero-img img { max-width: 260px; }
 }
 
 @media (max-width: 768px) {
-  /* 히어로 */
   .about-hero {
     grid-template-columns: 1fr;
     min-height: auto;
   }
-  .about-hero-bg-text { display: none; }
   .about-hero-img {
     order: 1;
-    height: auto;  /* 비율 유지 */
+    padding: 40px 24px 0;
+    justify-content: flex-start;
   }
   .about-hero-img img {
-    height: auto;
-    object-fit: contain;
-    object-position: center top;
+    max-width: 200px;
   }
   .about-hero-left {
     order: 2;
-    padding: 48px 24px;
+    padding: 40px 24px 48px;
     justify-content: flex-start;
   }
-
-  /* 바디 */
   .about-body {
     grid-template-columns: 1fr;
     gap: 48px;
     padding: 48px 24px;
   }
-
-  /* 컨택 */
   .about-contact { padding: 48px 24px; }
   .about-contact-row { flex-direction: column; gap: 24px; }
 }
