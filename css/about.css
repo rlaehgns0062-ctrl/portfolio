@@ -1,30 +1,33 @@
 /* about.css */
 .about-page { padding-top: var(--nav-h, 72px); }
 
-/* ── 히어로 헤더 — 좌: 텍스트, 우: 사진 꽉 채움 ── */
+/* ── 히어로 헤더 ── */
 .about-header {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: 80vh;
+  grid-template-columns: 1fr 400px;
+  min-height: 88vh;
   border-bottom: 0.5px solid var(--border);
   overflow: hidden;
 }
 
+/* 좌측: 타이틀 + 소개 + 연락처 */
 .about-header-left {
-  padding: 80px 64px 80px 48px;
+  padding: 72px 64px 72px 48px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
+
+.about-header-top {}
 
 .about-page-title {
   font-family: 'Outfit', sans-serif;
-  font-size: clamp(40px, 5.5vw, 80px);
+  font-size: clamp(36px, 4.5vw, 64px);
   font-weight: 400;
   color: var(--text-primary);
   letter-spacing: -0.02em;
   line-height: 1;
-  margin: 0 0 28px;
+  margin: 0 0 20px;
   text-transform: none;
 }
 
@@ -33,44 +36,30 @@
   color: var(--text-secondary);
   line-height: 1.8;
   font-weight: 400;
-  max-width: 380px;
+  max-width: 400px;
+  margin-bottom: 0;
 }
 
-/* 우측 사진 — 꽉 채움 */
-.about-profile-img {
-  position: relative;
-  overflow: hidden;
-  background: var(--bg3);
-}
-.about-profile-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  display: block;
-}
+/* 소개 + 연락처 — 하단 */
+.about-header-bottom {}
 
-/* ── 본문 그리드 ── */
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  padding: 64px 48px;
-  align-items: start;
+.about-intro-short {
+  margin-bottom: 40px;
 }
-.about-intro p {
+.about-intro-short p {
   font-size: 14px;
   color: var(--text-secondary);
   line-height: 1.9;
   font-weight: 400;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
-.about-intro p strong {
+.about-intro-short p:last-child { margin-bottom: 0; }
+.about-intro-short p strong {
   color: var(--text-primary);
   font-weight: 400;
 }
+
 .contact-links {
-  margin-top: 40px;
   display: flex;
   flex-direction: column;
   gap: 0;
@@ -87,7 +76,33 @@
   text-decoration: none;
   transition: color 0.2s;
 }
+.contact-item:first-child { border-top: 0.5px solid var(--border); }
 a.contact-item:hover { color: var(--text-primary); }
+
+/* 우측: 프로필 사진 */
+.about-profile-img {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg3);
+  border-left: 0.5px solid var(--border);
+}
+.about-profile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+/* ── 하단 경력/스킬 그리드 ── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  padding: 64px 48px;
+  align-items: start;
+}
+
 .about-section { margin-bottom: 40px; }
 .section-title { display: block; margin-bottom: 20px; }
 .exp-list { display: flex; flex-direction: column; }
@@ -112,15 +127,17 @@ a.contact-item:hover { color: var(--text-primary); }
     grid-template-columns: 1fr;
     min-height: auto;
   }
-  .about-header-left {
-    padding: 48px 24px 40px;
-    justify-content: flex-start;
-    order: 2;
-  }
   .about-profile-img {
     order: 1;
-    height: 60vw;
-    max-height: 320px;
+    height: 70vw;
+    max-height: 360px;
+    border-left: none;
+    border-bottom: 0.5px solid var(--border);
+  }
+  .about-header-left {
+    order: 2;
+    padding: 48px 24px;
+    gap: 48px;
   }
   .about-grid {
     grid-template-columns: 1fr;
