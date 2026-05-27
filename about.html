@@ -7,7 +7,7 @@
   <meta name="description" content="프로덕트 디자이너 김도훈의 경력과 소개입니다." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/about.css" />
@@ -31,63 +31,48 @@
 
   <main class="about-page page-enter">
 
-    <div class="about-header">
+    <!-- ── HERO ── -->
+    <div class="about-hero">
 
-      <div class="about-header-left">
-        <div class="about-header-top">
-          <h1 class="about-page-title">Hello!</h1>
-          <p class="about-subtitle">디자이너 김도훈입니다.</p>
-          <p class="about-tagline">
+      <div class="about-hero-left">
+        <!-- 배경 텍스트 -->
+        <span class="about-hero-bg-text" aria-hidden="true">Hello!</span>
+
+        <h1 class="about-title">Hello!</h1>
+        <p class="about-subtitle">UI/UX 디자이너 김도훈입니다.</p>
+
+        <div class="about-hero-desc">
+          <p>
             복잡한 서비스 구조를 정리하고<br>
             사용자가 이해하기 쉬운 경험으로 설계합니다.
           </p>
-        </div>
-
-        <div class="about-header-bottom">
-          <div class="about-intro-short">
-            <p>
-              UX 컨설팅 에이전시에서 <strong>금융, 공공, 이커머스, SaaS</strong> 등
-              다양한 도메인의 서비스 구조를 설계해왔습니다.
-            </p>
-            <p>
-              저는 주어진 문제를 그대로 해결하기보다, <strong>어떤 문제를 핵심으로
-              선택하고 무엇을 하지 않을지 판단</strong>하는 디자이너를 지향합니다.
-              문제 정의부터 설계, 결과, 회고까지 디자인의 판단이
-              만든 변화를 설명하는 데 집중합니다.
-            </p>
-            <p>
-              에이전시에서 다양한 산업과 이해관계자를 경험하며 서비스의 맥락을
-              읽는 힘을 쌓았고, 이제는 <strong>인하우스 프로덕트 팀</strong>에서
-              제품의 전체 라이프사이클을 오너십 있게 이끌고 싶습니다.
-            </p>
-          </div>
-
-          <div class="contact-links">
-            <a href="mailto:rlaehgns0062@gmail.com" class="contact-item">
-              <span class="mono">Email</span>
-              <span>rlaehgns0062@gmail.com</span>
-            </a>
-            <div class="contact-item">
-              <span class="mono">Phone</span>
-              <span>010-8352-8545</span>
-            </div>
-            <div class="contact-item">
-              <span class="mono">Location</span>
-              <span>Seoul, South Korea</span>
-            </div>
-          </div>
+          <p>
+            UX 컨설팅 에이전시에서 금융, 공공, 이커머스, SaaS 등
+            다양한 도메인의 서비스 구조를 설계해왔습니다.
+          </p>
+          <p>
+            복잡한 문제를 그대로 해결하기보다, 핵심 문제를 정의하고
+            무엇을 하지 않을지 판단하는 디자인을 지향합니다.
+          </p>
+          <p>
+            이제는 인하우스 프로덕트 팀에서 제품의 전체 흐름을 깊이 이해하고,
+            사용자 데이터와 피드백을 바탕으로 지속적으로 개선하는
+            디자이너로 성장하고자 합니다.
+          </p>
         </div>
       </div>
 
-      <div class="about-profile-img">
+      <div class="about-hero-img">
         <img src="assets/profile.png" alt="Kim Dohoon" />
       </div>
 
     </div>
 
-    <div class="about-grid">
+    <!-- ── BODY: Experience / Capabilities ── -->
+    <div class="about-body">
 
-      <div class="about-left">
+      <!-- 좌측: Experience + Education -->
+      <div>
         <div class="about-section">
           <span class="mono section-title">Experience</span>
           <div class="exp-list">
@@ -103,42 +88,48 @@
                 <span class="exp-co">뉴게이즈 (Newgaze)</span>
                 <span class="mono">2021.04 — 2024.02</span>
               </div>
-              <p class="exp-role">UI/UX 및 그래픽 디자이너</p>
+              <p class="exp-role">UI/UX Designer · Graphic Designer</p>
             </div>
             <div class="exp-item">
               <div class="exp-header">
                 <span class="exp-co">에이플로우 (Aflow)</span>
                 <span class="mono">2020.05 — 2021.03</span>
               </div>
-              <p class="exp-role">UI·그래픽 디자이너</p>
+              <p class="exp-role">Graphic Designer</p>
             </div>
           </div>
         </div>
 
         <div class="about-section">
           <span class="mono section-title">Education</span>
-          <div class="exp-item">
-            <div class="exp-header">
-              <span class="exp-co">계명대학교</span>
-              <span class="mono">2013 — 2020</span>
+          <div class="exp-list">
+            <div class="exp-item">
+              <div class="exp-header">
+                <span class="exp-co">계명대학교</span>
+                <span class="mono">2013 — 2020</span>
+              </div>
+              <p class="exp-role">시각디자인과 졸업</p>
             </div>
-            <p class="exp-role">시각디자인과 졸업</p>
           </div>
         </div>
       </div>
 
-      <div class="about-right">
+      <!-- 우측: Capabilities + Tools -->
+      <div>
         <div class="about-section">
           <span class="mono section-title">Capabilities</span>
           <div class="skills-grid">
-            <span class="tag">디자인 비즈니스 전략</span>
-            <span class="tag">UI·UX 설계 및 최적화</span>
-            <span class="tag">인터랙션 플로우 설계</span>
-            <span class="tag">데이터 시각화</span>
-            <span class="tag">정보 구조 설계</span>
-            <span class="tag">와이어프레임 & 프로토타이핑</span>
-            <span class="tag">디자인 시스템</span>
+            <span class="tag">UX Strategy</span>
+            <span class="tag">Information Architecture</span>
+            <span class="tag">UI/UX Design</span>
+            <span class="tag">Design System</span>
+            <span class="tag">Data Visualization</span>
+            <span class="tag">Interaction Flow</span>
+            <span class="tag">Wireframing</span>
+            <span class="tag">Prototyping</span>
             <span class="tag">Figma Variables</span>
+            <span class="tag">Front-end QA</span>
+            <span class="tag">AI Workflow</span>
           </div>
         </div>
 
@@ -149,11 +140,11 @@
             <div class="tool-item">
               <span class="tool-icon">
                 <svg viewBox="0 0 38 57" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M19 28.5C19 25.9804 20.0009 23.5641 21.7825 21.7825C23.5641 20.0009 25.9804 19 28.5 19C31.0196 19 33.4359 20.0009 35.2175 21.7825C36.9991 23.5641 38 25.9804 38 28.5C38 31.0196 36.9991 33.4359 35.2175 35.2175C33.4359 36.9991 31.0196 38 28.5 38C25.9804 38 23.5641 36.9991 21.7825 35.2175C20.0009 33.4359 19 31.0196 19 28.5Z" fill="#1ABCFE"/>
-                  <path d="M0 47.5C0 44.9804 1.00089 42.5641 2.78249 40.7825C4.56408 39.0009 6.98044 38 9.5 38H19V47.5C19 50.0196 17.9991 52.4359 16.2175 54.2175C14.4359 55.9991 12.0196 57 9.5 57C6.98044 57 4.56408 55.9991 2.78249 54.2175C1.00089 52.4359 0 50.0196 0 47.5Z" fill="#0ACF83"/>
-                  <path d="M19 0V19H28.5C31.0196 19 33.4359 17.9991 35.2175 16.2175C36.9991 14.4359 38 12.0196 38 9.5C38 6.98044 36.9991 4.56408 35.2175 2.78249C33.4359 1.00089 31.0196 0 28.5 0H19Z" fill="#FF7262"/>
-                  <path d="M0 9.5C0 12.0196 1.00089 14.4359 2.78249 16.2175C4.56408 17.9991 6.98044 19 9.5 19H19V0H9.5C6.98044 0 4.56408 1.00089 2.78249 2.78249C1.00089 4.56408 0 6.98044 0 9.5Z" fill="#F24E1E"/>
-                  <path d="M0 28.5C0 31.0196 1.00089 33.4359 2.78249 35.2175C4.56408 36.9991 6.98044 38 9.5 38H19V19H9.5C6.98044 19 4.56408 20.0009 2.78249 21.7825C1.00089 23.5641 0 25.9804 0 28.5Z" fill="#A259FF"/>
+                  <path d="M19 28.5C19 25.98 20 23.56 21.78 21.78C23.56 20 25.98 19 28.5 19C31.02 19 33.44 20 35.22 21.78C36.99 23.56 38 25.98 38 28.5C38 31.02 36.99 33.44 35.22 35.22C33.44 36.99 31.02 38 28.5 38C25.98 38 23.56 36.99 21.78 35.22C20 33.44 19 31.02 19 28.5Z" fill="#1ABCFE"/>
+                  <path d="M0 47.5C0 44.98 1 42.56 2.78 40.78C4.56 39 6.98 38 9.5 38H19V47.5C19 50.02 17.99 52.44 16.22 54.22C14.44 55.99 12.02 57 9.5 57C6.98 57 4.56 55.99 2.78 54.22C1 52.44 0 50.02 0 47.5Z" fill="#0ACF83"/>
+                  <path d="M19 0V19H28.5C31.02 19 33.44 17.99 35.22 16.22C36.99 14.44 38 12.02 38 9.5C38 6.98 36.99 4.56 35.22 2.78C33.44 1 31.02 0 28.5 0H19Z" fill="#FF7262"/>
+                  <path d="M0 9.5C0 12.02 1 14.44 2.78 16.22C4.56 17.99 6.98 19 9.5 19H19V0H9.5C6.98 0 4.56 1 2.78 2.78C1 4.56 0 6.98 0 9.5Z" fill="#F24E1E"/>
+                  <path d="M0 28.5C0 31.02 1 33.44 2.78 35.22C4.56 36.99 6.98 38 9.5 38H19V19H9.5C6.98 19 4.56 20 2.78 21.78C1 23.56 0 25.98 0 28.5Z" fill="#A259FF"/>
                 </svg>
               </span>
               <span class="tool-name">Figma</span>
@@ -175,7 +166,7 @@
                 <svg viewBox="0 0 240 234" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect width="240" height="234" rx="42" fill="#310000"/>
                   <path d="M101.1 138.6H63.9L56.2 164.5H38L74.2 69.7H91.2L127.7 164.5H109.1L101.1 138.6ZM68.2 125.1H96.8L82.6 80.3L68.2 125.1Z" fill="#FF9A00"/>
-                  <path d="M152.3 72.5C152.3 73.9 151.9 75.1 151 76.1C150.1 77.1 148.8 77.6 147.1 77.6C145.4 77.6 144.1 77.1 143.2 76.1C142.3 75.1 141.9 73.9 141.9 72.5C141.9 71.1 142.3 69.9 143.2 68.9C144.1 67.9 145.4 67.4 147.1 67.4C148.8 67.4 150.1 67.9 151 68.9C151.9 69.9 152.3 71.1 152.3 72.5ZM150.4 164.5H143.8V92.4H150.4V164.5Z" fill="#FF9A00"/>
+                  <path d="M152.3 72.5C152.3 74 151.9 75.1 151 76.1C150.1 77.1 148.8 77.6 147.1 77.6C145.4 77.6 144.1 77.1 143.2 76.1C142.3 75.1 141.9 73.9 141.9 72.5C141.9 71.1 142.3 69.9 143.2 68.9C144.1 67.9 145.4 67.4 147.1 67.4C148.8 67.4 150.1 67.9 151 68.9C151.9 69.9 152.3 71.1 152.3 72.5ZM150.4 164.5H143.8V92.4H150.4V164.5Z" fill="#FF9A00"/>
                   <path d="M202 160.5C198.5 162.7 194.3 163.8 189.5 163.8C178.3 163.8 172.7 157.9 172.7 146.1V98.6H161.4V92.4H172.7V73.2L179.3 71.2V92.4H202V98.6H179.3V145.3C179.3 150 180.2 153.4 182.1 155.6C184 157.8 186.8 158.9 190.5 158.9C193.5 158.9 196.3 158.1 199 156.4L202 160.5Z" fill="#FF9A00"/>
                 </svg>
               </span>
@@ -185,7 +176,7 @@
             <div class="tool-item">
               <span class="tool-icon">
                 <svg viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M37.532 16.87a9.963 9.963 0 0 0-.856-8.184 10.078 10.078 0 0 0-10.855-4.835 9.964 9.964 0 0 0-6.211-2.614 10.079 10.079 0 0 0-9.463 6.967 9.967 9.967 0 0 0-6.67 4.834 10.08 10.08 0 0 0 1.24 11.817 9.965 9.965 0 0 0 .856 8.185 10.079 10.079 0 0 0 10.855 4.835 9.965 9.965 0 0 0 6.211 2.614 10.079 10.079 0 0 0 9.463-6.967 9.967 9.967 0 0 0 6.67-4.834 10.079 10.079 0 0 0-1.24-11.817zm-17.97 10.953a4.936 4.936 0 0 1-3.136-1.126l.154-.088 5.21-3.009a.862.862 0 0 0 .437-.762v-7.344l2.202 1.271a.08.08 0 0 1 .044.055v6.083a4.958 4.958 0 0 1-4.91 4.92zm-10.554-4.542a4.936 4.936 0 0 1-.59-3.303l.158.094 5.209 3.008a.863.863 0 0 0 .873 0l6.357-3.669v2.542a.081.081 0 0 1-.033.066L16.01 25.35a4.957 4.957 0 0 1-6.993-2.069l-.009-.02zm-1.372-11.113a4.934 4.934 0 0 1 2.577-2.166v6.196a.862.862 0 0 0 .435.761l6.339 3.66-2.202 1.271a.081.081 0 0 1-.076.009L9.098 19.47a4.957 4.957 0 0 1-.461-7.302l-.001-.001zm18.088 4.258l-6.357-3.669 2.202-1.27a.082.082 0 0 1 .076-.01l6.108 3.527a4.956 4.956 0 0 1-.765 8.938v-6.196a.862.862 0 0 0-.264-.32zm2.192-3.318l-.158-.094-5.209-3.008a.863.863 0 0 0-.874 0L15.518 13.7v-2.542a.082.082 0 0 1 .032-.066l6.193-3.578a4.956 4.956 0 0 1 7.377 5.133l.001.02zm-13.814 4.542l-2.202-1.271a.081.081 0 0 1-.044-.055v-6.083a4.956 4.956 0 0 1 8.125-3.805l-.154.088-5.21 3.009a.862.862 0 0 0-.437.762l-.078 7.355zm1.198-2.584l2.83-1.633 2.83 1.628v3.257l-2.83 1.633-2.83-1.628V15.066z" fill="currentColor"/>
+                  <path d="M37.532 16.87a9.963 9.963 0 0 0-.856-8.184 10.078 10.078 0 0 0-10.855-4.835 9.964 9.964 0 0 0-6.211-2.614 10.079 10.079 0 0 0-9.463 6.967 9.967 9.967 0 0 0-6.67 4.834 10.08 10.08 0 0 0 1.24 11.817 9.965 9.965 0 0 0 .856 8.185 10.079 10.079 0 0 0 10.855 4.835 9.965 9.965 0 0 0 6.211 2.614 10.079 10.079 0 0 0 9.463-6.967 9.967 9.967 0 0 0 6.67-4.834 10.079 10.079 0 0 0-1.24-11.817zm-17.97 10.953a4.936 4.936 0 0 1-3.136-1.126l.154-.088 5.21-3.009a.862.862 0 0 0 .437-.762v-7.344l2.202 1.271a.08.08 0 0 1 .044.055v6.083a4.958 4.958 0 0 1-4.91 4.92zm-10.554-4.542a4.936 4.936 0 0 1-.59-3.303l.158.094 5.209 3.008a.863.863 0 0 0 .873 0l6.357-3.669v2.542a.081.081 0 0 1-.033.066L16.01 25.35a4.957 4.957 0 0 1-6.993-2.069l-.009-.02zm-1.372-11.113a4.934 4.934 0 0 1 2.577-2.166v6.196a.862.862 0 0 0 .435.761l6.339 3.66-2.202 1.271a.081.081 0 0 1-.076.009L9.098 19.47a4.957 4.957 0 0 1-.461-7.302zm18.088 4.258l-6.357-3.669 2.202-1.27a.082.082 0 0 1 .076-.01l6.108 3.527a4.956 4.956 0 0 1-.765 8.938v-6.196a.862.862 0 0 0-.264-.32zm2.192-3.318l-.158-.094-5.209-3.008a.863.863 0 0 0-.874 0L15.518 13.7v-2.542a.082.082 0 0 1 .032-.066l6.193-3.578a4.956 4.956 0 0 1 7.377 5.133zm-13.814 4.542l-2.202-1.271a.081.081 0 0 1-.044-.055v-6.083a4.956 4.956 0 0 1 8.125-3.805l-.154.088-5.21 3.009a.862.862 0 0 0-.437.762l-.078 7.355zm1.198-2.584l2.83-1.633 2.83 1.628v3.257l-2.83 1.633-2.83-1.628V15.066z" fill="currentColor"/>
                 </svg>
               </span>
               <span class="tool-name">ChatGPT</span>
@@ -217,6 +208,26 @@
       </div>
 
     </div>
+
+    <!-- ── CONTACT ── -->
+    <div class="about-contact">
+      <span class="mono about-contact-label">Contact</span>
+      <div class="about-contact-row">
+        <div class="about-contact-item">
+          <span class="contact-label">Email</span>
+          <a href="mailto:rlaehgns0062@gmail.com">rlaehgns0062@gmail.com</a>
+        </div>
+        <div class="about-contact-item">
+          <span class="contact-label">Phone</span>
+          <span>010-8352-8545</span>
+        </div>
+        <div class="about-contact-item">
+          <span class="contact-label">Location</span>
+          <span>Seoul, South Korea</span>
+        </div>
+      </div>
+    </div>
+
   </main>
 
   <footer>
