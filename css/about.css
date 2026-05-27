@@ -1,9 +1,16 @@
 /* about.css */
 .about-page { padding-top: 80px; }
+
 .about-header {
   padding: 80px 48px 64px;
   border-bottom: 0.5px solid var(--border);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 64px;
+  align-items: end;
 }
+.about-header-left {}
+
 .about-page-title {
   font-family: 'Outfit', sans-serif;
   font-size: clamp(48px, 7vw, 96px);
@@ -21,6 +28,25 @@
   font-weight: 400;
   max-width: 400px;
 }
+
+/* 프로필 이미지 — 3:4 비율 */
+.about-profile-img {
+  width: 240px;
+  aspect-ratio: 3 / 4;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--bg3);
+  border: 0.5px solid var(--border);
+  flex-shrink: 0;
+}
+.about-profile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -77,6 +103,13 @@ a.contact-item:hover { color: var(--text-primary); }
 .skills-grid { display: flex; flex-wrap: wrap; gap: 8px; }
 
 @media (max-width: 768px) {
-  .about-header { padding: 72px 24px 48px; }
+  .about-header {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 72px 24px 48px;
+  }
+  .about-profile-img {
+    width: 120px;
+  }
   .about-grid { grid-template-columns: 1fr; gap: 48px; padding: 48px 24px; }
 }
