@@ -8,7 +8,7 @@
   min-height: 88vh;
   border-bottom: 0.5px solid var(--border);
   overflow: hidden;
-  gap: 0;
+  align-items: stretch;
 }
 
 /* 좌측 */
@@ -19,6 +19,8 @@
   justify-content: space-between;
 }
 
+.about-header-top { margin-bottom: 0; }
+
 .about-page-title {
   font-family: 'Outfit', sans-serif;
   font-size: clamp(36px, 4.5vw, 64px);
@@ -26,13 +28,22 @@
   color: var(--text-primary);
   letter-spacing: -0.02em;
   line-height: 1;
-  margin: 0 0 20px;
+  margin: 0 0 10px;
   text-transform: none;
+}
+
+.about-subtitle {
+  font-size: clamp(16px, 2vw, 22px);
+  font-weight: 300;
+  color: var(--text-secondary);
+  letter-spacing: -0.01em;
+  margin: 0 0 24px;
+  line-height: 1.3;
 }
 
 .about-tagline {
   font-size: 15px;
-  color: var(--text-secondary);
+  color: var(--text-muted);
   line-height: 1.8;
   font-weight: 400;
   max-width: 400px;
@@ -65,19 +76,20 @@
 .contact-item:first-child { border-top: 0.5px solid var(--border); }
 a.contact-item:hover { color: var(--text-primary); }
 
-/* 우측: 프로필 사진 — 배경/보더 없음 */
+/* 우측: 프로필 사진 — 비율 유지하며 자연스럽게 축소 */
 .about-profile-img {
-  position: relative;
   overflow: hidden;
   background: none;
   border: none;
+  display: flex;
+  align-items: flex-end;
 }
 .about-profile-img img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
+  height: auto;       /* 비율 유지 */
   display: block;
+  object-fit: contain;
+  object-position: bottom;
 }
 
 /* ── 하단 그리드 ── */
@@ -105,19 +117,13 @@ a.contact-item:hover { color: var(--text-primary); }
 .skills-grid { display: flex; flex-wrap: wrap; gap: 8px; }
 
 /* ── Tools 아이콘 리스트 ── */
-.tools-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-}
+.tools-list { display: flex; flex-direction: column; }
 .tool-item {
   display: flex;
   align-items: center;
   gap: 12px;
   padding: 12px 0;
   border-bottom: 0.5px solid var(--border);
-  font-size: 13px;
-  color: var(--text-secondary);
 }
 .tool-item:first-child { border-top: 0.5px solid var(--border); }
 .tool-icon {
@@ -128,14 +134,8 @@ a.contact-item:hover { color: var(--text-primary); }
   align-items: center;
   justify-content: center;
 }
-.tool-icon img,
-.tool-icon svg {
-  width: 20px;
-  height: 20px;
-  object-fit: contain;
-}
+.tool-icon svg { width: 20px; height: 20px; }
 .tool-name { font-size: 13px; color: var(--text-primary); }
-.tool-desc { font-size: 12px; color: var(--text-muted); margin-left: auto; }
 
 /* ── 모바일 ── */
 @media (max-width: 768px) {
@@ -145,8 +145,7 @@ a.contact-item:hover { color: var(--text-primary); }
   }
   .about-profile-img {
     order: 1;
-    height: 70vw;
-    max-height: 360px;
+    align-items: flex-start;
   }
   .about-header-left {
     order: 2;
