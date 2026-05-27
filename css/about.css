@@ -177,10 +177,10 @@
     min-height: auto;
   }
   .about-hero-img {
-    order: 1;
-    padding: 40px 24px 0;
-    justify-content: flex-start;
-  }
+  order: 1;
+  padding: 40px 24px 0;
+  justify-content: center;
+}
   .about-hero-img img {
     max-width: 200px;
   }
