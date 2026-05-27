@@ -8,7 +8,6 @@
   min-height: 88vh;
   border-bottom: 0.5px solid var(--border);
   overflow: hidden;
-  align-items: stretch;
 }
 
 /* 좌측 */
@@ -76,20 +75,19 @@
 .contact-item:first-child { border-top: 0.5px solid var(--border); }
 a.contact-item:hover { color: var(--text-primary); }
 
-/* 우측: 프로필 사진 — 비율 유지하며 자연스럽게 축소 */
+/* 우측: 프로필 사진 — 데스크탑: 꽉 채움 */
 .about-profile-img {
   overflow: hidden;
   background: none;
   border: none;
-  display: flex;
-  align-items: flex-end;
+  position: relative;
 }
 .about-profile-img img {
   width: 100%;
-  height: auto;       /* 비율 유지 */
+  height: 100%;         /* 데스크탑: 영역 꽉 채움 */
+  object-fit: cover;
+  object-position: center top;
   display: block;
-  object-fit: contain;
-  object-position: bottom;
 }
 
 /* ── 하단 그리드 ── */
@@ -137,16 +135,24 @@ a.contact-item:hover { color: var(--text-primary); }
 .tool-icon svg { width: 20px; height: 20px; }
 .tool-name { font-size: 13px; color: var(--text-primary); }
 
-/* ── 모바일 ── */
+/* ── 모바일: 비율 유지하며 축소 ── */
 @media (max-width: 768px) {
   .about-header {
     grid-template-columns: 1fr;
     min-height: auto;
   }
+
+  /* 모바일: height auto로 비율 유지 */
   .about-profile-img {
     order: 1;
-    align-items: flex-start;
+    height: auto;
   }
+  .about-profile-img img {
+    height: auto;         /* 모바일: 비율 유지, 잘림 없음 */
+    object-fit: contain;
+    object-position: center top;
+  }
+
   .about-header-left {
     order: 2;
     padding: 48px 24px;
