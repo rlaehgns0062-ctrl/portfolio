@@ -23,23 +23,24 @@
   z-index: 1;
 }
 
-/* 배경 Hello! — 제거 */
+/* 배경 Hello! 제거 */
 .about-hero-bg-text { display: none; }
 
-/* 타이틀 */
+/* 타이틀 — Bold */
 .about-title {
   font-family: 'Outfit', sans-serif;
   font-size: clamp(40px, 5.5vw, 72px);
-  font-weight: 400;
+  font-weight: 700;
   color: var(--text-primary);
   letter-spacing: -0.02em;
   line-height: 1;
   margin: 0 0 10px;
 }
 
+/* 서브타이틀 — Semibold */
 .about-subtitle {
   font-size: clamp(15px, 1.8vw, 20px);
-  font-weight: 300;
+  font-weight: 600;
   color: var(--text-secondary);
   letter-spacing: -0.01em;
   margin: 0 0 40px;
@@ -57,7 +58,7 @@
 .about-hero-desc p:last-child { margin-bottom: 0; }
 .about-hero-desc p strong { color: var(--text-primary); font-weight: 400; }
 
-/* 우측 이미지 — 중앙 정렬 */
+/* 우측 이미지 — 데스크탑: 중앙 배치, 약 10~15% 크게 */
 .about-hero-img {
   display: flex;
   align-items: center;
@@ -67,7 +68,7 @@
   border: none;
 }
 .about-hero-img img {
-  width: 80%;
+  width: 92%;          /* 기존 80% → 92% (약 15% 확대) */
   height: auto;
   object-fit: contain;
   object-position: center;
@@ -88,7 +89,6 @@
 
 .about-section { margin-bottom: 48px; }
 .about-section:last-child { margin-bottom: 0; }
-
 .section-title { display: block; margin-bottom: 20px; }
 
 .exp-list { display: flex; flex-direction: column; }
@@ -104,7 +104,6 @@
 .exp-co { font-size: 14px; color: var(--text-primary); font-weight: 500; }
 .exp-role { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
 
-/* Capabilities 태그 — 대비 강화 */
 .skills-grid { display: flex; flex-wrap: wrap; gap: 8px; }
 .skills-grid .tag {
   background: rgba(20, 18, 16, 0.07);
@@ -112,7 +111,6 @@
   border-color: rgba(20, 18, 16, 0.15);
 }
 
-/* Tools 아이콘 */
 .tools-list { display: flex; flex-direction: column; }
 .tool-item {
   display: flex;
@@ -138,16 +136,8 @@
   border-bottom: 0.5px solid var(--border);
 }
 .about-contact-label { display: block; margin-bottom: 24px; }
-.about-contact-row {
-  display: flex;
-  gap: 48px;
-  flex-wrap: wrap;
-}
-.about-contact-item {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
+.about-contact-row { display: flex; gap: 48px; flex-wrap: wrap; }
+.about-contact-item { display: flex; flex-direction: column; gap: 4px; }
 .about-contact-item .contact-label {
   font-size: 10px;
   letter-spacing: 0.18em;
@@ -167,8 +157,8 @@
    RESPONSIVE
 ══════════════════════════════ */
 @media (max-width: 1024px) {
-  .about-hero { grid-template-columns: 1fr 300px; }
-  .about-hero-img img { max-width: 260px; }
+  .about-hero { grid-template-columns: 1fr 40%; }
+  .about-hero-img img { width: 95%; }
 }
 
 @media (max-width: 768px) {
@@ -176,13 +166,15 @@
     grid-template-columns: 1fr;
     min-height: auto;
   }
+  /* 모바일 이미지: 중앙 정렬, 크게 */
   .about-hero-img {
-  order: 1;
-  padding: 40px 24px 0;
-  justify-content: center;
-}
+    order: 1;
+    padding: 40px 24px 0;
+    justify-content: center;
+  }
   .about-hero-img img {
-    max-width: 200px;
+    width: 85%;          /* 모바일에서 크게 */
+    max-width: 340px;
   }
   .about-hero-left {
     order: 2;
