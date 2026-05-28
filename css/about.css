@@ -13,6 +13,51 @@
   position: relative;
 }
 
+/* 홈 히어로와 같은 soft gradient 배경 */
+.about-grad-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+.about-grad-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+}
+.about-orb1 {
+  width: 560px;
+  height: 560px;
+  top: -150px;
+  right: -90px;
+  background: radial-gradient(circle, #c8d4ff 0%, #a0b4f0 45%, transparent 70%);
+  opacity: 0.52;
+}
+.about-orb2 {
+  width: 420px;
+  height: 420px;
+  top: 80px;
+  left: -140px;
+  background: radial-gradient(circle, #d4c8ff 0%, #b8a8e8 50%, transparent 70%);
+  opacity: 0.34;
+}
+.about-orb3 {
+  width: 360px;
+  height: 360px;
+  bottom: 80px;
+  right: 24%;
+  background: radial-gradient(circle, #b8ead8 0%, #90d4b8 50%, transparent 70%);
+  opacity: 0.28;
+}
+.about-orb4 {
+  width: 280px;
+  height: 280px;
+  bottom: 150px;
+  left: 30%;
+  background: radial-gradient(circle, #ffd4b8 0%, #f0b898 55%, transparent 70%);
+  opacity: 0.2;
+}
+
 /* 좌측 텍스트 */
 .about-hero-left {
   padding: 72px 72px 72px 48px;
@@ -20,7 +65,7 @@
   flex-direction: column;
   justify-content: center;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 /* 배경 Hello! 제거 */
@@ -66,6 +111,8 @@
   overflow: hidden;
   background: none;
   border: none;
+  position: relative;
+  z-index: 2;
 }
 .about-hero-img img {
   width: 92%;          /* 기존 80% → 92% (약 15% 확대) */
@@ -165,6 +212,35 @@
   .about-hero {
     grid-template-columns: 1fr;
     min-height: auto;
+  }
+  .about-grad-orb { filter: blur(84px); }
+  .about-orb1 {
+    width: 360px;
+    height: 360px;
+    top: -80px;
+    right: -130px;
+    opacity: 0.42;
+  }
+  .about-orb2 {
+    width: 300px;
+    height: 300px;
+    top: 180px;
+    left: -130px;
+    opacity: 0.3;
+  }
+  .about-orb3 {
+    width: 260px;
+    height: 260px;
+    right: -80px;
+    bottom: 130px;
+    opacity: 0.24;
+  }
+  .about-orb4 {
+    width: 220px;
+    height: 220px;
+    left: 18%;
+    bottom: 20px;
+    opacity: 0.18;
   }
   /* 모바일 이미지: 중앙 정렬, 크게 */
   .about-hero-img {
