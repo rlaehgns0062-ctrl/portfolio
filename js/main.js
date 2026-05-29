@@ -17,70 +17,61 @@ mainEl.classList.add('page-enter');
     }
   }, { passive: true });
 
-  /* ── 토글 nav — 슬라이딩 active indicator ── */
-  const navLinks = document.querySelectorAll('.nav-links li a');
+  /* ── 탭 nav active 상태 ── */
+  const navLinks = document.querySelectorAll('.nav-links li a, .nav-links-mobile li a');
   const currentPath = window.location.pathname;
+  const isDetailWork = currentPath.includes('/work/');
+  const isWorkPage = currentPath.endsWith('/work.html') || isDetailWork;
+  const isAboutPage = currentPath.includes('about.html');
 
-  // active indicator 엘리먼트 생성
-  const pill = document.querySelector('.nav-links');
-  const indicator = document.createElement('span');
-  indicator.className = 'nav-indicator';
-  pill.appendChild(indicator);
-
-  // 현재 페이지 기준으로 active 설정
-  let activeLink = null;
   navLinks.forEach(link => {
     const href = link.getAttribute('href');
-    const isAbout = currentPath.includes('about');
-    const isWork = !isAbout;
+    const pointsToHome = href.includes('index.html');
+    const pointsToAbout = href.includes('about.html');
+    const pointsToWork = href.includes('work.html');
+    const shouldActivate =
+      (pointsToWork && isWorkPage) ||
+      (pointsToAbout && isAboutPage) ||
+      (pointsToHome && !isWorkPage && !isAboutPage);
 
-    if ((href.includes('about') && isAbout) || (href.includes('index') && isWork)) {
-      link.classList.add('active');
-      activeLink = link;
-    } else {
-      link.classList.remove('active');
+    link.classList.toggle('active', shouldActivate);
+  });
+
+  /* ── 홈 프로젝트 페이지 넘버링 ── */
+  const projectPager = document.querySelector('[data-project-pager]');
+  if (projectPager) {
+    const slides = Array.from(projectPager.querySelectorAll('[data-project-slide]'));
+    const currentEl = document.querySelector('[data-project-current]');
+    const totalEl = document.querySelector('[data-project-total]');
+    const prevBtn = document.querySelector('[data-project-prev]');
+    const nextBtn = document.querySelector('[data-project-next]');
+    const pageSize = 3;
+    const totalPages = Math.max(1, Math.ceil(slides.length / pageSize));
+    let activePage = 0;
+
+    if (totalEl) totalEl.textContent = String(totalPages).padStart(2, '0');
+
+    function renderProjectPage(nextPage) {
+      activePage = (nextPage + totalPages) % totalPages;
+      const start = activePage * pageSize;
+      const end = start + pageSize;
+      slides.forEach((slide, index) => {
+        slide.classList.toggle('is-active', index >= start && index < end);
+      });
+      if (currentEl) currentEl.textContent = String(activePage + 1).padStart(2, '0');
+      if (prevBtn) prevBtn.disabled = totalPages <= 1;
+      if (nextBtn) nextBtn.disabled = totalPages <= 1;
     }
-  });
 
-  // indicator 초기 위치 설정 (애니메이션 없이)
-  function setIndicator(el, animate) {
-    if (!el) return;
-    const pillRect = pill.getBoundingClientRect();
-    const elRect = el.getBoundingClientRect();
-    indicator.style.transition = animate ? 'left 0.3s cubic-bezier(0.22,1,0.36,1), width 0.3s cubic-bezier(0.22,1,0.36,1)' : 'none';
-    indicator.style.left = (elRect.left - pillRect.left) + 'px';
-    indicator.style.width = elRect.width + 'px';
-    indicator.style.height = elRect.height + 'px';
-    indicator.style.top = (elRect.top - pillRect.top) + 'px';
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => renderProjectPage(activePage - 1));
+    }
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => renderProjectPage(activePage + 1));
+    }
+
+    renderProjectPage(0);
   }
-
-  // 초기 위치 (transition 없이)
-  if (activeLink) {
-    requestAnimationFrame(() => setIndicator(activeLink, false));
-  }
-
-  // 클릭 시 — 토글 먼저 이동, 딜레이 후 페이지 전환
-  navLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      const href = link.getAttribute('href');
-      const isCurrentPage = link.classList.contains('active');
-      if (isCurrentPage) return; // 현재 페이지면 아무것도 안 함
-
-      e.preventDefault();
-
-      // active 클래스 이동
-      navLinks.forEach(l => l.classList.remove('active'));
-      link.classList.add('active');
-
-      // indicator 슬라이드
-      setIndicator(link, true);
-
-      // 200ms 후 페이지 전환
-      setTimeout(() => {
-        window.location.href = href;
-      }, 220);
-    });
-  });
 
   /* ── 프로젝트 카드 호버 시 번호 강조 ── */
   const cards = document.querySelectorAll('.project-card');

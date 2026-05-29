@@ -9,21 +9,22 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/style.css?v=20260529-projects" />
+  <link rel="stylesheet" href="css/home.css?v=20260529-projects" />
 </head>
 <body>
 
   <nav>
     <div class="nav-logo"><span>KIM DOHOON</span></div>
     <ul class="nav-links">
-      <li><a href="index.html" class="active">Work</a></li>
+      <li><a href="index.html" class="active">Home</a></li>
       <li><a href="about.html">About</a></li>
+      <li><a href="work.html">Work</a></li>
     </ul>
-    <!-- nav-right 밖, 독립 2번째 컬럼 -->
     <ul class="nav-links-mobile">
-      <li><a href="index.html" class="active">Work</a></li>
+      <li><a href="index.html" class="active">Home</a></li>
       <li><a href="about.html">About</a></li>
+      <li><a href="work.html">Work</a></li>
     </ul>
     <div class="nav-right">
       <a href="mailto:rlaehgns0062@gmail.com" class="nav-cta">Contact</a>
@@ -61,70 +62,79 @@
 
   <section class="works" id="work">
     <div class="works-header">
-      <span class="mono">Selected Work</span>
-      <span class="mono">03 Projects</span>
+      <span class="mono">Selected Projects</span>
+      <a href="work.html" class="view-all-link">전체보기</a>
     </div>
-    <h2 class="works-title">PROJECTS</h2>
+    <div class="works-title-row">
+      <h2 class="works-title">PROJECTS</h2>
+      <div class="project-pager-controls" aria-label="프로젝트 페이지 이동">
+        <button type="button" class="pager-btn" data-project-prev aria-label="이전 프로젝트">←</button>
+        <span class="pager-count mono"><span data-project-current>01</span> / <span data-project-total>03</span></span>
+        <button type="button" class="pager-btn" data-project-next aria-label="다음 프로젝트">→</button>
+      </div>
+    </div>
 
-    <a href="work/01-finance.html" class="project-card">
-      <span class="p-num mono">01</span>
-      <div class="p-thumb"><img src="assets/thumb-01.png" alt="대형 금융사 모바일 자산관리 서비스 개선"></div>
-      <div class="p-main">
-        <p class="p-name">대형 금융사 모바일<br>자산관리 서비스 개선</p>
-        <div class="p-tags">
-          <span class="tag">레거시 UX 개선</span>
-          <span class="tag">정보 구조 재정리</span>
-          <span class="tag">디자인 시스템 고도화</span>
-          <span class="tag">운영 효율화</span>
+    <div class="project-pager" data-project-pager>
+      <a href="work/01-finance.html" class="project-card is-active" data-project-slide>
+        <span class="p-num mono">01</span>
+        <div class="p-thumb"><img src="assets/thumb-01.png" alt="대형 금융사 모바일 자산관리 서비스 개선"></div>
+        <div class="p-main">
+          <p class="p-name">대형 금융사 모바일<br>자산관리 서비스 개선</p>
+          <div class="p-tags">
+            <span class="tag">레거시 UX 개선</span>
+            <span class="tag">정보 구조 재정리</span>
+            <span class="tag">디자인 시스템 고도화</span>
+            <span class="tag">운영 효율화</span>
+          </div>
+          <p class="p-desc">3종 혼재 가이드를 Type 1 기반으로 통합하고<br>1,800페이지 규모 라이트·다크 토큰화를 주도.<br>복잡한 금융 정보를 사용자 중심 구조로 재정립.</p>
         </div>
-        <p class="p-desc">3종 혼재 가이드를 Type 1 기반으로 통합하고<br>1,800페이지 규모 라이트·다크 토큰화를 주도.<br>복잡한 금융 정보를 사용자 중심 구조로 재정립.</p>
-      </div>
-      <div class="p-meta">
-        <p class="p-role mono" style="font-size:10px;">Design PL</p>
-        <p class="p-date">2025.05 — 2026.02</p>
-      </div>
-      <span class="p-arrow" aria-hidden="true">↗</span>
-    </a>
+        <div class="p-meta">
+          <p class="p-role mono" style="font-size:10px;">Design PL</p>
+          <p class="p-date">2025.05 — 2026.02</p>
+        </div>
+        <span class="p-arrow" aria-hidden="true">↗</span>
+      </a>
 
-    <a href="work/02-toggle.html" class="project-card">
-      <span class="p-num mono">02</span>
-      <div class="p-thumb"><img src="assets/thumb-02.png" alt="Toggle SaaS 메인화면 리디자인"></div>
-      <div class="p-main">
-        <p class="p-name">Toggle SaaS<br>메인화면 리디자인</p>
-        <div class="p-tags">
-          <span class="tag">B2B SaaS</span>
-          <span class="tag">정보 구조 개선</span>
-          <span class="tag">핵심 가치 전달</span>
-          <span class="tag">탐색 흐름 개선</span>
+      <a href="work/02-toggle.html" class="project-card" data-project-slide>
+        <span class="p-num mono">02</span>
+        <div class="p-thumb"><img src="assets/thumb-02.png" alt="Toggle SaaS 메인화면 리디자인"></div>
+        <div class="p-main">
+          <p class="p-name">Toggle SaaS<br>메인화면 리디자인</p>
+          <div class="p-tags">
+            <span class="tag">B2B SaaS</span>
+            <span class="tag">정보 구조 개선</span>
+            <span class="tag">핵심 가치 전달</span>
+            <span class="tag">탐색 흐름 개선</span>
+          </div>
+          <p class="p-desc">홈 화면 평균 체류시간 3초 미만 문제를 발견하고<br>칸반 기반 구조 재설계로 서비스 리텐션 개선 목표 설정.<br>비즈니스 목표를 설계 기준으로 연결.</p>
         </div>
-        <p class="p-desc">홈 화면 평균 체류시간 3초 미만 문제를 발견하고<br>칸반 기반 구조 재설계로 서비스 리텐션 개선 목표 설정.<br>비즈니스 목표를 설계 기준으로 연결.</p>
-      </div>
-      <div class="p-meta">
-        <p class="p-role mono" style="font-size:10px;">Product Designer</p>
-        <p class="p-date">2024.04 — 2024.05</p>
-      </div>
-      <span class="p-arrow" aria-hidden="true">↗</span>
-    </a>
+        <div class="p-meta">
+          <p class="p-role mono" style="font-size:10px;">Product Designer</p>
+          <p class="p-date">2024.04 — 2024.05</p>
+        </div>
+        <span class="p-arrow" aria-hidden="true">↗</span>
+      </a>
 
-    <a href="work/03-estore.html" class="project-card">
-      <span class="p-num mono">03</span>
-      <div class="p-thumb"><img src="assets/thumb-03.png" alt="E-STORE 36.5 차세대 판로 플랫폼 개선"></div>
-      <div class="p-main">
-        <p class="p-name">E-STORE 36.5<br>차세대 판로 플랫폼 개선</p>
-        <div class="p-tags">
-          <span class="tag">공공 플랫폼 개선</span>
-          <span class="tag">PC·Mobile UX</span>
-          <span class="tag">디자인 전략</span>
-          <span class="tag">프론트 QA</span>
+      <a href="work/03-estore.html" class="project-card" data-project-slide>
+        <span class="p-num mono">03</span>
+        <div class="p-thumb"><img src="assets/thumb-03.png" alt="E-STORE 36.5 차세대 판로 플랫폼 개선"></div>
+        <div class="p-main">
+          <p class="p-name">E-STORE 36.5<br>차세대 판로 플랫폼 개선</p>
+          <div class="p-tags">
+            <span class="tag">공공 플랫폼 개선</span>
+            <span class="tag">PC·Mobile UX</span>
+            <span class="tag">디자인 전략</span>
+            <span class="tag">프론트 QA</span>
+          </div>
+          <p class="p-desc">정보구조 문제 발견 및 메인 플로우 재설계 리딩.<br>QA 프로세스 주도를 통해 출시 전 결함 수정 및 품질 관리.</p>
         </div>
-        <p class="p-desc">정보구조 문제 발견 및 메인 플로우 재설계 리딩.<br>QA 프로세스 주도를 통해 출시 전 결함 수정 및 품질 관리.</p>
-      </div>
-      <div class="p-meta">
-        <p class="p-role mono" style="font-size:10px;">Design PL</p>
-        <p class="p-date">2024.09 — 2025.02</p>
-      </div>
-      <span class="p-arrow" aria-hidden="true">↗</span>
-    </a>
+        <div class="p-meta">
+          <p class="p-role mono" style="font-size:10px;">Design PL</p>
+          <p class="p-date">2024.09 — 2025.02</p>
+        </div>
+        <span class="p-arrow" aria-hidden="true">↗</span>
+      </a>
+    </div>
 
   </section>
 
@@ -165,6 +175,6 @@
     <a href="mailto:rlaehgns0062@gmail.com" class="footer-mail">rlaehgns0062@gmail.com</a>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=20260529-projects"></script>
 </body>
 </html>

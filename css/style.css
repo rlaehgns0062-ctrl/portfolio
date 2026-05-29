@@ -104,41 +104,48 @@ nav {
   background: rgba(20, 18, 16, 0.04);
 }
 
-/* 데스크탑 토글 */
+/* 데스크탑 탭 */
 .nav-links {
   justify-self: center;
   display: flex;
+  gap: 28px;
   list-style: none;
-  background: rgba(20, 18, 16, 0.05);
-  border: 0.5px solid var(--border-hover);
-  border-radius: 999px;
-  padding: 3px;
+  padding: 0;
   position: relative;
 }
 .nav-indicator {
-  position: absolute;
-  background: rgba(20, 18, 16, 0.09);
-  border-radius: 999px;
-  pointer-events: none;
-  z-index: 0;
+  display: none;
 }
 .nav-links li { position: relative; z-index: 1; }
 .nav-links li a {
   display: block;
   font-family: var(--font-mono);
   font-size: 12px;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   color: var(--text-muted);
-  padding: 6px 18px;
-  border-radius: 999px;
+  padding: 4px 0 6px;
   transition: color 0.2s;
   position: relative;
   z-index: 1;
 }
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.2s var(--ease-out);
+}
 .nav-links li a:hover { color: var(--text-secondary); }
 .nav-links li a.active { color: var(--text-primary); }
+.nav-links li a.active::after,
+.nav-links li a:hover::after { transform: scaleX(1); }
 
-/* 모바일 토글 — 데스크탑에서 숨김 */
+/* 모바일 탭 — 데스크탑에서 숨김 */
 .nav-links-mobile { display: none; }
 
 /* nav-right */
@@ -231,28 +238,37 @@ footer {
   .nav-links { display: none; }
   .nav-links-mobile {
     display: flex;
+    gap: 14px;
     justify-self: center;
     grid-column: 2;
     list-style: none;
-    background: rgba(20, 18, 16, 0.05);
-    border: 0.5px solid var(--border-hover);
-    border-radius: 999px;
-    padding: 3px;
+    padding: 0;
   }
   .nav-links-mobile li a {
     display: block;
     font-family: var(--font-mono);
     font-size: 10px;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.08em;
     color: var(--text-muted);
-    padding: 5px 12px;
-    border-radius: 999px;
+    padding: 4px 0 6px;
     transition: color 0.2s;
+    position: relative;
+  }
+  .nav-links-mobile li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(0);
+    transition: transform 0.2s var(--ease-out);
   }
   .nav-links-mobile li a.active {
     color: var(--text-primary);
-    background: rgba(20, 18, 16, 0.09);
   }
+  .nav-links-mobile li a.active::after { transform: scaleX(1); }
   .nav-right { justify-self: end; grid-column: 3; }
   .nav-cta { font-size: 10px; padding: 6px 12px; }
   footer { padding: 28px 24px; flex-direction: column; gap: 16px; text-align: center; }
