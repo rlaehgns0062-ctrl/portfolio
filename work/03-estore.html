@@ -62,8 +62,8 @@
       <h1 class="work-intro-title">E-STORE 36.5</h1>
       <span class="work-intro-sub">차세대 판로 플랫폼 개선</span>
       <p class="work-intro-desc">
-        노후화된 공공 커머스 플랫폼, 탐색부터 구매까지 전면 재설계.
-        정보구조 문제 발견 및 메인 플로우 재설계 리딩. QA 프로세스 주도를 통해 출시 전 결함 수정 및 품질 관리.
+        약 40억원의 예산이 투입된 공공 커머스 플랫폼의 탐색·구매 흐름을 전면 재설계했습니다.
+        노후화된 UI, 반응형 미지원, 디자인 기준 부재를 해결하기 위해 PC·MO 파운데이션과 운영 가능한 디자인 시스템을 함께 구축했습니다.
       </p>
     </div>
 
@@ -94,83 +94,119 @@
           <span class="section-label">Context</span>
         </div>
         <div class="section-content">
-          <h2>왜 이 프로젝트를 했는가</h2>
-          <p>E-Store 36.5는 사회적경제 상품을 판매하는 공공 커머스 플랫폼으로, 약 40억원의 예산이 투입되어 접속자 107만 5,866명, 구매회원 23,586명, 입점기업 2,756개, 등록상품 42,421개 규모의 플랫폼입니다.</p>
-          <p>입점업체의 66.8%가 매출 0원을 기록하며 플랫폼이 제 역할을 하지 못한다는 지적이 이어졌습니다. 노후화된 UI와 반응형 미지원, 복잡한 탐색 구조가 복합적으로 작용하며 사용자 이탈을 유발하고 있었고, 이를 해결하기 위한 차세대 개편의 일환으로 UI/UX 전면 재설계가 시작됐습니다.</p>
+          <h2>운영 성과를 만들지 못하던 공공 커머스 플랫폼</h2>
+          <p>E-Store 36.5는 사회적경제 상품을 판매하는 공공 커머스 플랫폼입니다. 약 40억원의 예산이 투입되었지만 입점업체의 66.8%가 매출 0원을 기록하며 플랫폼이 제 역할을 하지 못한다는 지적이 이어졌습니다.</p>
+          <p>노후화된 UI, 반응형 미지원, 복잡한 탐색 구조가 사용자 이탈을 유발하고 있었고, 디자인 기준 없이 화면이 누적되어 운영 일관성도 확보되지 않은 상태였습니다.</p>
+          <div class="insight-box">
+            <p>탐색·구매 흐름 재설계와 이후 운영에서 재사용 가능한 디자인 시스템 구축을 프로젝트의 두 축으로 설정했습니다.</p>
+          </div>
+          <div class="img-placeholder">
+            <span class="ph-label">Image Slot 01</span>
+            <span class="ph-note">프로젝트 개요 / 기존 플랫폼 현황 이미지 첨부 영역</span>
+          </div>
+          <span class="ph-caption">Project Overview</span>
         </div>
       </div>
 
       <div class="work-section">
         <div class="section-sticky">
           <span class="section-num">02</span>
-          <span class="section-label">Problem</span>
+          <span class="section-label">As-Is</span>
         </div>
         <div class="section-content">
-          <h2>문제의 크기</h2>
+          <h2>탐색, 구매, 운영 기준이 동시에 흔들리는 구조</h2>
+          <p>기존 서비스는 일반 소비자와 공공기관 조달 인터페이스가 혼재되어 사용성 전문성이 부족했습니다. 상품보다 텍스트 정보가 먼저 눈에 들어오는 메인 홈 구조와 복잡한 GNB·카테고리 구조로 원하는 상품을 찾기까지 인지 비용이 높았습니다.</p>
           <ul class="decision-list">
             <li>
               <span class="decision-tag dont">문제 1</span>
-              <div><strong>비효율적인 탐색 구조</strong> — 복잡한 GNB와 카테고리로 원하는 상품 탐색 시 이탈 가능성 높음</div>
+              <div><strong>비효율적인 탐색 구조</strong> — 복잡한 GNB와 카테고리 구조로 원하는 상품을 찾기까지 인지 비용이 높고, 탐색 단계 이탈 가능성이 컸습니다.</div>
             </li>
             <li>
               <span class="decision-tag dont">문제 2</span>
-              <div><strong>구매 전환 저하</strong> — 상품 상세부터 결제까지 이어지는 플로우의 정보 과부하로 구매 완료율 저하</div>
+              <div><strong>구매 전환 저하</strong> — 상품 상세부터 장바구니, 결제까지 이어지는 플로우에서 정보 과부하와 불명확한 레이아웃이 구매 완료를 방해했습니다.</div>
             </li>
             <li>
               <span class="decision-tag dont">문제 3</span>
-              <div><strong>반응형 미지원</strong> — 모바일 사용자가 PC 화면을 그대로 접속하는 구조로 사용성 심각하게 저하</div>
+              <div><strong>디자인 기준 부재</strong> — 컴포넌트, 컬러, 레이아웃 규칙이 정의되지 않아 운영 과정에서 일관성을 유지하기 어려웠습니다.</div>
             </li>
           </ul>
+          <div class="img-placeholder">
+            <span class="ph-label">Image Slot 02</span>
+            <span class="ph-note">As-is 화면 분석 / 문제 상황 이미지 첨부 영역</span>
+          </div>
+          <span class="ph-caption">As-Is Analysis</span>
         </div>
       </div>
 
       <div class="work-section">
         <div class="section-sticky">
           <span class="section-num">03</span>
-          <span class="section-label">Decision</span>
+          <span class="section-label">Strategy</span>
         </div>
         <div class="section-content">
-          <h2>무엇을 하고, 무엇을 하지 않았는가</h2>
-          <p>핵심 판단은 재설계의 방향을 <strong>'공공 플랫폼의 신뢰성'과 '커머스의 전환율'</strong> 두 가지를 동시에 잡는 것이었습니다.</p>
+          <h2>상품 발견부터 구매까지, 어떤 기기에서도 쉽게 이어지게</h2>
+          <p>탐색 구조가 복잡하면 사용자는 상품을 발견하기 전에 이탈하고, 구매 플로우가 불친절하면 발견한 상품도 구매로 이어지지 않습니다. 따라서 탐색 효율 향상과 구매 전환 개선을 동시에 해결하는 방향으로 설계 전략을 수립했습니다.</p>
           <ul class="decision-list">
             <li>
-              <span class="decision-tag do">한 것</span>
-              <div>상품 중심의 홈 재설계, 카테고리·검색 탐색 구조 개선, 구매 플로우 정보 계층 재정립, PC·MO 디자인 시스템 동시 구축</div>
+              <span class="decision-tag do">탐색</span>
+              <div>메인 홈 콘텐츠 위계를 재정의하고 카테고리 구조를 명확히 해 상품 도달률을 높이는 구조를 설계했습니다.</div>
             </li>
             <li>
-              <span class="decision-tag dont">하지 않은 것</span>
-              <div>화려한 비주얼 변화보다 명확한 구조와 여백 중심의 설계로 사용 편의성 확보에 집중. 불필요한 정보 레이어 제거</div>
+              <span class="decision-tag do">검색</span>
+              <div>자동완성, 인기 검색어, 카테고리 탭 분리로 사용자가 원하는 결과에 더 빠르게 접근하도록 검색 효율을 높였습니다.</div>
             </li>
             <li>
-              <span class="decision-tag why">기준</span>
-              <div>주 방문층인 40대 이상 사용자가 어렵지 않게 사용할 수 있도록 정보 계층과 레이아웃 밀도를 조정</div>
+              <span class="decision-tag why">시스템</span>
+              <div>PC·MO 파운데이션을 먼저 정의해 운영 일관성을 확보하고, 화면마다 기준을 새로 잡는 비용을 줄였습니다.</div>
             </li>
           </ul>
+          <div class="img-placeholder">
+            <span class="ph-label">Image Slot 03</span>
+            <span class="ph-note">User Need / Hypothesis / Target Metric 이미지 첨부 영역</span>
+          </div>
+          <span class="ph-caption">Solution Direction</span>
         </div>
       </div>
 
       <div class="work-section">
         <div class="section-sticky">
           <span class="section-num">04</span>
-          <span class="section-label">Design</span>
+          <span class="section-label">To-Be</span>
         </div>
         <div class="section-content">
-          <h2>주요 개선 화면</h2>
+          <h2>디자인 시스템 기반 전 화면 재설계</h2>
+          <p>구축된 파운데이션을 기반으로 메인 홈부터 결제, 회원가입, 모바일까지 일관된 기준으로 전 화면을 설계했습니다. 시스템이 먼저 정의되어 있었기 때문에 화면마다 기준을 새로 잡는 대신 설계 자체에 집중할 수 있었고, 컴포넌트 재사용으로 일관성과 작업 속도를 함께 확보했습니다.</p>
           <div class="point-grid">
             <div class="point-card">
-              <span class="point-card-label">홈 화면 재설계</span>
-              <p class="point-card-title">상품 중심 구조로 전환</p>
-              <p>배너 중심 → 상품·카테고리 중심 구조. GNB 단순화로 핵심 진입점 중심 재편</p>
+              <span class="point-card-label">Home</span>
+              <p class="point-card-title">상품 중심 홈 구조</p>
+              <p>메인 홈을 상품, 카테고리, 기획전 중심으로 재편해 발견 흐름을 강화했습니다.</p>
             </div>
             <div class="point-card">
-              <span class="point-card-label">PC·MO 반응형</span>
-              <p class="point-card-title">파운데이션 분리 설계</p>
-              <p>기기별 최적화된 컴포넌트 시스템 구축. 재사용 가능한 레이아웃 가이드 제작</p>
+              <span class="point-card-label">Checkout</span>
+              <p class="point-card-title">결제 정보 구조 분리</p>
+              <p>정보 과부하가 결제 포기로 이어진다고 판단해 2컬럼 레이아웃과 금액 실시간 업데이트 구조를 적용했습니다.</p>
             </div>
             <div class="point-card">
-              <span class="point-card-label">QA 프로세스</span>
-              <p class="point-card-title">출시 전 품질 관리 주도</p>
-              <p>퍼블리싱 단계 QA를 직접 주도하여 출시 전 결함 수정 및 품질 기준 수립</p>
+              <span class="point-card-label">Join</span>
+              <p class="point-card-title">회원가입 흐름 개선</p>
+              <p>구매 전환 직전의 마지막 관문인 회원가입을 유형 선택부터 정보 입력까지 다시 설계했습니다.</p>
+            </div>
+          </div>
+          <div class="img-2col">
+            <div>
+              <div class="img-placeholder">
+                <span class="ph-label">Image Slot 04-A</span>
+                <span class="ph-note">To-Be 홈 / 상품 탐색 화면</span>
+              </div>
+              <span class="ph-caption">Main & Product Discovery</span>
+            </div>
+            <div>
+              <div class="img-placeholder">
+                <span class="ph-label">Image Slot 04-B</span>
+                <span class="ph-note">결제 / 회원가입 주요 화면</span>
+              </div>
+              <span class="ph-caption">Checkout & Signup Flow</span>
             </div>
           </div>
         </div>
@@ -179,58 +215,131 @@
       <div class="work-section">
         <div class="section-sticky">
           <span class="section-num">05</span>
-          <span class="section-label">Result</span>
+          <span class="section-label">System</span>
         </div>
         <div class="section-content">
-          <h2>설계 결과</h2>
+          <h2>운영 가능성을 기준으로 설계한 디자인 시스템</h2>
+          <p>UI 디자인 작업에 앞서 시스템을 먼저 정의했습니다. 추후 B2G 화면 확장 가능성을 고려했을 때 기준 없이 화면이 쌓이면 재작업 비용이 커진다고 판단했기 때문입니다. 공공기관 플랫폼 특성과 주 사용 연령층을 고려해 시각적 완성도보다 접근성과 운영 기준을 우선했습니다.</p>
           <div class="result-grid">
             <div class="result-item">
-              <span class="result-label">반응형 구축</span>
-              <span class="result-val">PC·MO</span>
-              <span class="result-desc">기기별 파운데이션 분리로 최적화된 경험 확보</span>
+              <span class="result-label">Color Token</span>
+              <span class="result-val">4</span>
+              <span class="result-desc">Primary, Secondary, Sub, Neutral 계층으로 분리하고 시맨틱 네이밍을 적용</span>
             </div>
             <div class="result-item">
-              <span class="result-label">구조 재설계</span>
-              <span class="result-val">전면</span>
-              <span class="result-desc">탐색부터 구매까지 메인 플로우 리딩</span>
+              <span class="result-label">Grid / Spacing</span>
+              <span class="result-val">12</span>
+              <span class="result-desc">12컬럼 기반 PC 레이아웃과 8단계 gap 토큰으로 간격 기준 정립</span>
             </div>
             <div class="result-item">
-              <span class="result-label">품질 관리 주도</span>
-              <span class="result-val">QA</span>
-              <span class="result-desc">출시 전 결함 수정 및 품질 기준 수립</span>
+              <span class="result-label">Layout Guide</span>
+              <span class="result-val">9</span>
+              <span class="result-desc">서브 페이지 유형을 분석해 9종의 PC 레이아웃 가이드 제작</span>
             </div>
           </div>
+          <div class="img-placeholder">
+            <span class="ph-label">Image Slot 05</span>
+            <span class="ph-note">컬러 토큰 / 스페이싱 / PC·MO 레이아웃 가이드 이미지 첨부 영역</span>
+          </div>
+          <span class="ph-caption">Design System & Layout Guide</span>
         </div>
       </div>
 
       <div class="work-section">
         <div class="section-sticky">
           <span class="section-num">06</span>
+          <span class="section-label">Flow</span>
+        </div>
+        <div class="section-content">
+          <h2>컴포넌트 시스템이 실제 화면에서 작동하는 방식</h2>
+          <p>회원가입은 구매 전환 직전의 마지막 관문입니다. 정의한 컴포넌트와 레이아웃 기준을 기반으로 유형 선택부터 정보 입력까지 전 단계를 재설계했습니다.</p>
+          <ul class="decision-list">
+            <li>
+              <span class="decision-tag do">Point 01</span>
+              <div><strong>회원 유형 선택 구조 개선</strong> — 카드 리스트 컴포넌트와 툴팁 안내로 유형별 대상을 명확히 전달해 잘못된 선택으로 인한 단계 지연을 줄였습니다.</div>
+            </li>
+            <li>
+              <span class="decision-tag do">Point 02</span>
+              <div><strong>약관 UX 간소화</strong> — 필수·선택 구분이 불명확했던 전문 텍스트를 상세보기 팝업으로 분리하고 전체 동의 체크박스를 도입했습니다.</div>
+            </li>
+            <li>
+              <span class="decision-tag do">Point 03</span>
+              <div><strong>정보 입력 화면 밀도 개선</strong> — 필수 항목 중심으로 정리하고 여백을 강하게 적용해 친절하고 쉽게 진행되는 화면으로 개선했습니다.</div>
+            </li>
+          </ul>
+          <div class="img-placeholder">
+            <span class="ph-label">Image Slot 06</span>
+            <span class="ph-note">회원가입 유형 선택 / 약관 동의 / 정보 입력 화면 첨부 영역</span>
+          </div>
+          <span class="ph-caption">Signup Process</span>
+        </div>
+      </div>
+
+      <div class="work-section">
+        <div class="section-sticky">
+          <span class="section-num">07</span>
+          <span class="section-label">Mobile</span>
+        </div>
+        <div class="section-content">
+          <h2>움직임까지 정의한 모바일 경험 가이드</h2>
+          <p>화면 설계만으로는 모바일 경험을 완성할 수 없다고 판단했습니다. MO 파운데이션과 인터랙션 가이드를 기반으로 홈, 카테고리, 상품 상세까지 모바일 전 화면을 재설계하고 퍼블리셔가 해석에 따라 다르게 구현하지 않도록 인터랙션 규칙을 문서화했습니다.</p>
+          <div class="point-grid">
+            <div class="point-card">
+              <span class="point-card-label">Mobile Home</span>
+              <p class="point-card-title">모바일 홈 레이아웃 재정의</p>
+              <p>모바일 뷰포트에 맞게 섹션별 레이아웃을 재정의하고 하단 탭바로 주요 기능 접근성을 높였습니다.</p>
+            </div>
+            <div class="point-card">
+              <span class="point-card-label">Category</span>
+              <p class="point-card-title">2Depth 동시 노출</p>
+              <p>1Depth 메뉴는 좌측 고정, 2Depth는 우측 동시 노출 구조로 원하는 카테고리에 한 번에 도달하도록 했습니다.</p>
+            </div>
+            <div class="point-card">
+              <span class="point-card-label">Product Detail</span>
+              <p class="point-card-title">상품 상세 모바일 최적화</p>
+              <p>풀스크린 이미지와 하단 고정 구매 버튼으로 상품 몰입감과 구매 액션 접근성을 강화했습니다.</p>
+            </div>
+          </div>
+          <div class="img-placeholder">
+            <span class="ph-label">Image Slot 07</span>
+            <span class="ph-note">모바일 홈 / 카테고리 / 상품 상세 화면 첨부 영역</span>
+          </div>
+          <span class="ph-caption">Mobile Experience Guide</span>
+        </div>
+      </div>
+
+      <div class="work-section">
+        <div class="section-sticky">
+          <span class="section-num">08</span>
           <span class="section-label">Review</span>
         </div>
         <div class="section-content">
-          <h2>배운 점과 개선할 점</h2>
+          <h2>결과 및 회고</h2>
           <div class="retro-grid">
             <div>
               <span class="retro-col-title">What Changed</span>
               <div class="retro-item">
-                <p class="retro-item-title">공공성과 커머스 경험의 균형 설계</p>
-                <p class="retro-item-desc">공공기관 플랫폼 특성상 기업의 사회적 가치를 전달하면서도 방문자가 자연스럽게 구매로 이어지는 경험을 설계. 탐색부터 결제까지 흐름을 재설계해 가치 전달과 구매 전환이라는 두 목표를 동시에 달성</p>
+                <p class="retro-item-title">운영 가능한 디자인 시스템 구축</p>
+                <p class="retro-item-desc">PC·MO 파운데이션을 분리 정의하고 컬러, 타이포, 컴포넌트, 레이아웃 가이드를 체계적으로 구축했습니다. 이후 플랫폼이 일반 소비자 전용 스토어36.5와 공공기관 전용 가치장터로 분리·확대되는 구조적 기반으로 활용될 수 있었습니다.</p>
               </div>
               <div class="retro-item">
-                <p class="retro-item-title">운영 가능한 디자인 시스템 구축</p>
-                <p class="retro-item-desc">PC·MO 파운데이션 분리와 레이아웃 가이드 제작으로 이후 운영에서 참고할 수 있는 재사용 가능한 기반 마련. 이 재설계는 이후 플랫폼이 일반 소비자 전용 스토어36.5와 공공기관 전용 가치장터로 분리·확대되는 구조적 기반으로 활용</p>
+                <p class="retro-item-title">공공성과 커머스 경험의 균형 설계</p>
+                <p class="retro-item-desc">기업의 사회적 가치를 전달하면서도 방문자가 자연스럽게 구매로 이어지는 경험을 설계했습니다. 탐색부터 결제까지 흐름을 재설계해 가치 전달과 구매 전환이라는 두 목표를 동시에 다뤘습니다.</p>
+              </div>
+              <div class="retro-item">
+                <p class="retro-item-title">주 사용자를 고려한 접근성 설계</p>
+                <p class="retro-item-desc">주 방문층인 40대 이상 사용자가 어렵지 않게 사용할 수 있도록 정보 계층과 레이아웃 밀도를 조정하고, 명확한 구조와 여백 중심의 설계로 사용 편의성을 확보했습니다.</p>
               </div>
             </div>
             <div>
               <span class="retro-col-title">What I'd Do Differently</span>
               <div class="retro-item">
                 <p class="retro-item-title">기획과 디자인 동시 진행의 한계</p>
-                <p class="retro-item-desc">명확한 기획 없이 화면 기획과 디자인을 동시에 진행하다 보니 프로젝트가 러프하게 흘러간 부분이 있었음. 다양한 관점의 피드백을 충분히 받지 못한 것이 아쉬움으로 남음</p>
+                <p class="retro-item-desc">명확한 기획 없이 화면 기획과 디자인을 동시에 진행하다 보니 프로젝트가 러프하게 흘러간 부분이 있었습니다. 예산과 인력 배치의 현실적 한계 속에서 빠르게 성장할 수 있었지만, 다양한 관점의 피드백을 충분히 받지 못한 점은 아쉬움으로 남았습니다.</p>
               </div>
               <div class="retro-item">
-                <p class="retro-item-title">더 체계적인 환경에서 설계하고 싶다는 동기</p>
-                <p class="retro-item-desc">모바일부터 디자인 시스템까지 전 프로세스를 혼자 판단하고 결정해야 하는 순간이 많았습니다. 그 경험이 더 체계적인 환경에서, 더 다양한 관점과 함께 설계하고 싶다는 동기로 이어졌습니다.</p>
+                <p class="retro-item-title">더 체계적인 환경에서 일하고 싶다는 동기</p>
+                <p class="retro-item-desc">모바일 웹부터 디자인 시스템까지 전 프로세스를 주도하며 혼자 판단하고 결정해야 하는 순간이 많았습니다. 이 경험은 더 체계적인 환경에서, 더 다양한 관점과 함께 설계하고 싶다는 동기로 이어졌습니다.</p>
               </div>
             </div>
           </div>
