@@ -4,8 +4,8 @@
 
 /* ── HERO — 데스크탑: 아래 정렬, 전체 높이 ── */
 .hero {
-  min-height: 100vh;
-  padding: 0 48px 72px;
+  min-height: 88vh;
+  padding: 0 48px 56px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -46,8 +46,8 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding-top: 88px;
-  margin-bottom: 20px;
+  padding-top: 64px;
+  margin-bottom: 16px;
 }
 
 .hero-headline { position: relative; z-index: 2; }
@@ -89,10 +89,12 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-top: 72px;
+  margin-top: 52px;
   gap: 40px;
 }
-.hero-desc { font-size: 14px; color: var(--text-secondary); max-width: 340px; line-height: 1.8; font-weight: 400; }
+.hero-desc { font-size: 14px; color: var(--text-secondary); max-width: 430px; line-height: 1.8; font-weight: 400; }
+.hero-desc-line { display: block; }
+.hero-desc-nowrap { white-space: nowrap; }
 .hero-desc strong { color: var(--text-primary); font-weight: 400; }
 .hero-scroll { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
 .hero-scroll::before { content: ''; display: block; width: 36px; height: 0.5px; background: var(--text-muted); }
@@ -270,7 +272,7 @@
     justify-content: flex-start;
   }
   .hero-top {
-    padding-top: 80px;
+    padding-top: 68px;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
@@ -286,7 +288,7 @@
     margin-top: 40px;
   }
   .resume-cta { font-size: 13px; padding: 12px 24px; }
-  .hero-desc { font-size: 13px; max-width: 100%; }
+  .hero-desc { font-size: 10px; max-width: 100%; letter-spacing: -0.01em; }
   .br-desktop { display: none; }
   .corner { display: none; }
   .works { padding: 48px 24px; }
