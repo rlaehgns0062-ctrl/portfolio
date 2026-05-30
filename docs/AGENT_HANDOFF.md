@@ -1,0 +1,12 @@
+# Agent Handoff
+
+## [codex] 2026-05-31 05:49 KST
+
+- Removed the `Home` item from the mobile hamburger menu on the home page.
+- Replaced the mobile-only house SVG home icon on About and Work pages with a quieter `KD` monogram home button.
+- Updated `css/style.css` for the new mobile home button styling.
+- Verified `js/main.js` with `node --check`.
+
+Notes:
+- Desktop top navigation remains unchanged.
+- Existing untracked local files were not included: `.DS_Store`, `docs/HANDOFF.md.pdf`, `watch-main.sh`.
