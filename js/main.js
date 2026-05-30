@@ -122,6 +122,21 @@ mainEl.classList.add('page-enter');
     renderProjectPage(0);
   }
 
+  /* ── 홈 Studies 가로 갤러리 ── */
+  const studyRail = document.querySelector('[data-study-rail]');
+  const studyPrev = document.querySelector('[data-study-prev]');
+  const studyNext = document.querySelector('[data-study-next]');
+  if (studyRail && studyPrev && studyNext) {
+    function scrollStudies(direction) {
+      const card = studyRail.querySelector('.study-card');
+      const step = card ? card.getBoundingClientRect().width + 14 : 320;
+      studyRail.scrollBy({ left: direction * step, behavior: 'smooth' });
+    }
+
+    studyPrev.addEventListener('click', () => scrollStudies(-1));
+    studyNext.addEventListener('click', () => scrollStudies(1));
+  }
+
   /* ── 프로젝트 카드 호버 시 번호 강조 ── */
   const cards = document.querySelectorAll('.project-card');
   cards.forEach(card => {
