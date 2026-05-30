@@ -15,7 +15,15 @@
 <body>
 
   <nav>
-    <div class="nav-logo"><span>KIM DOHOON</span></div>
+    <div class="nav-logo">
+      <span class="nav-logo-text">KIM DOHOON</span>
+      <a href="index.html" class="nav-logo-mobile-home" aria-label="홈으로">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+          <path d="M9 21V12h6v9" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -23,7 +31,6 @@
     </ul>
     <button class="nav-menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
     <div class="mobile-menu" id="mobile-menu">
-      <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="work.html" class="active">Work</a>
       <a href="mailto:rlaehgns0062@gmail.com">Contact</a>
