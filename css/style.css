@@ -320,3 +320,20 @@ footer {
   src: url('../fonts/PlayfairDisplay-SemiBoldItalic.ttf') format('truetype');
   font-weight: 600; font-style: italic; font-display: swap;
 }
+/* ── 모바일 홈 아이콘 (홈 제외 페이지) ── */
+.nav-logo-mobile-home {
+  display: none;
+  color: var(--text-primary);
+  line-height: 0;
+}
+
+@media (max-width: 768px) {
+  .nav-logo .nav-logo-text { display: none; }
+  .nav-logo-mobile-home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+  }
+}
