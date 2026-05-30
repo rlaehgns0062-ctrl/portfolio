@@ -18,7 +18,7 @@ mainEl.classList.add('page-enter');
   }, { passive: true });
 
   /* ── 탭 nav active 상태 ── */
-  const navLinks = document.querySelectorAll('.nav-links li a, .nav-links-mobile li a');
+  const navLinks = document.querySelectorAll('.nav-links li a, .mobile-menu a');
   const currentPath = window.location.pathname;
   const isDetailWork = currentPath.includes('/work/');
   const isWorkPage = currentPath.endsWith('/work.html') || isDetailWork;
@@ -36,6 +36,55 @@ mainEl.classList.add('page-enter');
 
     link.classList.toggle('active', shouldActivate);
   });
+
+  /* ── 모바일 햄버거 메뉴 ── */
+  const menuToggle = document.querySelector('.nav-menu-toggle');
+  const mobileMenu = document.querySelector('.mobile-menu');
+  if (menuToggle && mobileMenu) {
+    function setMenu(open) {
+      menuToggle.classList.toggle('is-open', open);
+      mobileMenu.classList.toggle('is-open', open);
+      menuToggle.setAttribute('aria-expanded', String(open));
+    }
+
+    menuToggle.addEventListener('click', () => {
+      setMenu(!mobileMenu.classList.contains('is-open'));
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => setMenu(false));
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') setMenu(false);
+    });
+  }
+
+  /* ── Work 하위 탭 ── */
+  const workTabs = document.querySelectorAll('[data-work-tab]');
+  const workPanels = document.querySelectorAll('[data-work-panel]');
+  if (workTabs.length && workPanels.length) {
+    function setWorkTab(tabName) {
+      workTabs.forEach(tab => {
+        tab.classList.toggle('active', tab.dataset.workTab === tabName);
+      });
+      workPanels.forEach(panel => {
+        panel.classList.toggle('is-active', panel.dataset.workPanel === tabName);
+      });
+    }
+
+    const initialTab = window.location.hash === '#studies' ? 'studies' : 'projects';
+    setWorkTab(initialTab);
+
+    workTabs.forEach(tab => {
+      tab.addEventListener('click', (e) => {
+        e.preventDefault();
+        const tabName = tab.dataset.workTab;
+        setWorkTab(tabName);
+        history.replaceState(null, '', `#${tabName}`);
+      });
+    });
+  }
 
   /* ── 홈 프로젝트 페이지 넘버링 ── */
   const projectPager = document.querySelector('[data-project-pager]');

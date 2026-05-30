@@ -9,8 +9,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-  <link rel="stylesheet" href="css/style.css?v=20260529-projects" />
-  <link rel="stylesheet" href="css/home.css?v=20260530-home-actions-3" />
+  <link rel="stylesheet" href="css/style.css?v=20260531-mobile-menu-studies" />
+  <link rel="stylesheet" href="css/home.css?v=20260531-studies" />
 </head>
 <body>
 
@@ -21,11 +21,13 @@
       <li><a href="about.html">About</a></li>
       <li><a href="work.html" class="active">Work</a></li>
     </ul>
-    <ul class="nav-links-mobile">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="work.html" class="active">Work</a></li>
-    </ul>
+    <button class="nav-menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="work.html" class="active">Work</a>
+      <a href="mailto:rlaehgns0062.com">Contact</a>
+    </div>
     <div class="nav-right">
       <a href="mailto:rlaehgns0062@gmail.com" class="nav-cta">Contact</a>
     </div>
@@ -34,12 +36,16 @@
   <main class="work-list-page">
     <section class="works work-archive" id="work">
       <div class="works-header">
-        <span class="mono">All Projects</span>
-        <span class="mono">03 Projects</span>
+        <span class="mono">All Work</span>
       </div>
       <h1 class="works-title">WORK</h1>
+      <div class="work-tabs">
+        <a href="#projects" class="work-tab active" data-work-tab="projects">Projects</a>
+        <a href="#studies" class="work-tab" data-work-tab="studies">Studies</a>
+      </div>
 
-      <a href="work/01-finance.html" class="project-card">
+      <div id="projects" class="work-panel is-active" data-work-panel="projects">
+        <a href="work/01-finance.html" class="project-card">
         <span class="p-num mono">01</span>
         <div class="p-thumb"><img src="assets/thumb-01.png" alt="대형 금융사 모바일 자산관리 서비스 개선"></div>
         <div class="p-main">
@@ -57,9 +63,9 @@
           <p class="p-date">2025.05 — 2026.02</p>
         </div>
         <span class="p-arrow" aria-hidden="true">↗</span>
-      </a>
+        </a>
 
-      <a href="work/02-toggle.html" class="project-card">
+        <a href="work/02-toggle.html" class="project-card">
         <span class="p-num mono">02</span>
         <div class="p-thumb"><img src="assets/thumb-02.png" alt="Toggle SaaS 메인화면 리디자인"></div>
         <div class="p-main">
@@ -77,9 +83,9 @@
           <p class="p-date">2024.04 — 2024.05</p>
         </div>
         <span class="p-arrow" aria-hidden="true">↗</span>
-      </a>
+        </a>
 
-      <a href="work/03-estore.html" class="project-card">
+        <a href="work/03-estore.html" class="project-card">
         <span class="p-num mono">03</span>
         <div class="p-thumb"><img src="assets/thumb-03.png" alt="E-STORE 36.5 차세대 판로 플랫폼 개선"></div>
         <div class="p-main">
@@ -97,7 +103,28 @@
           <p class="p-date">2024.09 — 2025.02</p>
         </div>
         <span class="p-arrow" aria-hidden="true">↗</span>
-      </a>
+        </a>
+      </div>
+
+      <div id="studies" class="studies work-panel" data-work-panel="studies" style="padding-left:0;padding-right:0;border-top:none;">
+        <div class="studies-header">
+          <span class="mono">AI Studies</span>
+          <span class="mono">01 Study</span>
+        </div>
+        <h2 class="studies-title">STUDIES</h2>
+        <div class="study-grid">
+          <a href="work/studies/01-ai-visual-study.html" class="study-card">
+            <div class="study-thumb"><img src="assets/thumb-03.png" alt="AI visual study preview"></div>
+            <p class="study-name">AI Visual Study<br>Commerce Moodboard</p>
+            <div class="p-tags">
+              <span class="tag">AI Image</span>
+              <span class="tag">Moodboard</span>
+              <span class="tag">Visual Direction</span>
+            </div>
+            <p class="study-desc">AI 이미지 생성과 디자인 리서치를 결합해 커머스 서비스의 비주얼 방향을 빠르게 탐색한 스터디입니다.</p>
+          </a>
+        </div>
+      </div>
     </section>
   </main>
 
@@ -106,6 +133,6 @@
     <a href="mailto:rlaehgns0062@gmail.com" class="footer-mail">rlaehgns0062@gmail.com</a>
   </footer>
 
-  <script src="js/main.js?v=20260529-projects"></script>
+  <script src="js/main.js?v=20260531-mobile-menu"></script>
 </body>
 </html>

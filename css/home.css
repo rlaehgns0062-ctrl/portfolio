@@ -246,6 +246,173 @@
   margin-bottom: 48px;
 }
 
+.work-tabs {
+  display: flex;
+  gap: 28px;
+  border-bottom: 0.5px solid var(--border);
+  margin: 0 0 32px;
+}
+.work-tab {
+  display: inline-block;
+  padding: 0 0 12px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  border-bottom: 1px solid transparent;
+}
+.work-tab.active,
+.work-tab:hover {
+  color: var(--text-primary);
+  border-color: currentColor;
+}
+.work-panel { display: none; }
+.work-panel.is-active { display: block; }
+
+.studies {
+  padding: 80px 48px;
+  border-top: 0.5px solid var(--border);
+}
+.studies-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 14px;
+}
+.studies-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 44px;
+  letter-spacing: 0.03em;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  margin-bottom: 48px;
+}
+.study-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.study-card {
+  color: inherit;
+  display: block;
+}
+.study-thumb {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 4px;
+  border: 0.5px solid var(--border);
+  background: var(--bg3);
+  margin-bottom: 16px;
+}
+.study-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s var(--ease-out);
+}
+.study-card:hover .study-thumb img { transform: scale(1.04); }
+.study-name {
+  font-size: 18px;
+  line-height: 1.35;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+.study-desc {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-top: 14px;
+}
+.study-actions {
+  display: flex;
+  justify-content: center;
+  padding-top: 28px;
+}
+
+.study-page {
+  padding-top: var(--nav-h);
+}
+.study-cover {
+  padding: 72px 48px 48px;
+  border-bottom: 0.5px solid var(--border);
+}
+.study-cover-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 46%);
+  gap: 64px;
+  align-items: end;
+}
+.study-cover-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(42px, 7vw, 96px);
+  line-height: 0.95;
+  letter-spacing: 0;
+  margin: 18px 0 24px;
+}
+.study-cover-desc {
+  max-width: 520px;
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+.study-meta {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+.study-cover-image {
+  aspect-ratio: 4 / 3;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 0.5px solid var(--border);
+}
+.study-cover-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.study-body {
+  padding: 72px 48px;
+}
+.study-section {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 64px;
+  padding: 44px 0;
+  border-top: 0.5px solid var(--border);
+}
+.study-section h2 {
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin-bottom: 18px;
+}
+.study-section p {
+  font-size: 14px;
+  line-height: 1.85;
+  color: var(--text-secondary);
+}
+.study-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.study-gallery-item img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 0.5px solid var(--border);
+}
+.study-gallery-item span {
+  display: block;
+  margin-top: 8px;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
 /* ── ABOUT STRIP ── */
 .about-strip {
   padding: 72px 48px;
@@ -333,4 +500,20 @@
   .p-thumb { display: none; }
   .p-tags { min-height: auto; }
   .about-strip { grid-template-columns: 1fr; gap: 40px; padding: 48px 24px; }
+  .work-tabs { gap: 22px; margin-bottom: 24px; }
+  .studies { padding: 48px 24px; }
+  .studies-title { font-size: 34px; margin-bottom: 32px; }
+  .study-grid { grid-template-columns: 1fr; gap: 28px; }
+  .study-page { padding-top: var(--nav-h-mobile); }
+  .study-cover { padding: 48px 24px 36px; }
+  .study-cover-grid { grid-template-columns: 1fr; gap: 32px; }
+  .study-cover-title { font-size: 44px; }
+  .study-cover-desc { font-size: 13px; }
+  .study-body { padding: 48px 24px; }
+  .study-section {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 36px 0;
+  }
+  .study-gallery-grid { grid-template-columns: 1fr; }
 }
