@@ -405,14 +405,15 @@
   padding-top: var(--nav-h);
 }
 .study-cover {
-  padding: 72px 48px 48px;
+  padding: 72px 48px 56px;
   border-bottom: 0.5px solid var(--border);
 }
-.study-cover-grid {
+.study-cover-intro {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(360px, 46%);
-  gap: 64px;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 38%);
+  gap: 48px;
   align-items: end;
+  margin-bottom: 40px;
 }
 .study-cover-title {
   font-family: 'Outfit', sans-serif;
@@ -434,15 +435,17 @@
   margin-top: 24px;
 }
 .study-cover-image {
-  aspect-ratio: 4 / 3;
-  border-radius: 4px;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
   overflow: hidden;
   border: 0.5px solid var(--border);
+  background: #123f29;
 }
 .study-cover-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  display: block;
 }
 .study-body {
   padding: 72px 48px;
@@ -459,6 +462,19 @@
   font-weight: 400;
   letter-spacing: -0.02em;
   margin-bottom: 18px;
+}
+.study-section-media {
+  margin: 20px 0 18px;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 0.5px solid var(--border);
+  background: #123f29;
+}
+.study-section-media img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  display: block;
 }
 .study-section p {
   font-size: 14px;
@@ -579,7 +595,7 @@
   .study-card { min-width: 68vw; }
   .study-page { padding-top: var(--nav-h-mobile); }
   .study-cover { padding: 48px 24px 36px; }
-  .study-cover-grid { grid-template-columns: 1fr; gap: 32px; }
+  .study-cover-intro { grid-template-columns: 1fr; gap: 24px; margin-bottom: 28px; }
   .study-cover-title { font-size: 44px; }
   .study-cover-desc { font-size: 13px; }
   .study-body { padding: 48px 24px; }

@@ -1,5 +1,11 @@
 # Agent Handoff
 
+## [codex] 2026-05-31 14:19 KST
+
+- Refined the first Study hero into a large visual-led case-study layout inspired by the referenced Dribbble dashboard composition.
+- Added reusable image slots between each section title and description in the Study detail page.
+- Updated the `home.css` cache version across pages that load it.
+
 ## [codex] 2026-05-31 14:02 KST
 
 - Rewrote the first Study detail page around the AI-assisted fridge app design system case study.
