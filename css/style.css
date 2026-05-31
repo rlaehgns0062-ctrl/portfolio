@@ -324,7 +324,7 @@ footer {
 .nav-logo-mobile-home {
   display: none;
   color: var(--text-primary);
-  line-height: 1;
+  line-height: 0;
 }
 
 @media (max-width: 768px) {
@@ -340,11 +340,14 @@ footer {
     background: rgba(20, 18, 16, 0.02);
     transition: border-color 0.2s, background 0.2s;
   }
-  .nav-logo-mobile-home span {
-    font-family: var(--font-mono);
-    font-size: 10px;
-    letter-spacing: 0.08em;
-    color: var(--text-primary);
+  .nav-logo-mobile-home svg {
+    width: 18px;
+    height: 18px;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
   }
   .nav-logo-mobile-home:hover {
     border-color: var(--text-primary);
