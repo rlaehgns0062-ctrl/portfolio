@@ -276,6 +276,7 @@
 }
 .work-panel { display: none; }
 .work-panel.is-active { display: block; }
+.work-archive #projects .project-card:first-child { border-top: none; }
 
 .studies {
   padding: 56px 48px 64px;

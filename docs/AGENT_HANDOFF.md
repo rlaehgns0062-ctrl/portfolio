@@ -1,5 +1,11 @@
 # Agent Handoff
 
+## [codex] 2026-05-31 13:46 KST
+
+- Removed the `STUDIES` heading inside the Work page Studies panel.
+- Removed the top divider from the first Project card in the Work archive.
+- Updated the `home.css` cache version across pages that load it.
+
 ## [codex] 2026-05-31 13:34 KST
 
 - Updated the home page Projects and Studies `전체보기` links to black pill CTA buttons aligned to the right.
