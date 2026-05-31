@@ -1,5 +1,11 @@
 # Agent Handoff
 
+## [codex] 2026-05-31 14:02 KST
+
+- Rewrote the first Study detail page around the AI-assisted fridge app design system case study.
+- Updated the study narrative to follow Concept, Screens, Components, Variants, Variables, Automation, Dark Mode, and Reflection.
+- Updated the first Study card on Home and Work to match the fridge app design system content.
+
 ## [codex] 2026-05-31 13:46 KST
 
 - Removed the `STUDIES` heading inside the Work page Studies panel.
