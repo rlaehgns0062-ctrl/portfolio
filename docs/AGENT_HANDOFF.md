@@ -1,5 +1,12 @@
 # Agent Handoff
 
+## [codex] 2026-05-31 13:18 KST
+
+- Removed the remaining `01 Study` eyebrow above the Studies title on the Work page.
+
+Notes:
+- Existing untracked local files were not included: `.DS_Store`, `docs/.DS_Store`, `docs/HANDOFF.md.pdf`, `watch-main.sh`.
+
 ## [codex] 2026-05-31 06:05 KST
 
 - Replaced the mobile-only `KD` home affordance on About and Work with a clearer circular line home icon.
