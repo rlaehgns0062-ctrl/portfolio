@@ -151,27 +151,34 @@
 }
 .project-actions {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   padding-top: 24px;
 }
 .view-all-link {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   margin-top: 0;
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.12em;
-  color: var(--text-secondary);
-  border-bottom: 0.5px solid var(--border);
-  padding-bottom: 2px;
-  transition: color 0.2s, border-color 0.2s;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  background: var(--text-primary);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.2s, transform 0.2s;
+  box-shadow: 0 8px 22px rgba(20, 18, 16, 0.14);
 }
 .view-all-link::after {
-  content: ' →';
+  content: '↗';
 }
 .view-all-link:hover {
-  color: var(--text-primary);
-  border-color: var(--text-secondary);
+  opacity: 0.88;
+  transform: translateY(-1px);
 }
 .project-pager .project-card {
   display: none;
@@ -389,7 +396,7 @@
 }
 .study-actions {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   padding-top: 28px;
 }
 
@@ -538,7 +545,7 @@
   }
   .works-title { font-size: 34px; }
   .project-actions {
-    justify-content: center;
+    justify-content: flex-end;
     padding-top: 20px;
   }
   .project-pager-controls {
@@ -555,7 +562,8 @@
     font-size: 9px;
   }
   .view-all-link {
-    font-size: 10px;
+    padding: 11px 20px;
+    font-size: 12px;
   }
   .project-card { grid-template-columns: 28px 1fr 16px; gap: 12px; }
   .p-desc { display: none; }

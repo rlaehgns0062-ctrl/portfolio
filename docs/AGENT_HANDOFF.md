@@ -1,5 +1,12 @@
 # Agent Handoff
 
+## [codex] 2026-05-31 13:34 KST
+
+- Updated the home page Projects and Studies `전체보기` links to black pill CTA buttons aligned to the right.
+- Matched the CTA arrow style to the Resume arrow.
+- Changed the home page `AI STUDIES` title to `STUDIES`.
+- Updated the `home.css` cache version across pages that load it.
+
 ## [codex] 2026-05-31 13:18 KST
 
 - Removed the remaining `01 Study` eyebrow above the Studies title on the Work page.
