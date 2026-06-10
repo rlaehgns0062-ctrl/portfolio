@@ -479,6 +479,9 @@
 .study-section-media.is-fill img {
   object-fit: cover;
 }
+.study-section-media.is-fill {
+  border: none;
+}
 .study-section p {
   font-size: 14px;
   line-height: 1.85;

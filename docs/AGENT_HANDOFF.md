@@ -1,5 +1,9 @@
 # Agent Handoff
 
+## [codex] 2026-06-10 20:02 KST
+
+- Removed the outer border from the filled Overview image frame in the first Study detail page.
+
 ## [codex] 2026-06-10 19:57 KST
 
 - Replaced `assets/studies/study-01-overview.png` with the updated overview screenshot.
