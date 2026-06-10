@@ -476,6 +476,9 @@
   object-fit: contain;
   display: block;
 }
+.study-section-media.is-fill img {
+  object-fit: cover;
+}
 .study-section p {
   font-size: 14px;
   line-height: 1.85;

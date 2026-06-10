@@ -1,5 +1,10 @@
 # Agent Handoff
 
+## [codex] 2026-06-10 19:57 KST
+
+- Replaced `assets/studies/study-01-overview.png` with the updated overview screenshot.
+- Added an `is-fill` media modifier so the Overview image fills its frame without inner padding.
+
 ## [codex] 2026-06-10 19:45 KST
 
 - Added `assets/studies/study-01-overview.png` from the provided screenshot.
