@@ -1,5 +1,10 @@
 # Agent Handoff
 
+## [codex] 2026-06-10 19:45 KST
+
+- Added `assets/studies/study-01-overview.png` from the provided screenshot.
+- Updated the first Study Overview section image slot to use the new overview image.
+
 ## [codex] 2026-05-31 14:19 KST
 
 - Refined the first Study hero into a large visual-led case-study layout inspired by the referenced Dribbble dashboard composition.
