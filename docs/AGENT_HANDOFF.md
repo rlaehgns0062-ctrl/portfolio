@@ -1,5 +1,10 @@
 # Agent Handoff
 
+## [codex] 2026-06-11 22:20 KST
+
+- Replaced `assets/studies/study-coming-soon.png` from the Claude source thumbnail path.
+- Updated Coming Soon thumbnail cache query parameters from `20260611` to `20260611b`.
+
 ## [codex] 2026-06-11 22:08 KST
 
 - Removed outlines from all Study thumbnails.
