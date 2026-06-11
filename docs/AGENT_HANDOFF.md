@@ -1,5 +1,11 @@
 # Agent Handoff
 
+## [codex] 2026-06-11 00:00 KST
+
+- Reduced Study card thumbnail sizing while keeping the 3:4 ratio.
+- Converted unavailable Study cards into disabled non-link cards.
+- Updated unavailable Study card titles to `Coming Soon`.
+
 ## [codex] 2026-06-10 20:02 KST
 
 - Removed the outer border from the filled Overview image frame in the first Study detail page.
