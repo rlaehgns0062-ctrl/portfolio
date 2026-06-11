@@ -1,5 +1,11 @@
 # Agent Handoff
 
+## [codex] 2026-06-11 22:08 KST
+
+- Removed outlines from all Study thumbnails.
+- Added cache-busting query parameters to Coming Soon thumbnail usages so same-path image replacements load freshly.
+- Updated the `home.css` cache version across pages that load it.
+
 ## [codex] 2026-06-11 00:18 KST
 
 - Added `assets/studies/study-coming-soon.png` from the Claude source thumbnail.
