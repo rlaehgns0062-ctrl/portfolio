@@ -1,5 +1,11 @@
 # Agent Handoff
 
+## [codex] 2026-06-11 22:28 KST
+
+- Removed the outline from Work project list thumbnails.
+- Set project and Study list thumbnail radius values to `0`.
+- Updated the `home.css` cache version across pages that load it.
+
 ## [codex] 2026-06-11 22:20 KST
 
 - Replaced `assets/studies/study-coming-soon.png` from the Claude source thumbnail path.
