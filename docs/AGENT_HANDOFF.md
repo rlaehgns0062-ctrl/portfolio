@@ -1,5 +1,11 @@
 # Agent Handoff
 
+## [codex] 2026-06-11 00:18 KST
+
+- Added `assets/studies/study-coming-soon.png` from the Claude source thumbnail.
+- Replaced all unavailable Study card thumbnails on Home and Work with the Coming Soon image.
+- Removed the disabled-card image dimming so the Coming Soon thumbnail displays as designed.
+
 ## [codex] 2026-06-11 00:00 KST
 
 - Reduced Study card thumbnail sizing while keeping the 3:4 ratio.

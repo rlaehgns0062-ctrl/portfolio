@@ -382,10 +382,6 @@
 .study-card-empty .study-desc {
   color: var(--text-muted);
 }
-.study-card-empty:not(a) .study-thumb img {
-  filter: grayscale(1);
-  opacity: 0.48;
-}
 .study-kicker {
   display: block;
   margin-bottom: 6px;
