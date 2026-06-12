@@ -1,5 +1,9 @@
 # Agent Handoff
 
+## [codex] 2026-06-12 21:58 KST
+
+- Updated the caption below the first 03 E-STORE image to `as-is 메인, 상품 주문 화면`.
+
 ## [codex] 2026-06-12 00:12 KST
 
 - Added `assets/03-estore-01.png` from the Claude source image.
