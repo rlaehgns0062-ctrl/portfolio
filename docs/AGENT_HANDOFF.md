@@ -1,5 +1,10 @@
 # Agent Handoff
 
+## [codex] 2026-06-13 00:41 KST
+
+- Changed the footer top button to float at the bottom-right only on mobile.
+- Updated the global `style.css` cache version across pages.
+
 ## [codex] 2026-06-13 00:28 KST
 
 - Added a footer-right circular top button across all pages, inspired by the referenced BEAMS footer placement.
