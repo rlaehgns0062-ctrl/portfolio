@@ -1,5 +1,10 @@
 # Agent Handoff
 
+## [codex] 2026-06-13 01:12 KST
+
+- Tightened mobile spacing in Work detail retrospective sections for better readability.
+- Updated the `work.css` cache version across Work detail pages.
+
 ## [codex] 2026-06-13 01:05 KST
 
 - Fixed the mobile top button returning in a stuck active/hover state after tapping it.

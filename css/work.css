@@ -305,7 +305,23 @@
   .work-section { grid-template-columns: 1fr; gap: 20px; padding: 48px 0; }
   .section-sticky { position: static; flex-direction: row; gap: 8px; }
   .point-grid, .result-grid { grid-template-columns: 1fr; }
-  .retro-grid { grid-template-columns: 1fr; gap: 32px; }
+  .retro-grid { grid-template-columns: 1fr; gap: 26px; }
+  .retro-col-title {
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+  }
+  .retro-item {
+    padding: 14px 0;
+  }
+  .retro-item-title {
+    font-size: 14px;
+    margin-bottom: 6px;
+    line-height: 1.45;
+  }
+  .retro-item-desc {
+    font-size: 12px;
+    line-height: 1.75;
+  }
   .img-2col { grid-template-columns: 1fr; }
   .work-nav-bottom { padding: 36px 24px; gap: 16px; }
   .work-nav-link { max-width: 45%; }
