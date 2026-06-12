@@ -616,7 +616,7 @@
   .studies { padding: 44px 24px 52px; }
   .studies-title { font-size: 22px; margin-bottom: 22px; }
   .study-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 14px; max-width: none; }
-  .study-card { min-width: 0; }
+  .study-rail .study-card { min-width: 58vw; }
   .study-grid .study-card { min-width: 0; }
   .study-page { padding-top: var(--nav-h-mobile); }
   .study-cover { padding: 48px 24px 36px; }

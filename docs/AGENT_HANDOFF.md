@@ -1,5 +1,10 @@
 # Agent Handoff
 
+## [codex] 2026-06-13 01:34 KST
+
+- Restored mobile Home Study rail card width while keeping Work page Study grid at two columns.
+- Updated the `home.css` cache version across pages that load it.
+
 ## [codex] 2026-06-13 01:26 KST
 
 - Removed the mobile divider line between Work detail retrospective content groups.
