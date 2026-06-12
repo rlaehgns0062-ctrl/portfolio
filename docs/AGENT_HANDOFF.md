@@ -1,5 +1,10 @@
 # Agent Handoff
 
+## [codex] 2026-06-13 03:28 KST
+
+- Set Home Work pager controls hidden by default in markup so the current single-page state does not depend on JS timing.
+- JS still reveals controls automatically when project count grows beyond one page.
+
 ## [codex] 2026-06-13 03:19 KST
 
 - Hid Home Work pager controls when there is only one project page.
