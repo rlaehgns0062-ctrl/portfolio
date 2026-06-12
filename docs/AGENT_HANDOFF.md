@@ -1,5 +1,10 @@
 # Agent Handoff
 
+## [codex] 2026-06-13 00:57 KST
+
+- Changed mobile Study lists to a two-column grid.
+- Updated the `home.css` cache version across pages that load it.
+
 ## [codex] 2026-06-13 00:49 KST
 
 - Changed the mobile floating top button to stay hidden at the page top.
