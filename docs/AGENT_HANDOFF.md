@@ -1,5 +1,11 @@
 # Agent Handoff
 
+## [codex] 2026-06-12 00:00 KST
+
+- Set remaining Work detail image block radius values to `0`.
+- Set remaining Study detail image radius values to `0`.
+- Updated `home.css` and `work.css` cache versions across pages that load them.
+
 ## [codex] 2026-06-11 22:28 KST
 
 - Removed the outline from Work project list thumbnails.
