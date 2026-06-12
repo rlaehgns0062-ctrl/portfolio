@@ -1,5 +1,11 @@
 # Agent Handoff
 
+## [codex] 2026-06-13 01:19 KST
+
+- Reworked mobile Work detail retrospective spacing so the section title and each retrospective content group read as distinct blocks.
+- Added mobile-only separation between `What Changed` and `What I'd Do Differently`.
+- Updated the `work.css` cache version across Work detail pages.
+
 ## [codex] 2026-06-13 01:12 KST
 
 - Tightened mobile spacing in Work detail retrospective sections for better readability.
