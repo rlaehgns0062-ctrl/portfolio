@@ -119,25 +119,27 @@
 .project-pager-controls {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
   padding-top: 8px;
 }
 .pager-btn {
-  width: 34px;
-  height: 34px;
-  border: 0.5px solid var(--border-hover);
+  width: 38px;
+  height: 38px;
+  border: 0.5px solid rgba(20, 18, 16, 0.35);
   border-radius: 50%;
   background: transparent;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   cursor: pointer;
   font-family: var(--font-mono);
   font-size: 13px;
   transition: color 0.2s, border-color 0.2s, background 0.2s;
 }
-.pager-btn:hover {
-  color: var(--text-primary);
-  border-color: var(--text-primary);
-  background: rgba(20, 18, 16, 0.04);
+@media (hover: hover) and (pointer: fine) {
+  .pager-btn:hover {
+    color: var(--bg);
+    border-color: var(--text-primary);
+    background: var(--text-primary);
+  }
 }
 .pager-count {
   min-width: 68px;
@@ -190,12 +192,14 @@
   border-top: none;
 }
 .pager-btn:disabled {
+  border-color: var(--border);
+  color: var(--text-muted);
   cursor: default;
-  opacity: 0.35;
+  opacity: 0.42;
 }
 .pager-btn:disabled:hover {
-  color: var(--text-secondary);
-  border-color: var(--border-hover);
+  color: var(--text-muted);
+  border-color: var(--border);
   background: transparent;
 }
 .project-card {
@@ -590,16 +594,16 @@
     padding-top: 20px;
   }
   .project-pager-controls {
-    gap: 8px;
+    gap: 16px;
     padding-top: 0;
   }
   .pager-btn {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     font-size: 12px;
   }
   .pager-count {
-    min-width: 56px;
+    min-width: 60px;
     font-size: 9px;
   }
   .view-all-link {

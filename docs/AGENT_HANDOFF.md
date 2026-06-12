@@ -1,5 +1,12 @@
 # Agent Handoff
 
+## [codex] 2026-06-13 01:45 KST
+
+- Restored Home Work pager controls beside the Work section label.
+- Increased mobile pager button touch size and spacing.
+- Changed Project pager behavior to disable prev/next at the first/last page instead of looping.
+- Clarified default, hover, and disabled pager button states and updated `home.css`/`main.js` cache versions.
+
 ## [codex] 2026-06-13 01:34 KST
 
 - Restored mobile Home Study rail card width while keeping Work page Study grid at two columns.

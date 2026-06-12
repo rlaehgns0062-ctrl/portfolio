@@ -168,15 +168,15 @@ mainEl.classList.add('page-enter');
     if (totalEl) totalEl.textContent = String(totalPages).padStart(2, '0');
 
     function renderProjectPage(nextPage) {
-      activePage = (nextPage + totalPages) % totalPages;
+      activePage = Math.max(0, Math.min(nextPage, totalPages - 1));
       const start = activePage * pageSize;
       const end = start + pageSize;
       slides.forEach((slide, index) => {
         slide.classList.toggle('is-active', index >= start && index < end);
       });
       if (currentEl) currentEl.textContent = String(activePage + 1).padStart(2, '0');
-      if (prevBtn) prevBtn.disabled = totalPages <= 1;
-      if (nextBtn) nextBtn.disabled = totalPages <= 1;
+      if (prevBtn) prevBtn.disabled = activePage === 0;
+      if (nextBtn) nextBtn.disabled = activePage === totalPages - 1;
     }
 
     if (prevBtn) {
