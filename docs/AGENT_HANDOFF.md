@@ -1,5 +1,10 @@
 # Agent Handoff
 
+## [codex] 2026-06-13 00:06 KST
+
+- Added `피크닉 (peaknic)` as the latest UI/UX Designer experience on Home and About.
+- Updated the IXI experience period from current to `2024.05 - 2026.05` on Home and About.
+
 ## [codex] 2026-06-12 22:35 KST
 
 - Increased the desktop cursor point offset so it sits farther down/right from the native pointer with clearer breathing room.
