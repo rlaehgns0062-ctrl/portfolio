@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
     cursorPoint.setAttribute('aria-hidden', 'true');
     document.body.appendChild(cursorPoint);
 
-    const cursorOffsetX = 10;
-    const cursorOffsetY = 12;
+    const cursorOffsetX = 22;
+    const cursorOffsetY = 24;
     let pointerX = window.innerWidth / 2;
     let pointerY = window.innerHeight / 2;
     let pointX = pointerX;

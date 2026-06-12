@@ -1,5 +1,10 @@
 # Agent Handoff
 
+## [codex] 2026-06-12 22:35 KST
+
+- Increased the desktop cursor point offset so it sits farther down/right from the native pointer with clearer breathing room.
+- Updated global `style.css` and `main.js` cache versions across pages.
+
 ## [codex] 2026-06-12 22:20 KST
 
 - Added a desktop-only black square cursor point that follows the mouse.
