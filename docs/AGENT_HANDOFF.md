@@ -1,5 +1,12 @@
 # Agent Handoff
 
+## [codex] 2026-06-12 22:20 KST
+
+- Added a desktop-only black square cursor point that follows the mouse.
+- The cursor point grows and morphs into a circle over interactive elements.
+- Offset the cursor point slightly down and right from the native pointer.
+- Updated global `style.css` and `main.js` cache versions across pages.
+
 ## [codex] 2026-06-12 22:12 KST
 
 - Moved `assets/03-estore-01.png` from the Context section to the As-Is analysis image slot on the 03 project page.

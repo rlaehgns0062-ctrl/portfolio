@@ -3,6 +3,52 @@
    ============================================ */
 document.addEventListener('DOMContentLoaded', () => {
 
+  /* ── 데스크탑 커서 포인트 ── */
+  const canUseCursorPoint = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  if (canUseCursorPoint) {
+    const cursorPoint = document.createElement('div');
+    cursorPoint.className = 'cursor-point';
+    cursorPoint.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(cursorPoint);
+
+    const cursorOffsetX = 10;
+    const cursorOffsetY = 12;
+    let pointerX = window.innerWidth / 2;
+    let pointerY = window.innerHeight / 2;
+    let pointX = pointerX;
+    let pointY = pointerY;
+
+    function animateCursorPoint() {
+      pointX += (pointerX - pointX) * 0.24;
+      pointY += (pointerY - pointY) * 0.24;
+      cursorPoint.style.transform = `translate3d(${pointX}px, ${pointY}px, 0) translate(-50%, -50%)`;
+      requestAnimationFrame(animateCursorPoint);
+    }
+
+    window.addEventListener('pointermove', (e) => {
+      pointerX = e.clientX + cursorOffsetX;
+      pointerY = e.clientY + cursorOffsetY;
+      cursorPoint.classList.add('is-visible');
+    }, { passive: true });
+
+    document.addEventListener('pointerover', (e) => {
+      const interactive = e.target.closest('a, button, [role="button"], input, textarea, select, summary, .project-card, .study-card:not(.is-disabled), [data-work-tab], [data-project-prev], [data-project-next], [data-study-prev], [data-study-next]');
+      cursorPoint.classList.toggle('is-active', Boolean(interactive));
+    });
+
+    document.addEventListener('pointerout', (e) => {
+      if (!e.relatedTarget || !e.relatedTarget.closest || !e.relatedTarget.closest('a, button, [role="button"], input, textarea, select, summary, .project-card, .study-card:not(.is-disabled), [data-work-tab], [data-project-prev], [data-project-next], [data-study-prev], [data-study-next]')) {
+        cursorPoint.classList.remove('is-active');
+      }
+    });
+
+    document.addEventListener('mouseleave', () => {
+      cursorPoint.classList.remove('is-visible', 'is-active');
+    });
+
+    animateCursorPoint();
+  }
+
   /* ── 페이지 진입 애니메이션 ── */
   const mainEl = document.querySelector('main') || document.querySelector('.hero') || document.body;
 mainEl.classList.add('page-enter');
