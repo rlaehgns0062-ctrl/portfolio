@@ -1,5 +1,12 @@
 # Agent Handoff
 
+## [codex] 2026-06-13 03:19 KST
+
+- Hid Home Work pager controls when there is only one project page.
+- Increased visual spacing between pager arrow buttons for future multi-page states.
+- Reworked pager pressed state to avoid stuck active styling on touch devices.
+- Updated `home.css` and `main.js` cache versions across pages.
+
 ## [codex] 2026-06-13 01:45 KST
 
 - Restored Home Work pager controls beside the Work section label.

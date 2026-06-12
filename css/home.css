@@ -119,8 +119,11 @@
 .project-pager-controls {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 28px;
   padding-top: 8px;
+}
+.project-pager-controls.is-hidden {
+  display: none;
 }
 .pager-btn {
   width: 38px;
@@ -132,7 +135,9 @@
   cursor: pointer;
   font-family: var(--font-mono);
   font-size: 13px;
-  transition: color 0.2s, border-color 0.2s, background 0.2s;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  transition: color 0.16s, border-color 0.16s, background 0.16s, opacity 0.16s;
 }
 @media (hover: hover) and (pointer: fine) {
   .pager-btn:hover {
@@ -140,6 +145,11 @@
     border-color: var(--text-primary);
     background: var(--text-primary);
   }
+}
+.pager-btn.is-pressing {
+  color: var(--bg);
+  border-color: var(--text-primary);
+  background: var(--text-primary);
 }
 .pager-count {
   min-width: 68px;
@@ -594,13 +604,18 @@
     padding-top: 20px;
   }
   .project-pager-controls {
-    gap: 16px;
+    gap: 32px;
     padding-top: 0;
   }
   .pager-btn {
     width: 40px;
     height: 40px;
     font-size: 12px;
+  }
+  .pager-btn.is-pressing {
+    color: var(--text-primary);
+    border-color: rgba(20, 18, 16, 0.35);
+    background: transparent;
   }
   .pager-count {
     min-width: 60px;

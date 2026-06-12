@@ -161,11 +161,13 @@ mainEl.classList.add('page-enter');
     const totalEl = document.querySelector('[data-project-total]');
     const prevBtn = document.querySelector('[data-project-prev]');
     const nextBtn = document.querySelector('[data-project-next]');
+    const controlsEl = document.querySelector('.project-pager-controls');
     const pageSize = 3;
     const totalPages = Math.max(1, Math.ceil(slides.length / pageSize));
     let activePage = 0;
 
     if (totalEl) totalEl.textContent = String(totalPages).padStart(2, '0');
+    if (controlsEl) controlsEl.classList.toggle('is-hidden', totalPages <= 1);
 
     function renderProjectPage(nextPage) {
       activePage = Math.max(0, Math.min(nextPage, totalPages - 1));
@@ -180,11 +182,30 @@ mainEl.classList.add('page-enter');
     }
 
     if (prevBtn) {
-      prevBtn.addEventListener('click', () => renderProjectPage(activePage - 1));
+      prevBtn.addEventListener('click', () => {
+        prevBtn.blur();
+        prevBtn.classList.remove('is-pressing');
+        renderProjectPage(activePage - 1);
+      });
     }
     if (nextBtn) {
-      nextBtn.addEventListener('click', () => renderProjectPage(activePage + 1));
+      nextBtn.addEventListener('click', () => {
+        nextBtn.blur();
+        nextBtn.classList.remove('is-pressing');
+        renderProjectPage(activePage + 1);
+      });
     }
+    [prevBtn, nextBtn].forEach(button => {
+      if (!button) return;
+      button.addEventListener('pointerdown', () => {
+        if (!button.disabled) button.classList.add('is-pressing');
+      });
+      ['pointerup', 'pointerleave', 'pointercancel'].forEach(eventName => {
+        button.addEventListener(eventName, () => {
+          button.classList.remove('is-pressing');
+        });
+      });
+    });
 
     renderProjectPage(0);
   }
