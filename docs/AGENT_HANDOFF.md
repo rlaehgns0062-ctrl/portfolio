@@ -1,5 +1,10 @@
 # Agent Handoff
 
+## [codex] 2026-06-12 00:12 KST
+
+- Added `assets/03-estore-01.png` from the Claude source image.
+- Inserted the new E-STORE visual into the first Context image slot on the 03 project page.
+
 ## [codex] 2026-06-12 00:00 KST
 
 - Set remaining Work detail image block radius values to `0`.
