@@ -1,5 +1,10 @@
 # Agent Handoff
 
+## [codex] 2026-06-12 22:12 KST
+
+- Moved `assets/03-estore-01.png` from the Context section to the As-Is analysis image slot on the 03 project page.
+- Removed the Context section image block and caption entirely.
+
 ## [codex] 2026-06-12 22:04 KST
 
 - Removed outlines from Work detail image slots and inserted image blocks.
