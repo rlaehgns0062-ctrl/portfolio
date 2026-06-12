@@ -1,5 +1,11 @@
 # Agent Handoff
 
+## [codex] 2026-06-13 00:49 KST
+
+- Changed the mobile floating top button to stay hidden at the page top.
+- Added scroll-based visibility so the mobile top button appears after scrolling down and hides again at the top.
+- Updated the global `main.js` cache version across pages.
+
 ## [codex] 2026-06-13 00:41 KST
 
 - Changed the footer top button to float at the bottom-right only on mobile.

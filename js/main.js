@@ -64,11 +64,24 @@ mainEl.classList.add('page-enter');
   }, { passive: true });
 
   /* ── 푸터 TOP 버튼 ── */
-  document.querySelectorAll('[data-top-button]').forEach(button => {
+  const topButtons = document.querySelectorAll('[data-top-button]');
+  const mobileTopButtonQuery = window.matchMedia('(max-width: 768px)');
+  function syncTopButtons() {
+    const shouldShow = mobileTopButtonQuery.matches && window.scrollY > 24;
+    topButtons.forEach(button => {
+      button.classList.toggle('is-visible', shouldShow);
+    });
+  }
+  topButtons.forEach(button => {
     button.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   });
+  window.addEventListener('scroll', syncTopButtons, { passive: true });
+  if (mobileTopButtonQuery.addEventListener) {
+    mobileTopButtonQuery.addEventListener('change', syncTopButtons);
+  }
+  syncTopButtons();
 
   /* ── 탭 nav active 상태 ── */
   const navLinks = document.querySelectorAll('.nav-links li a, .mobile-menu a');
