@@ -312,7 +312,6 @@
   .retro-grid > div + div {
     margin-top: 38px;
     padding-top: 30px;
-    border-top: 1px solid var(--border);
   }
   .retro-col-title {
     margin-bottom: 18px;

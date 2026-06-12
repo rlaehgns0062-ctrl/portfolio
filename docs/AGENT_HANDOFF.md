@@ -1,5 +1,10 @@
 # Agent Handoff
 
+## [codex] 2026-06-13 01:26 KST
+
+- Removed the mobile divider line between Work detail retrospective content groups.
+- Kept spacing-based separation and updated the `work.css` cache version across Work detail pages.
+
 ## [codex] 2026-06-13 01:19 KST
 
 - Reworked mobile Work detail retrospective spacing so the section title and each retrospective content group read as distinct blocks.
