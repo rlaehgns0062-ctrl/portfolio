@@ -1,5 +1,11 @@
 # Agent Handoff
 
+## [codex] 2026-06-13 00:15 KST
+
+- Cleared the placeholder images from the first Study detail page starting at Concept through Reflection.
+- Added empty media-slot styling so cleared Study slots keep their intended proportions for future images.
+- Updated the `home.css` cache version across pages that load it.
+
 ## [codex] 2026-06-13 00:06 KST
 
 - Added `피크닉 (peaknic)` as the latest UI/UX Designer experience on Home and About.

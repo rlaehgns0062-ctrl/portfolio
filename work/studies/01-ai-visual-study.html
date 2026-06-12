@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
   <link rel="stylesheet" href="../../css/style.css?v=20260612-cursor-gap" />
-  <link rel="stylesheet" href="../../css/home.css?v=20260612-image-square" />
+  <link rel="stylesheet" href="../../css/home.css?v=20260613-study-empty-slots" />
 </head>
 <body>
 
@@ -72,9 +72,7 @@
         <span class="mono">Concept</span>
         <div>
           <h2>초기 컨셉을 모바일 앱 화면으로 구체화했습니다</h2>
-          <div class="study-section-media">
-            <img src="../../assets/studies/study-01.png" alt="Fridge app concept screen preview">
-          </div>
+          <div class="study-section-media"></div>
           <p>냉장고 속 식재료를 관리하고 남은 재료를 기반으로 레시피를 추천하는 모바일 앱 컨셉에서 출발했습니다. My Fridge, Ingredient Detail, Recipe Recommendations 화면을 먼저 제작하며 서비스의 핵심 흐름과 정보 구조를 확인했습니다.</p>
         </div>
       </section>
@@ -85,11 +83,11 @@
           <h2>핵심 화면을 기준으로 시스템화 범위를 확인했습니다</h2>
           <div class="study-gallery-grid">
             <div class="study-gallery-item">
-              <img src="../../assets/studies/study-01.png" alt="My Fridge light and dark mode screen">
+              <div class="study-gallery-slot"></div>
               <span>My Fridge light and dark mode screens</span>
             </div>
             <div class="study-gallery-item">
-              <img src="../../assets/studies/study-01.png" alt="Fridge app component application preview">
+              <div class="study-gallery-slot"></div>
               <span>Component and token application preview</span>
             </div>
           </div>
@@ -101,9 +99,7 @@
         <span class="mono">Components</span>
         <div>
           <h2>반복 UI를 Figma 컴포넌트로 분리했습니다</h2>
-          <div class="study-section-media">
-            <img src="../../assets/studies/study-01.png" alt="Figma component structure preview">
-          </div>
+          <div class="study-section-media"></div>
           <p>화면에서 반복되는 CTA Button, Chip, Tab, Gauge Bar, Bottom Navigation, Ingredient Card를 컴포넌트로 분리했습니다. 이후 Header Add/Menu, Ingredients Search 같은 액션 버튼 컴포넌트도 추가해 화면 확장 시 같은 규칙으로 사용할 수 있도록 구성했습니다.</p>
         </div>
       </section>
@@ -112,9 +108,7 @@
         <span class="mono">Variants</span>
         <div>
           <h2>상태와 속성을 variants로 관리했습니다</h2>
-          <div class="study-section-media">
-            <img src="../../assets/studies/study-01.png" alt="Component variants preview">
-          </div>
+          <div class="study-section-media"></div>
           <p>각 컴포넌트는 단일 형태로 고정하지 않고 type, size, state, percent, active 등의 component variants를 구성했습니다. 버튼, 탭, 칩, 게이지처럼 반복적으로 변하는 UI를 variants로 관리해 화면마다 새로 만드는 대신 조건에 맞춰 재사용할 수 있게 했습니다.</p>
         </div>
       </section>
@@ -123,9 +117,7 @@
         <span class="mono">Variables</span>
         <div>
           <h2>Primitive / Semantic variable 구조를 만들었습니다</h2>
-          <div class="study-section-media">
-            <img src="../../assets/studies/study-01.png" alt="Primitive and semantic variable structure preview">
-          </div>
+          <div class="study-section-media"></div>
           <p>색상과 의미가 직접 섞이지 않도록 Primitive / Semantic variable 구조를 제작했습니다. 화면에 사용되는 색상은 semantic token을 통해 연결하고, 실제 색상 값은 primitive 단계에서 관리해 테마 확장과 유지보수가 가능한 구조로 정리했습니다.</p>
         </div>
       </section>
@@ -134,9 +126,7 @@
         <span class="mono">Automation</span>
         <div>
           <h2>변수와 컴포넌트를 실제 화면에 자동 적용했습니다</h2>
-          <div class="study-section-media">
-            <img src="../../assets/studies/study-01.png" alt="Automated variable and component application preview">
-          </div>
+          <div class="study-section-media"></div>
           <p>정의한 변수와 컴포넌트를 실제 화면에 자동 적용하는 흐름을 만들었습니다. 새 액션 버튼 컴포넌트를 추가할 때도 light/dark 화면에 동시에 반영되도록 구성해, 반복 수정에 쓰이는 시간을 줄이고 변경 가능성을 높였습니다.</p>
         </div>
       </section>
@@ -145,9 +135,7 @@
         <span class="mono">Dark Mode</span>
         <div>
           <h2>단순 반전이 아닌 명도 위계로 다크모드를 확장했습니다</h2>
-          <div class="study-section-media">
-            <img src="../../assets/studies/study-01.png" alt="Dark mode color remapping preview">
-          </div>
+          <div class="study-section-media"></div>
           <p>Semantic / Color 구조에 Dark mode를 확장했습니다. Toss 컬러 시스템 글을 참고해 라이트 컬러를 단순히 반전하지 않고, 배경과 표면, 강조 색상, 텍스트의 명도 위계를 기준으로 dark color remapping을 진행했습니다.</p>
         </div>
       </section>
@@ -156,9 +144,7 @@
         <span class="mono">Reflection</span>
         <div>
           <h2>AI를 디자인 시스템 협업 파트너로 사용했습니다</h2>
-          <div class="study-section-media">
-            <img src="../../assets/studies/study-01.png" alt="AI design system workflow reflection preview">
-          </div>
+          <div class="study-section-media"></div>
           <p>이 작업에서 AI는 단순한 시각 생성 도구가 아니라, 디자인 시스템을 구조화하고 반복 적용을 자동화하며 변경 가능성을 높이는 협업 파트너로 사용되었습니다. 화면 제작 이후 컴포넌트, variants, variables, dark mode까지 연결하며 AI 기반 작업을 운영 가능한 디자인 프로세스로 확장했습니다.</p>
         </div>
       </section>

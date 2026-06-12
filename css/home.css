@@ -484,6 +484,9 @@
   object-fit: contain;
   display: block;
 }
+.study-section-media:empty {
+  aspect-ratio: 16 / 9;
+}
 .study-section-media.is-fill img {
   object-fit: cover;
 }
@@ -506,6 +509,13 @@
   object-fit: cover;
   border-radius: 0;
   border: 0.5px solid var(--border);
+}
+.study-gallery-slot {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 0;
+  border: 0.5px solid var(--border);
+  background: #123f29;
 }
 .study-gallery-item span {
   display: block;
