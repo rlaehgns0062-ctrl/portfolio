@@ -32,12 +32,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
 
     document.addEventListener('pointerover', (e) => {
-      const interactive = e.target.closest('a, button, [role="button"], input, textarea, select, summary, .project-card, .study-card:not(.is-disabled), [data-work-tab], [data-project-prev], [data-project-next], [data-study-prev], [data-study-next]');
+      const interactive = e.target.closest('a, button, [role="button"], input, textarea, select, summary, .project-card, .study-card:not(.is-disabled), [data-work-tab], [data-top-button], [data-project-prev], [data-project-next], [data-study-prev], [data-study-next]');
       cursorPoint.classList.toggle('is-active', Boolean(interactive));
     });
 
     document.addEventListener('pointerout', (e) => {
-      if (!e.relatedTarget || !e.relatedTarget.closest || !e.relatedTarget.closest('a, button, [role="button"], input, textarea, select, summary, .project-card, .study-card:not(.is-disabled), [data-work-tab], [data-project-prev], [data-project-next], [data-study-prev], [data-study-next]')) {
+      if (!e.relatedTarget || !e.relatedTarget.closest || !e.relatedTarget.closest('a, button, [role="button"], input, textarea, select, summary, .project-card, .study-card:not(.is-disabled), [data-work-tab], [data-top-button], [data-project-prev], [data-project-next], [data-study-prev], [data-study-next]')) {
         cursorPoint.classList.remove('is-active');
       }
     });
@@ -62,6 +62,13 @@ mainEl.classList.add('page-enter');
       nav.style.borderBottomColor = '';
     }
   }, { passive: true });
+
+  /* ── 푸터 TOP 버튼 ── */
+  document.querySelectorAll('[data-top-button]').forEach(button => {
+    button.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
 
   /* ── 탭 nav active 상태 ── */
   const navLinks = document.querySelectorAll('.nav-links li a, .mobile-menu a');

@@ -1,5 +1,14 @@
 # Agent Handoff
 
+## [codex] 2026-06-13 00:28 KST
+
+- Added a footer-right circular top button across all pages, inspired by the referenced BEAMS footer placement.
+- Refined the top button to an icon-only light gray circle that turns black on hover.
+- Reduced the top button size and fixed the arrow position so hover does not shift it.
+- Slimmed the top button arrow stroke and moved it up slightly within the circle.
+- Added smooth scroll-to-top behavior via global `main.js`.
+- Updated global `style.css` and `main.js` cache versions across pages.
+
 ## [codex] 2026-06-13 00:15 KST
 
 - Cleared the placeholder images from the first Study detail page starting at Concept through Reflection.
