@@ -74,6 +74,7 @@ mainEl.classList.add('page-enter');
   }
   topButtons.forEach(button => {
     button.addEventListener('click', () => {
+      button.blur();
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   });

@@ -389,6 +389,10 @@ footer {
     pointer-events: auto;
     transform: translateY(0);
   }
+  .footer-top:hover {
+    background: rgba(20, 18, 16, 0.12);
+    color: var(--text-primary);
+  }
 }
 
 /* ── Playfair SemiBold Italic ── */

@@ -1,5 +1,11 @@
 # Agent Handoff
 
+## [codex] 2026-06-13 01:05 KST
+
+- Fixed the mobile top button returning in a stuck active/hover state after tapping it.
+- Blurred the top button on click and neutralized mobile hover styling.
+- Updated global `style.css` and `main.js` cache versions across pages.
+
 ## [codex] 2026-06-13 00:57 KST
 
 - Changed mobile Study lists to a two-column grid.
