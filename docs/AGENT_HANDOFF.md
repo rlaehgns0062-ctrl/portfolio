@@ -1,5 +1,10 @@
 # Agent Handoff
 
+## [codex] 2026-06-12 22:04 KST
+
+- Removed outlines from Work detail image slots and inserted image blocks.
+- Updated `work.css` cache versions across Work detail pages.
+
 ## [codex] 2026-06-12 21:58 KST
 
 - Updated the caption below the first 03 E-STORE image to `as-is 메인, 상품 주문 화면`.
