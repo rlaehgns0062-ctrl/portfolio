@@ -12,6 +12,7 @@
 - Fixed footer marquee font rendering by forcing the marquee text to use Outfit and loading the heavier Outfit weights on detail pages that previously only loaded Pretendard.
 - Split the Home hero statement into five shorter mobile lines: `ORDER` / `IN FORM` / `CLARITY` / `WITHIN` / `DESIGN`.
 - Reverted the Home/Work project role label back to `Product Designer` and changed the Home About-strip heading from `Product / Designer` to `About`.
+- Removed the Home About-strip heading and slightly enlarged the About intro body copy.
 - Updated the `home.css` cache version across pages that load it.
 
 ## [codex] 2026-06-15 00:08 KST
