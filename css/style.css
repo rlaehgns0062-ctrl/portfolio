@@ -219,7 +219,7 @@ nav {
   flex: 0 0 auto;
   gap: 28px;
   padding: 18px 14px;
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Outfit', sans-serif !important;
   font-size: clamp(24px, 5vw, 64px);
   font-weight: 700;
   letter-spacing: 0.04em;
