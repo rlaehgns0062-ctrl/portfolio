@@ -2,15 +2,9 @@
 
 ## [codex] 2026-06-15 20:45 KST
 
-- Replaced the Home hero `headline.svg` English phrase with centered Korean text: `디자이너 / 김도훈 / 포트폴리오 / 사이트`.
-- Removed the previous gradient orb background from the Home hero and kept the page background clean.
-- Added a subtle text-only glitch animation to the Korean hero headline, with reduced-motion fallback.
-- Added a subtle scanline-style background glitch layer behind the Home hero content.
-- Increased the Home hero background contrast slightly so the subtle glitch texture is visible on the bright page background.
-- Shifted the Home hero effect toward a typography-led motion treatment inspired by the referenced creative developer hero: added a muted repeated type layer behind the Korean headline and softened the background scanline effect.
-- Replaced the repeated English hero echo layer with a single oversized Korean `포오트폴리오` background type layer; on mobile it splits into `포오트` / `폴리오`.
-- Replaced the Home hero's previous `디자이너 / 김도훈 / 포트폴리오 / 사이트` headline with a single oversized primary `포오트폴리오` title that fills the horizontal margins; mobile splits it into `포오트` / `폴리오`.
-- Moved the Korean hero headline into the normal hero layout flow so it no longer overlaps the top metadata or bottom description.
+- Replaced the Home hero headline with a static three-line statement: `ORDER IN FORM` / `CLARITY` / `WITHIN DESIGN`.
+- Removed the previous gradient, scanline, and text glitch treatments from the Home hero.
+- Styled the statement as large, centered, bold black typography inspired by the user's reference image.
 - Updated the `home.css` cache version across pages that load it.
 
 ## [codex] 2026-06-15 00:08 KST
