@@ -6,6 +6,7 @@
 - Removed the previous gradient orb background from the Home hero and kept the page background clean.
 - Added a subtle text-only glitch animation to the Korean hero headline, with reduced-motion fallback.
 - Added a subtle scanline-style background glitch layer behind the Home hero content.
+- Increased the Home hero background contrast slightly so the subtle glitch texture is visible on the bright page background.
 - Moved the Korean hero headline into the normal hero layout flow so it no longer overlaps the top metadata or bottom description.
 - Updated the `home.css` cache version across pages that load it.
 
