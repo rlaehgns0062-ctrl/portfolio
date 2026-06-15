@@ -202,10 +202,10 @@ nav {
 /* ── FOOTER ── */
 .footer-marquee {
   overflow: hidden;
-  background: var(--text-primary);
-  color: #ffffff;
-  border-top: 0.5px solid var(--text-primary);
-  border-bottom: 0.5px solid var(--text-primary);
+  background: var(--bg3);
+  color: var(--text-primary);
+  border-top: 0.5px solid rgba(20, 18, 16, 0.08);
+  border-bottom: 0.5px solid rgba(20, 18, 16, 0.08);
   white-space: nowrap;
 }
 .footer-marquee-track {
