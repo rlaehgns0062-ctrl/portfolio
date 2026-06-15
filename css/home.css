@@ -100,7 +100,14 @@
   margin-top: 52px;
   gap: 40px;
 }
-.hero-desc { font-size: 14px; color: var(--text-secondary); max-width: 460px; line-height: 1.8; font-weight: 400; }
+.hero-desc {
+  font-size: clamp(24px, 2.7vw, 40px);
+  color: var(--text-primary);
+  max-width: min(74vw, 1180px);
+  line-height: 1.18;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+}
 .hero-desc-line { display: block; }
 .hero-desc strong { color: var(--text-primary); font-weight: 400; }
 .hero-scroll { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
@@ -608,7 +615,12 @@
     margin-top: 0;
   }
   .resume-cta { font-size: 13px; padding: 12px 24px; }
-  .hero-desc { font-size: 11px; max-width: 100%; letter-spacing: 0; }
+  .hero-desc {
+    font-size: clamp(21px, 6.4vw, 30px);
+    max-width: 100%;
+    line-height: 1.24;
+    letter-spacing: -0.03em;
+  }
   .br-desktop { display: none; }
   .corner { display: none; }
   .works { padding: 48px 24px; }
