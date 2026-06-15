@@ -4,6 +4,7 @@
 
 - Replaced the Home hero `headline.svg` English phrase with centered Korean text: `디자이너 / 김도훈 / 포트폴리오 / 사이트`.
 - Kept the existing hero background and built the new text treatment with bold Pretendard-style typography.
+- Moved the Korean hero headline into the normal hero layout flow so it no longer overlaps the top metadata or bottom description.
 - Updated the `home.css` cache version across pages that load it.
 
 ## [codex] 2026-06-15 00:08 KST
