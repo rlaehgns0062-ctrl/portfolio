@@ -13,6 +13,21 @@
   overflow: hidden;
 }
 
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: -12%;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(0deg, rgba(20, 18, 16, 0.055) 0 1px, transparent 1px 9px),
+    repeating-linear-gradient(90deg, rgba(20, 18, 16, 0.035) 0 1px, transparent 1px 13px);
+  opacity: 0.18;
+  mix-blend-mode: multiply;
+  transform: translate3d(0, 0, 0);
+  animation: hero-bg-glitch 4.8s steps(1, end) infinite;
+}
+
 .corner { display: none; }
 
 /* 상단 메타 */
@@ -116,6 +131,29 @@
   }
 }
 
+@keyframes hero-bg-glitch {
+  0%, 78%, 84%, 100% {
+    opacity: 0.14;
+    transform: translate3d(0, 0, 0);
+    background-position: 0 0, 0 0;
+  }
+  79% {
+    opacity: 0.22;
+    transform: translate3d(-2px, 1px, 0);
+    background-position: 0 3px, 4px 0;
+  }
+  80% {
+    opacity: 0.12;
+    transform: translate3d(2px, -1px, 0);
+    background-position: 0 -2px, -3px 0;
+  }
+  82% {
+    opacity: 0.2;
+    transform: translate3d(1px, 0, 0);
+    background-position: 0 5px, 2px 0;
+  }
+}
+
 @keyframes hero-glitch-shadow-a {
   0%, 88%, 91%, 100% { opacity: 0; clip-path: inset(0 0 0 0); }
   89% { opacity: 1; clip-path: inset(8% 0 62% 0); }
@@ -129,6 +167,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .hero::before,
   .hero-headline span,
   .hero-headline span::before,
   .hero-headline span::after {

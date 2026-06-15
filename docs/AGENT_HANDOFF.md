@@ -5,6 +5,7 @@
 - Replaced the Home hero `headline.svg` English phrase with centered Korean text: `디자이너 / 김도훈 / 포트폴리오 / 사이트`.
 - Removed the previous gradient orb background from the Home hero and kept the page background clean.
 - Added a subtle text-only glitch animation to the Korean hero headline, with reduced-motion fallback.
+- Added a subtle scanline-style background glitch layer behind the Home hero content.
 - Moved the Korean hero headline into the normal hero layout flow so it no longer overlaps the top metadata or bottom description.
 - Updated the `home.css` cache version across pages that load it.
 
