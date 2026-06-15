@@ -1,5 +1,11 @@
 # Agent Handoff
 
+## [codex] 2026-06-15 00:08 KST
+
+- Matched Home `STUDIES` title font size and spacing to the `PROJECTS` title on desktop and mobile.
+- Matched the upper `Work` label row alignment and spacing between Home Projects and Studies.
+- Updated the `home.css` cache version across pages that load it.
+
 ## [codex] 2026-06-15 00:00 KST
 
 - Added a black footer marquee above the footer across all pages.
