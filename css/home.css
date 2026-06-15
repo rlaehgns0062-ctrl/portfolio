@@ -59,6 +59,9 @@
 .hero-portfolio-title span {
   display: block;
 }
+.hero-title-mobile {
+  display: none !important;
+}
 
 .hero-top .mono { color: var(--text-muted); letter-spacing: 0.18em; }
 
@@ -604,9 +607,15 @@
   .hero-portfolio-title {
     width: calc(100vw - 48px);
     gap: 0;
-    font-size: clamp(46px, 14.6vw, 88px);
-    line-height: 0.98;
+    font-size: clamp(48px, 15.2vw, 92px);
+    line-height: 0.94;
     letter-spacing: -0.035em;
+  }
+  .hero-title-desktop {
+    display: none !important;
+  }
+  .hero-title-mobile {
+    display: block !important;
   }
   .hero-bottom {
     flex-direction: column;
