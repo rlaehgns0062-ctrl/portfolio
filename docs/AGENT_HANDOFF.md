@@ -5,6 +5,7 @@
 - Replaced the Home hero headline with a static three-line statement: `ORDER IN FORM` / `CLARITY` / `WITHIN DESIGN`.
 - Removed the previous gradient, scanline, and text glitch treatments from the Home hero.
 - Styled the statement as large, centered, bold black typography inspired by the user's reference image.
+- Loaded Outfit 700/800/900 weights so the Home hero's 900-weight statement uses the real font instead of browser faux-bold rendering.
 - Updated the `home.css` cache version across pages that load it.
 
 ## [codex] 2026-06-15 00:08 KST
