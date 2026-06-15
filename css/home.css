@@ -11,7 +11,7 @@
   justify-content: space-between;
   position: relative;
   overflow: hidden;
-  background: var(--bg2);
+  background: var(--bg);
 }
 
 .hero::before {
@@ -21,9 +21,9 @@
   z-index: 1;
   pointer-events: none;
   background:
-    repeating-linear-gradient(0deg, rgba(20, 18, 16, 0.11) 0 1px, transparent 1px 9px),
-    repeating-linear-gradient(90deg, rgba(20, 18, 16, 0.075) 0 1px, transparent 1px 13px);
-  opacity: 0.28;
+    repeating-linear-gradient(0deg, rgba(20, 18, 16, 0.045) 0 1px, transparent 1px 12px),
+    repeating-linear-gradient(90deg, rgba(20, 18, 16, 0.03) 0 1px, transparent 1px 18px);
+  opacity: 0.18;
   mix-blend-mode: multiply;
   transform: translate3d(0, 0, 0);
   animation: hero-bg-glitch 4.8s steps(1, end) infinite;
@@ -42,15 +42,60 @@
   margin-bottom: 16px;
 }
 
-.hero-headline {
+.hero-title-stage {
   position: relative;
   z-index: 2;
+  align-self: center;
+  width: min(92vw, 1040px);
+  margin: 48px auto;
+  isolation: isolate;
+}
+
+.hero-type-echo {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  z-index: -1;
+  width: min(110vw, 1180px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(4px, 0.6vw, 10px);
+  font-family: 'Outfit', var(--font-sans);
+  font-size: clamp(32px, 5.6vw, 86px);
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  color: rgba(20, 18, 16, 0.1);
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  pointer-events: none;
+  transform: translate3d(-50%, -50%, 0) rotate(-2deg);
+  animation: hero-type-drift 9s ease-in-out infinite;
+}
+
+.hero-type-echo span {
+  display: block;
+  animation: hero-type-scramble 5.8s steps(1, end) infinite;
+}
+
+.hero-type-echo span:nth-child(even) {
+  color: rgba(20, 18, 16, 0.07);
+  transform: translateX(-4%);
+  animation-delay: 0.42s;
+}
+
+.hero-type-echo span:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+.hero-headline {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  align-self: center;
   width: min(92vw, 900px);
-  margin: 48px auto;
+  margin: 0 auto;
   font-family: 'Pretendard', var(--font-sans);
   font-size: clamp(56px, 8.5vw, 132px);
   font-weight: 700;
@@ -134,24 +179,52 @@
 
 @keyframes hero-bg-glitch {
   0%, 78%, 84%, 100% {
-    opacity: 0.22;
+    opacity: 0.12;
     transform: translate3d(0, 0, 0);
     background-position: 0 0, 0 0;
   }
   79% {
-    opacity: 0.34;
+    opacity: 0.2;
     transform: translate3d(-2px, 1px, 0);
     background-position: 0 3px, 4px 0;
   }
   80% {
-    opacity: 0.18;
+    opacity: 0.1;
     transform: translate3d(2px, -1px, 0);
     background-position: 0 -2px, -3px 0;
   }
   82% {
-    opacity: 0.3;
+    opacity: 0.16;
     transform: translate3d(1px, 0, 0);
     background-position: 0 5px, 2px 0;
+  }
+}
+
+@keyframes hero-type-drift {
+  0%, 100% { transform: translate3d(-50%, -50%, 0) rotate(-2deg); }
+  50% { transform: translate3d(-50.8%, -49.2%, 0) rotate(-1deg); }
+}
+
+@keyframes hero-type-scramble {
+  0%, 82%, 100% {
+    opacity: 1;
+    filter: none;
+  }
+  83% {
+    opacity: 0.6;
+    filter: blur(0.4px);
+  }
+  84% {
+    opacity: 0.92;
+    transform: translateX(1.2%);
+  }
+  85% {
+    opacity: 0.72;
+    transform: translateX(-0.8%);
+  }
+  86% {
+    opacity: 1;
+    filter: none;
   }
 }
 
@@ -169,6 +242,8 @@
 
 @media (prefers-reduced-motion: reduce) {
   .hero::before,
+  .hero-type-echo,
+  .hero-type-echo span,
   .hero-headline span,
   .hero-headline span::before,
   .hero-headline span::after {
@@ -704,9 +779,21 @@
   }
   .hero-top .mono { font-size: 9px; letter-spacing: 0.1em; }
   .hero-year { text-align: right !important; line-height: 1.6 !important; }
-  .hero-headline {
+  .hero-title-stage {
     width: min(92vw, 430px);
     margin: 56px auto 44px;
+  }
+  .hero-type-echo {
+    width: 112vw;
+    font-size: clamp(24px, 9vw, 44px);
+    gap: 4px;
+    color: rgba(20, 18, 16, 0.075);
+  }
+  .hero-type-echo span:nth-child(even) {
+    color: rgba(20, 18, 16, 0.05);
+  }
+  .hero-headline {
+    width: min(92vw, 430px);
     font-size: clamp(44px, 14vw, 72px);
     letter-spacing: -0.07em;
   }

@@ -7,6 +7,7 @@
 - Added a subtle text-only glitch animation to the Korean hero headline, with reduced-motion fallback.
 - Added a subtle scanline-style background glitch layer behind the Home hero content.
 - Increased the Home hero background contrast slightly so the subtle glitch texture is visible on the bright page background.
+- Shifted the Home hero effect toward a typography-led motion treatment inspired by the referenced creative developer hero: added a muted repeated type layer behind the Korean headline and softened the background scanline effect.
 - Moved the Korean hero headline into the normal hero layout flow so it no longer overlaps the top metadata or bottom description.
 - Updated the `home.css` cache version across pages that load it.
 
