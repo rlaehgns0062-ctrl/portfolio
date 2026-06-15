@@ -50,8 +50,28 @@
   margin-bottom: 16px;
 }
 
-.hero-headline { position: relative; z-index: 2; }
-.headline-svg { width: 60%; max-width: 560px; height: auto; display: block; }
+.hero-headline {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(92vw, 900px);
+  font-family: 'Pretendard', var(--font-sans);
+  font-size: clamp(64px, 9.4vw, 140px);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.06em;
+  color: var(--text-primary);
+  text-align: center;
+  word-break: keep-all;
+}
+.hero-headline span {
+  display: block;
+}
 .hero-top .mono { color: var(--text-muted); letter-spacing: 0.18em; }
 
 /* Resume CTA */
@@ -582,7 +602,11 @@
   }
   .hero-top .mono { font-size: 9px; letter-spacing: 0.1em; }
   .hero-year { text-align: right !important; line-height: 1.6 !important; }
-  .headline-svg { width: 100% !important; max-width: 100% !important; }
+  .hero-headline {
+    width: min(92vw, 430px);
+    font-size: clamp(48px, 16vw, 78px);
+    letter-spacing: -0.07em;
+  }
   .hero-bottom {
     flex-direction: column;
     align-items: flex-start;

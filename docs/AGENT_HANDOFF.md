@@ -1,5 +1,11 @@
 # Agent Handoff
 
+## [codex] 2026-06-15 20:45 KST
+
+- Replaced the Home hero `headline.svg` English phrase with centered Korean text: `디자이너 / 김도훈 / 포트폴리오 / 사이트`.
+- Kept the existing hero background and built the new text treatment with bold Pretendard-style typography.
+- Updated the `home.css` cache version across pages that load it.
+
 ## [codex] 2026-06-15 00:08 KST
 
 - Matched Home `STUDIES` title font size and spacing to the `PROJECTS` title on desktop and mobile.
