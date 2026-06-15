@@ -1,5 +1,12 @@
 # Agent Handoff
 
+## [codex] 2026-06-15 00:00 KST
+
+- Added a black footer marquee above the footer across all pages.
+- The marquee repeats `ORDER IN FORM, CLARITY WITHIN DESIGN` in bold white type and rolls continuously left-to-right.
+- Reversed the footer marquee direction to roll right-to-left.
+- Updated the global `style.css` cache version across pages.
+
 ## [codex] 2026-06-13 03:28 KST
 
 - Set Home Work pager controls hidden by default in markup so the current single-page state does not depend on JS timing.
