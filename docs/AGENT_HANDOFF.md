@@ -7,6 +7,7 @@
 - Styled the statement as large, centered, bold black typography inspired by the user's reference image.
 - Loaded Outfit 700/800/900 weights so the Home hero's 900-weight statement uses the real font instead of browser faux-bold rendering.
 - Reduced the Home hero statement weight from Outfit 900 to 800.
+- Increased the Home hero statement size and lowered its weight to Outfit 700.
 - Updated the `home.css` cache version across pages that load it.
 
 ## [codex] 2026-06-15 00:08 KST
