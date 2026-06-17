@@ -17,6 +17,8 @@
 - Increased Home section labels and `PROJECTS`/`STUDIES` title sizes by roughly 4px, and set the content titles to Outfit 700 for a slightly lighter bold.
 - Increased Home/Work project card number, title, and description type sizes by roughly 2px.
 - Increased desktop Home hero top spacing so the right-side `2026 / Design Portfolio` meta no longer clips under the fixed header/contact area.
+- Changed the footer Top button to use the same scroll-triggered floating behavior on desktop and mobile.
+- Slowed the footer marquee animation and reduced its vertical padding.
 - Updated the `home.css` cache version across pages that load it.
 
 ## [codex] 2026-06-15 00:08 KST

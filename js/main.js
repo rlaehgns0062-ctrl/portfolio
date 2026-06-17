@@ -65,9 +65,8 @@ mainEl.classList.add('page-enter');
 
   /* ── 푸터 TOP 버튼 ── */
   const topButtons = document.querySelectorAll('[data-top-button]');
-  const mobileTopButtonQuery = window.matchMedia('(max-width: 768px)');
   function syncTopButtons() {
-    const shouldShow = mobileTopButtonQuery.matches && window.scrollY > 24;
+    const shouldShow = window.scrollY > 24;
     topButtons.forEach(button => {
       button.classList.toggle('is-visible', shouldShow);
     });
@@ -79,9 +78,6 @@ mainEl.classList.add('page-enter');
     });
   });
   window.addEventListener('scroll', syncTopButtons, { passive: true });
-  if (mobileTopButtonQuery.addEventListener) {
-    mobileTopButtonQuery.addEventListener('change', syncTopButtons);
-  }
   syncTopButtons();
 
   /* ── 탭 nav active 상태 ── */

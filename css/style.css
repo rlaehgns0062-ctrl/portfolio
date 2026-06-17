@@ -211,14 +211,14 @@ nav {
 .footer-marquee-track {
   display: flex;
   width: max-content;
-  animation: footerMarquee 22s linear infinite;
+  animation: footerMarquee 34s linear infinite;
 }
 .footer-marquee-line {
   display: flex;
   align-items: center;
   flex: 0 0 auto;
   gap: 28px;
-  padding: 18px 14px;
+  padding: 8px 14px;
   font-family: 'Outfit', sans-serif !important;
   font-size: clamp(24px, 5vw, 64px);
   font-weight: 700;
@@ -272,7 +272,11 @@ footer {
 .footer-top {
   appearance: none;
   border: 0;
-  background: rgba(20, 18, 16, 0.08);
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+  z-index: 80;
+  background: rgba(20, 18, 16, 0.12);
   color: var(--text-primary);
   display: inline-flex;
   align-items: center;
@@ -282,7 +286,18 @@ footer {
   padding: 0;
   border-radius: 50%;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 10px 24px rgba(20, 18, 16, 0.10);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition: background 0.2s, color 0.2s, opacity 0.2s, visibility 0.2s, transform 0.2s;
+}
+.footer-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
 }
 .footer-top::after {
   content: "";
@@ -412,23 +427,8 @@ footer {
   footer { padding: 28px 24px; flex-direction: column; gap: 16px; text-align: center; }
   .footer-right { flex-direction: column; gap: 14px; align-items: center; }
   .footer-top {
-    position: fixed;
     right: 20px;
     bottom: 20px;
-    z-index: 80;
-    background: rgba(20, 18, 16, 0.12);
-    box-shadow: 0 10px 24px rgba(20, 18, 16, 0.10);
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transform: translateY(8px);
-    transition: background 0.2s, color 0.2s, opacity 0.2s, visibility 0.2s, transform 0.2s;
-  }
-  .footer-top.is-visible {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    transform: translateY(0);
   }
   .footer-top:hover {
     background: rgba(20, 18, 16, 0.12);
