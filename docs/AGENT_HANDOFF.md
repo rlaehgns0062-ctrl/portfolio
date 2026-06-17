@@ -16,6 +16,7 @@
 - Enlarged the Home About-strip `About me →` link to better match the larger intro body copy.
 - Increased Home section labels and `PROJECTS`/`STUDIES` title sizes by roughly 4px, and set the content titles to Outfit 700 for a slightly lighter bold.
 - Increased Home/Work project card number, title, and description type sizes by roughly 2px.
+- Increased desktop Home hero top spacing so the right-side `2026 / Design Portfolio` meta no longer clips under the fixed header/contact area.
 - Updated the `home.css` cache version across pages that load it.
 
 ## [codex] 2026-06-15 00:08 KST
