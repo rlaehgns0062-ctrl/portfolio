@@ -119,6 +119,10 @@
 /* ── WORKS ── */
 .works { padding: 80px 48px; border-top: 0.5px solid var(--border); }
 .works-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 14px; }
+.works-header > .mono,
+.studies-header > .mono {
+  font-size: 14px;
+}
 .works-title-row {
   display: flex;
   justify-content: space-between;
@@ -128,7 +132,8 @@
 }
 .works-title {
   font-family: 'Outfit', sans-serif;
-  font-size: 44px;
+  font-size: 48px;
+  font-weight: 700;
   letter-spacing: 0.03em;
   color: var(--text-primary);
   text-transform: uppercase;
@@ -322,7 +327,8 @@
 }
 .studies-title {
   font-family: 'Outfit', sans-serif;
-  font-size: 44px;
+  font-size: 48px;
+  font-weight: 700;
   letter-spacing: 0.03em;
   color: var(--text-primary);
   text-transform: uppercase;
@@ -637,7 +643,7 @@
     align-items: flex-start;
     margin-bottom: 32px;
   }
-  .works-title { font-size: 34px; }
+  .works-title { font-size: 38px; }
   .project-actions {
     justify-content: flex-end;
     padding-top: 20px;
@@ -672,7 +678,7 @@
   .about-strip { grid-template-columns: 1fr; gap: 40px; padding: 48px 24px; }
   .work-tabs { gap: 22px; margin-bottom: 24px; }
   .studies { padding: 44px 24px 52px; }
-  .studies-title { font-size: 34px; margin-bottom: 32px; }
+  .studies-title { font-size: 38px; margin-bottom: 32px; }
   .study-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 14px; max-width: none; }
   .study-rail .study-card { min-width: 58vw; }
   .study-grid .study-card { min-width: 0; }

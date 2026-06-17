@@ -14,6 +14,7 @@
 - Reverted the Home/Work project role label back to `Product Designer` and changed the Home About-strip heading from `Product / Designer` to `About`.
 - Removed the Home About-strip heading and slightly enlarged the About intro body copy.
 - Enlarged the Home About-strip `About me →` link to better match the larger intro body copy.
+- Increased Home section labels and `PROJECTS`/`STUDIES` title sizes by roughly 4px, and set the content titles to Outfit 700 for a slightly lighter bold.
 - Updated the `home.css` cache version across pages that load it.
 
 ## [codex] 2026-06-15 00:08 KST
