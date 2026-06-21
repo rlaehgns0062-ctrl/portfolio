@@ -424,13 +424,13 @@
   display: block;
   margin-bottom: 6px;
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 0.12em;
   color: var(--text-muted);
   text-transform: uppercase;
 }
 .study-name {
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.35;
   color: var(--text-primary);
   margin-bottom: 0;
