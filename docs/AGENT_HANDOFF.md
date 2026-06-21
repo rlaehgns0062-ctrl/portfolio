@@ -21,6 +21,7 @@
 - Slowed the footer marquee animation and reduced its vertical padding.
 - Tightened the Home About intro paragraph leading and paragraph gap, and added desktop footer right padding so the email link avoids the floating Top button.
 - Increased Home/Work Study card kicker and title sizes to better match the enlarged Project typography.
+- Enlarged Home Work project carousel thumbnails only, leaving the Work archive list thumbnail size unchanged.
 - Updated the `home.css` cache version across pages that load it.
 
 ## [codex] 2026-06-15 00:08 KST

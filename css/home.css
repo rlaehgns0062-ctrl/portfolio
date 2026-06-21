@@ -184,6 +184,12 @@
   border-top: 0.5px solid var(--border);
   border-bottom: 0.5px solid var(--border);
 }
+.project-pager .project-card {
+  grid-template-columns: 44px 340px 1fr auto 20px;
+}
+.project-pager .p-thumb {
+  width: 340px;
+}
 .project-actions {
   display: flex;
   justify-content: flex-end;
@@ -587,6 +593,8 @@
 /* ── RESPONSIVE ── */
 @media (max-width: 1024px) {
   .project-card { grid-template-columns: 36px 220px 1fr auto 20px; }
+  .project-pager .project-card { grid-template-columns: 36px 280px 1fr auto 20px; }
+  .project-pager .p-thumb { width: 280px; }
   .p-desc { display: none; }
 }
 
